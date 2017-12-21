@@ -11,12 +11,14 @@ try {
     $bdd = new PDO('mysql:host=mysql-groupe2equipe3php.alwaysdata.net;dbname=groupe2equipe3php_base;charset=utf8',
         '149231',
         'root');
+    echo 'Connecté à la base de données' . PHP_EOL;
 
     $nom = htmlspecialchars($_POST['nom']);
     $prenom = htmlspecialchars($_POST['prenom']);
     $pseudo = htmlspecialchars($_POST['pseudo']);
     $email = htmlspecialchars($_POST['email']);
     $mdp = htmlspecialchars($_POST['mdp']);
+    echo 'Paramètres récupérés' . PHP_EOL;
 
     if (is_null($nom)) {
         echo 'Le nom n\'est pas renseigné.';
@@ -37,6 +39,8 @@ try {
 
     $request = $bdd->prepare('INSERT INTO user VALUES(:nom, :prenom, :pseudo, :email, :mdp)');
     $request->execute(array('nom' => $nom, 'prenom' => $prenom, 'pseudo' => $pseudo, 'email' => $email, 'mdp' => $mdp));
+    echo 'Données ajoutées à la base de données' . PHP_EOL;
+
     $request->closeCursor();
     $bdd = null;
 }
