@@ -30,3 +30,6 @@ if (is_null($nom)) {
 
 bdd_user_insertion($bdd, $nom, $prenom, $pseudo, $email, $mdp);
 ?>
+    <form action="../vue/index.php">
+        <br/><input type="submit" value="Accueil"/><br/>
+    </form>

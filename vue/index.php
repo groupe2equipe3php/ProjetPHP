@@ -8,10 +8,10 @@ if(is_null($_SESSION['pseudo'])) {
     echo 'Bienvenue sur le site de traduction ! Vous pouvez vous inscrire ou vous connecter.<br/><br/>';
 ?>
 
-    <form action="../controleur/test_inscription.php" method="post">
+    <form action="inscription.php" method="post">
         <input type="submit" name="inscription" value="S'inscrire"/><br/><br/>
     </form>
-    <form action="../controleur/test_user_connexion.php" method="post">
+    <form action="connexion.php" method="post">
         <input type="submit" name="user_connexion" value="Se connecter"/><br/>
     </form>
 <?php
