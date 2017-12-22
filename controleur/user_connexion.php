@@ -1,11 +1,13 @@
 <?php
+session_start();
 require_once '../modele/bdd_connexion.php';
 require_once '../modele/bdd_verification.php';
+require_once '../modele/bdd_recherche.php';
 
 $bdd = bdd_connexion();
 
-$email = $_POST['email'];
-$mdp   = $_POST['mdp'];
+$email  = $_POST['email'];
+$mdp    = $_POST['mdp'];
 echo 'Identifiants récupérés.<br/>';
 
 if (is_null($email)) {
@@ -17,10 +19,14 @@ if (is_null($email)) {
 }
 
 if(bdd_user_connexion($bdd, $email, $mdp)) {
-    echo 'Whes ju connecté<br/>';
+    echo 'Connecté<br/>';
+    $_SESSION['pseudo'] = get_pseudo($bdd, $email);
+    $_SESSION['email']  = $email;
 }
 else {
-    echo 'zebi<br/>';
+    echo 'Pas connecté<br/>';
 }
-
 ?>
+    <form action="../vue/index.php">
+        <br/><input type="submit" value="Accueil"/><br/>
+    </form>

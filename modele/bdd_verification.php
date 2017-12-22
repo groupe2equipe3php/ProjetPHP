@@ -6,15 +6,16 @@ function bdd_user_connexion(PDO $bdd, $email, $mdp)
         $request->execute(array('email' => $email));
 
         if($request->rowCount() == 0) {
-            echo 'Cet utilisateur n\'est pas enregistré, veuillez vous inscrire.<br/>';
+            echo 'Cet utilisateur n\'est pas enregistré.<br/>';
         }
         else {
-            echo 'Cet utilisateur existe.<br/>';
-
             $data = $request->fetch();
             if($data['mdp'] == $mdp) {
                 echo 'Utilisateur connecté.<br/>';
                 return true;
+            }
+            else {
+                echo 'Le mot de passe renseigné n\'est pas le bon<br/>';
             }
         }
     }
