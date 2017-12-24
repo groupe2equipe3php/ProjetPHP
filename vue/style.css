@@ -1,0 +1,12 @@
+#corps {
+    font-family:"Century Gothic", Avenir, Futura, sans-serif;
+    background-color:#dfe3ee;
+    font-size:0.9em;
+    border-radius:2em;
+
+    padding-top:0.2em;
+    padding-left:2em;
+    padding-right:2em;
+    padding-bottom:0.5em;
+    margin-right:60%;
+}

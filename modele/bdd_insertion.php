@@ -8,6 +8,8 @@ function bdd_user_insertion(PDO $bdd, $nom, $prenom, $pseudo, $email, $mdp)
     }
     catch (PDOException $exception) {
         $exception->getMessage();
+        return false;
     }
+    return true;
 }
 ?>

@@ -2,8 +2,18 @@
 session_start();
 require_once '../utils.inc.php';
 
-start_page('Traducteur Groupe 2 Équipe 3 IUT');
+//start_page('Traducteur Groupe 2 Équipe 3 IUT');
+?>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Traducteur Groupe 2 Équipe 3 IUT</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
 
+<?php
 // Affichage de la langue du site actuelle
 if(is_null($_SESSION['langue']) or $_SESSION['langue'] = "francais") {
     $_SESSION['langue'] = "francais";
@@ -53,7 +63,25 @@ else {
                   <option value="Anglais" selected="selected">Anglais</option>';
             }
         ?>
-    </select>
+    </select><br/><br/>
+
+    <div id="corps">
+    <p>Voici le site web de traduction de l'équipe 3 du groupe 2 pour le projet PHP du semestre 3, IUT AMU site Aix.</p><br/>
+    <p>Ce groupe est composé de :</p>
+    <ul>
+        <li>Raphael Charpy</li>
+        <li>Yoan Giovacchini</li>
+        <li>Olivier Goasampis</li>
+        <li>Lucas Jordan</li>
+    </ul><br/><br/>
+
+    <form action="../controleur/traduction.php" method="post">
+        <label name="recherche_traduction">Saisir
+            <textarea name="recherche_traduction"></textarea>
+        </label>
+        <input type="submit" value="Traduire"/>
+    </form>
+    </div>
 
 <?php
 end_page();

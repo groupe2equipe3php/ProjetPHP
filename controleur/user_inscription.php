@@ -1,4 +1,5 @@
 <?php
+session_start();
 require_once '../modele/bdd_connexion.php';
 require_once '../modele/bdd_insertion.php';
 
@@ -28,7 +29,22 @@ if (is_null($nom)) {
     die();
 }
 
-bdd_user_insertion($bdd, $nom, $prenom, $pseudo, $email, $mdp);
+if(bdd_user_insertion($bdd, $nom, $prenom, $pseudo, $email, $mdp)) {
+    echo 'Utilisateur inscrit.<br/>';
+    if(mail($email,
+        'Confirmation inscription traducteur groupe 2 équipe 3',
+        'Veuillez confirmer votre inscription. Merci de votre confiance.')) {
+        echo 'E-mail de confirmation envoyé.<br/>';
+    }
+    else {
+        echo 'L\'e-mail de confirmation n\'a pas pu être envoyé.<br/>';
+    }
+    $_SESSION['pseudo'] = $pseudo;
+    $_SESSION['email']  = $email;
+}
+else {
+    echo 'Erreur pendant l\'inscription. Veuillez réessayer.<br/>';
+}
 ?>
     <form action="../vue/index.php">
         <br/><input type="submit" value="Accueil"/><br/>
