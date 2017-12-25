@@ -55,7 +55,7 @@ else {
 ?>
     <div class="bloc">
     <p>Voici le site web de traduction de l'équipe 3 du groupe 2 pour le projet PHP du semestre 3, IUT AMU site Aix.</p>
-    <p>Ce groupe est composé de :</p>
+    <p>Ce groupe est composé de : </p>
     <ul>
         <li>Raphael Charpy</li>
         <li>Yoan Giovacchini</li>
