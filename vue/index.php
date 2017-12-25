@@ -2,54 +2,76 @@
 session_start();
 require_once '../utils.inc.php';
 
-//start_page('Traducteur Groupe 2 Équipe 3 IUT');
+start_page('Traducteur Groupe 2 Équipe 3 IUT');
 ?>
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8"/>
-    <title>Traducteur Groupe 2 Équipe 3 IUT</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-</head>
-<body>
+<style>
+    .bloc {
+        font-family:"Century Gothic", Avenir, Futura, sans-serif;
+        background-color:#dfe3ee;
+        font-size:0.9em;
+        border-radius:2em;
+
+        padding-top:0.5em;
+        padding-left:2em;
+        padding-right:2em;
+        padding-bottom:0.5em;
+        margin-right:60%;
+    }
+</style>
 
 <?php
-// Affichage de la langue du site actuelle
-if(is_null($_SESSION['langue']) or $_SESSION['langue'] = "francais") {
-    $_SESSION['langue'] = "francais";
-    echo 'Français<br/><br/>';
-}
-elseif ($_SESSION['langue'] == "anglais") {
-    echo 'Anglais<br/><br/>';
-}
-
 // Message de bienvenue
 if(is_null($_SESSION['pseudo'])) {
     // L'utilisateur n'est pas connecté
-    echo 'Bienvenue sur le site de traduction ! Vous pouvez vous inscrire ou vous connecter.<br/><br/>';
 ?>
+    <div class="bloc">
+    <p>Bienvenue sur le site de traduction ! Vous pouvez vous inscrire ou vous connecter.</p>
     <form action="inscription.php" method="post">
         <input type="submit" name="inscription" value="S'inscrire"/><br/><br/>
     </form>
     <form action="connexion.php" method="post">
-        <input type="submit" name="user_connexion" value="Se connecter"/><br/><br/>
+        <input type="submit" name="user_connexion" value="Se connecter"/>
     </form>
+    </div><br/>
 
 <?php
 }
 else {
     // L'utilisateur est connecté
-    echo 'Bienvenue <strong>' . $_SESSION['pseudo']
-        . '</strong> ! Vous êtes connecté avec l\'adresse <strong>' . $_SESSION['email']
-        . '</strong><br/><br/>';
 ?>
+    <div class="bloc">
+    <p>Bienvenue <strong>
+            <?= $_SESSION['pseudo'] ?>
+    </strong> ! Vous êtes connecté avec l\'adresse <strong>
+            <?= $_SESSION['email'] ?>
+    </strong></p>
     <form action="../controleur/user_deconnexion.php" method="post">
-        <input type="submit" name="user_deconnexion" value="Se déconnecter"/><br/><br/>
+        <input type="submit" name="user_deconnexion" value="Se déconnecter"/>
     </form>
+    </div><br/>
 
 <?php
 }
 ?>
+    <div class="bloc">
+    <p>Voici le site web de traduction de l'équipe 3 du groupe 2 pour le projet PHP du semestre 3, IUT AMU site Aix.</p>
+    <p>Ce groupe est composé de :</p>
+    <ul>
+        <li>Raphael Charpy</li>
+        <li>Yoan Giovacchini</li>
+        <li>Olivier Goasampis</li>
+        <li>Lucas Jordan</li>
+    </ul>
+    </div><br/>
+
+    <div class="bloc">
+    <form action="../controleur/traduction.php" method="post">
+        <label name="recherche_traduction">Saisir
+            <textarea name="recherche_traduction"></textarea>
+        </label>
+        <input type="submit" value="Traduire"/><br/><br/>
+    </form>
+
     <!-- Sélection de la langue de saisie -->
     <label for="selection_langue">Sélectionnez la langue du site</label>
     <select name="selection_langue" id="selection_langue">
@@ -63,25 +85,8 @@ else {
                   <option value="Anglais" selected="selected">Anglais</option>';
             }
         ?>
-    </select><br/><br/>
-
-    <div id="corps">
-    <p>Voici le site web de traduction de l'équipe 3 du groupe 2 pour le projet PHP du semestre 3, IUT AMU site Aix.</p><br/>
-    <p>Ce groupe est composé de :</p>
-    <ul>
-        <li>Raphael Charpy</li>
-        <li>Yoan Giovacchini</li>
-        <li>Olivier Goasampis</li>
-        <li>Lucas Jordan</li>
-    </ul><br/><br/>
-
-    <form action="../controleur/traduction.php" method="post">
-        <label name="recherche_traduction">Saisir
-            <textarea name="recherche_traduction"></textarea>
-        </label>
-        <input type="submit" value="Traduire"/>
-    </form>
-    </div>
+    </select>
+    </div><br/>
 
 <?php
 end_page();
