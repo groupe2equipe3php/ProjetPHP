@@ -1,8 +1,8 @@
 <?php
-function bdd_user_connexion(PDO $bdd, $email, $mdp)
+function bdd_user_verification(PDO $bdd, $email, $mdp)
 {
     try {
-        $request = $bdd->prepare('SELECT email, mdp FROM user WHERE email = :email');
+        $request = $bdd->prepare('SELECT email, mdp, actif FROM user WHERE email = :email');
         $request->execute(array('email' => $email));
 
         if($request->rowCount() == 0) {
@@ -10,12 +10,19 @@ function bdd_user_connexion(PDO $bdd, $email, $mdp)
         }
         else {
             $data = $request->fetch();
+
+            if($data['actif'] == 0) {
+                echo 'Votre compte n\'a pas encore été vérifié.<br/>';
+                return false;
+            }
+
             if($data['mdp'] == $mdp) {
                 echo 'Utilisateur connecté.<br/>';
                 return true;
             }
             else {
                 echo 'Le mot de passe renseigné n\'est pas le bon<br/>';
+                return false;
             }
         }
     }

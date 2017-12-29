@@ -2,14 +2,15 @@
 session_start();
 require_once '../modele/bdd_connexion.php';
 require_once '../modele/bdd_insertion.php';
+require_once 'user_validation_inscription.php';
 
 $bdd = bdd_connexion();
 
-$nom = htmlspecialchars($_POST['nom']);
+$nom    = htmlspecialchars($_POST['nom']);
 $prenom = htmlspecialchars($_POST['prenom']);
 $pseudo = htmlspecialchars($_POST['pseudo']);
-$email = htmlspecialchars($_POST['email']);
-$mdp = htmlspecialchars($_POST['mdp']);
+$email  = htmlspecialchars($_POST['email']);
+$mdp    = htmlspecialchars($_POST['mdp']);
 echo 'Paramètres récupérés.<br/>';
 
 if (is_null($nom)) {
@@ -31,16 +32,13 @@ if (is_null($nom)) {
 
 if(bdd_user_insertion($bdd, $nom, $prenom, $pseudo, $email, $mdp)) {
     echo 'Utilisateur inscrit.<br/>';
-    if(mail($email,
-        'Confirmation inscription traducteur groupe 2 équipe 3',
-        'Veuillez confirmer votre inscription. Merci de votre confiance.')) {
+
+    if(valider_inscription($email)) {
         echo 'E-mail de confirmation envoyé.<br/>';
     }
     else {
         echo 'L\'e-mail de confirmation n\'a pas pu être envoyé.<br/>';
     }
-    $_SESSION['pseudo'] = $pseudo;
-    $_SESSION['email']  = $email;
 }
 else {
     echo 'Erreur pendant l\'inscription. Veuillez réessayer.<br/>';

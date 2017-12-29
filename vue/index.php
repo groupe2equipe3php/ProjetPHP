@@ -42,7 +42,7 @@ else {
     <div class="bloc">
     <p>Bienvenue <strong>
             <?= $_SESSION['pseudo'] ?>
-    </strong> ! Vous êtes connecté avec l\'adresse <strong>
+    </strong> ! Vous êtes connecté avec l'adresse <strong>
             <?= $_SESSION['email'] ?>
     </strong></p>
     <form action="../controleur/user_deconnexion.php" method="post">
