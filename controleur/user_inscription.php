@@ -2,7 +2,7 @@
 session_start();
 require_once '../modele/bdd_connexion.php';
 require_once '../modele/bdd_insertion.php';
-require_once 'user_validation_inscription.php';
+require_once 'validation_inscription.php';
 
 $bdd = bdd_connexion();
 

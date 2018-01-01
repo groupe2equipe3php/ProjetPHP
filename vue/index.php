@@ -27,10 +27,13 @@ if(is_null($_SESSION['pseudo'])) {
     <div class="bloc">
     <p>Bienvenue sur le site de traduction ! Vous pouvez vous inscrire ou vous connecter.</p>
     <form action="inscription.php" method="post">
-        <input type="submit" name="inscription" value="S'inscrire"/><br/><br/>
+        <input type="submit" name="user_inscription" value="S'inscrire"/><br/><br/>
     </form>
     <form action="connexion.php" method="post">
-        <input type="submit" name="user_connexion" value="Se connecter"/>
+        <input type="submit" name="user_connexion" value="Se connecter"/><br/><br/>
+    </form>
+    <form action="recuperation_mdp.php" method="post">
+        <input type="submit" name="recuperation_mdp" value="Mot de passe oublié"/>
     </form>
     </div><br/>
 

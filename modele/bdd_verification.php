@@ -16,7 +16,7 @@ function bdd_user_verification(PDO $bdd, $email, $mdp)
                 return false;
             }
 
-            if($data['mdp'] == $mdp) {
+            if(password_verify($mdp, $data['mdp'])) {
                 echo 'Utilisateur connecté.<br/>';
                 return true;
             }
