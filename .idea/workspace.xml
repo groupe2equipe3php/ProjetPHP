@@ -3,11 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="df8976d7-e84a-401c-b492-02b397824a3a" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/controleur/recuperation_mdp_aleatoire.php" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/controleur/recuperation_mdp_mail.php" afterPath="$PROJECT_DIR$/controleur/user_recuperation_mdp.php" />
-      <change beforePath="$PROJECT_DIR$/vue/connexion.php" afterPath="$PROJECT_DIR$/vue/connexion.php" />
-      <change beforePath="$PROJECT_DIR$/vue/inscription.php" afterPath="$PROJECT_DIR$/vue/inscription.php" />
-      <change beforePath="$PROJECT_DIR$/vue/recuperation_mdp.php" afterPath="$PROJECT_DIR$/vue/recuperation_mdp.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -173,7 +168,7 @@
       <updated>1514205321022</updated>
       <workItem from="1514205322145" duration="187000" />
       <workItem from="1514549372963" duration="5810000" />
-      <workItem from="1514834003995" duration="3088000" />
+      <workItem from="1514834003995" duration="3416000" />
     </task>
     <task id="LOCAL-00001" summary="Style de vue/index.php et merge sur master">
       <created>1514205410770</created>
@@ -203,11 +198,18 @@
       <option name="project" value="LOCAL" />
       <updated>1514836194344</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Page de sélection">
+      <created>1514837735597</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1514837735597</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9085000" />
+    <option name="totallyTimeSpent" value="9413000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1920" height="1053" extended-state="6" />
@@ -245,7 +247,8 @@
     <MESSAGE value="Style de vue/index.php et merge sur master" />
     <MESSAGE value="Vérification de l'inscription terminée" />
     <MESSAGE value="Commencement de la récupération du mot de passe" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commencement de la récupération du mot de passe" />
+    <MESSAGE value="Page de sélection" />
+    <option name="LAST_COMMIT_MESSAGE" value="Page de sélection" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
