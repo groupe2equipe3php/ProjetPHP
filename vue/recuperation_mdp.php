@@ -14,6 +14,7 @@ start_page('Récupération du mot de passe');
         <input type="submit"/>
     </form><br/>
 
+
 <?php
 end_page();
 ?>
