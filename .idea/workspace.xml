@@ -2,16 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="df8976d7-e84a-401c-b492-02b397824a3a" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/controleur/recuperation_mdp_aleatoire.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/controleur/recuperation_mdp_mail.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/vue/recuperation_mdp.php" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/controleur/user_activation_inscription.php" afterPath="$PROJECT_DIR$/controleur/activation_inscription.php" />
-      <change beforePath="$PROJECT_DIR$/controleur/user_inscription.php" afterPath="$PROJECT_DIR$/controleur/user_inscription.php" />
-      <change beforePath="$PROJECT_DIR$/controleur/user_validation_inscription.php" afterPath="$PROJECT_DIR$/controleur/validation_inscription.php" />
-      <change beforePath="$PROJECT_DIR$/modele/bdd_insertion.php" afterPath="$PROJECT_DIR$/modele/bdd_insertion.php" />
-      <change beforePath="$PROJECT_DIR$/modele/bdd_verification.php" afterPath="$PROJECT_DIR$/modele/bdd_verification.php" />
-      <change beforePath="$PROJECT_DIR$/vue/index.php" afterPath="$PROJECT_DIR$/vue/index.php" />
+      <change beforePath="$PROJECT_DIR$/controleur/recuperation_mdp_aleatoire.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/controleur/recuperation_mdp_mail.php" afterPath="$PROJECT_DIR$/controleur/user_recuperation_mdp.php" />
+      <change beforePath="$PROJECT_DIR$/vue/connexion.php" afterPath="$PROJECT_DIR$/vue/connexion.php" />
+      <change beforePath="$PROJECT_DIR$/vue/inscription.php" afterPath="$PROJECT_DIR$/vue/inscription.php" />
+      <change beforePath="$PROJECT_DIR$/vue/recuperation_mdp.php" afterPath="$PROJECT_DIR$/vue/recuperation_mdp.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -22,21 +18,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="recuperation_mdp.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vue/recuperation_mdp.php">
+      <file leaf-file-name="user_recuperation_mdp.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/controleur/user_recuperation_mdp.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="11" column="2" lean-forward="true" selection-start-line="11" selection-start-column="2" selection-end-line="11" selection-end-column="2" />
+            <state relative-caret-position="108">
+              <caret line="6" column="2" lean-forward="true" selection-start-line="6" selection-start-column="2" selection-end-line="6" selection-end-column="2" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="recuperation_mdp_aleatoire.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/controleur/recuperation_mdp_aleatoire.php">
+      <file leaf-file-name="recuperation_mdp.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/vue/recuperation_mdp.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="11" column="2" lean-forward="false" selection-start-line="11" selection-start-column="2" selection-end-line="11" selection-end-column="2" />
+            <state relative-caret-position="162">
+              <caret line="9" column="16" lean-forward="false" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -61,7 +57,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/controleur/validation_inscription.php" />
-        <option value="$PROJECT_DIR$/vue/inscription.php" />
         <option value="$PROJECT_DIR$/modele/bdd_recherche.php" />
         <option value="$PROJECT_DIR$/controleur/user_inscription.php" />
         <option value="$PROJECT_DIR$/controleur/user_connexion.php" />
@@ -70,9 +65,13 @@
         <option value="$PROJECT_DIR$/modele/bdd_insertion.php" />
         <option value="$PROJECT_DIR$/modele/bdd_verification.php" />
         <option value="$PROJECT_DIR$/vue/index.php" />
-        <option value="$PROJECT_DIR$/controleur/user_recuperation_mdp.php" />
-        <option value="$PROJECT_DIR$/vue/recuperation_mdp.php" />
         <option value="$PROJECT_DIR$/controleur/recuperation_mdp_aleatoire.php" />
+        <option value="$PROJECT_DIR$/vue/vue_recuperation_mdp_mail.php" />
+        <option value="$PROJECT_DIR$/controleur/recuperation_mdp_mail.php" />
+        <option value="$PROJECT_DIR$/controleur/user_recuperation_mdp.php" />
+        <option value="$PROJECT_DIR$/vue/inscription.php" />
+        <option value="$PROJECT_DIR$/vue/connexion.php" />
+        <option value="$PROJECT_DIR$/vue/recuperation_mdp.php" />
       </list>
     </option>
   </component>
@@ -174,7 +173,7 @@
       <updated>1514205321022</updated>
       <workItem from="1514205322145" duration="187000" />
       <workItem from="1514549372963" duration="5810000" />
-      <workItem from="1514834003995" duration="1537000" />
+      <workItem from="1514834003995" duration="3088000" />
     </task>
     <task id="LOCAL-00001" summary="Style de vue/index.php et merge sur master">
       <created>1514205410770</created>
@@ -197,14 +196,22 @@
       <option name="project" value="LOCAL" />
       <updated>1514563595715</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Commencement de la récupération du mot de passe">
+      <created>1514836194334</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1514836194344</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7534000" />
+    <option name="totallyTimeSpent" value="9085000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1920" height="1053" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -212,7 +219,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Remote Host" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22708334" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22708334" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.215625" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -237,7 +244,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Style de vue/index.php et merge sur master" />
     <MESSAGE value="Vérification de l'inscription terminée" />
-    <option name="LAST_COMMIT_MESSAGE" value="Vérification de l'inscription terminée" />
+    <MESSAGE value="Commencement de la récupération du mot de passe" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commencement de la récupération du mot de passe" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -327,34 +335,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vue/connexion.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="11" column="2" lean-forward="true" selection-start-line="11" selection-start-column="2" selection-end-line="11" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vue/inscription.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="15" column="2" lean-forward="true" selection-start-line="15" selection-start-column="2" selection-end-line="15" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/controleur/validation_inscription.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="414">
           <caret line="23" column="2" lean-forward="false" selection-start-line="23" selection-start-column="2" selection-end-line="23" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controleur/recuperation_mdp_mail.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" column="2" lean-forward="true" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="2" />
           <folding />
         </state>
       </provider>
@@ -375,15 +359,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vue/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="35" column="82" lean-forward="false" selection-start-line="35" selection-start-column="82" selection-end-line="35" selection-end-column="82" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vue/recuperation_mdp.php">
+    <entry file="file://$PROJECT_DIR$/vue/vue_recuperation_mdp_mail.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
           <caret line="11" column="2" lean-forward="true" selection-start-line="11" selection-start-column="2" selection-end-line="11" selection-end-column="2" />
@@ -391,10 +367,50 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controleur/recuperation_mdp_aleatoire.php">
+    <entry file="file://$PROJECT_DIR$/controleur/recuperation_mdp_lien.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="11" column="2" lean-forward="false" selection-start-line="11" selection-start-column="2" selection-end-line="11" selection-end-column="2" />
+        <state relative-caret-position="54">
+          <caret line="3" column="2" lean-forward="true" selection-start-line="3" selection-start-column="2" selection-end-line="3" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="576">
+          <caret line="35" column="82" lean-forward="false" selection-start-line="35" selection-start-column="82" selection-end-line="35" selection-end-column="82" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue/inscription.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="9" column="94" lean-forward="false" selection-start-line="9" selection-start-column="94" selection-end-line="9" selection-end-column="94" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue/connexion.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" column="94" lean-forward="false" selection-start-line="6" selection-start-column="94" selection-end-line="6" selection-end-column="94" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controleur/user_recuperation_mdp.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" column="2" lean-forward="true" selection-start-line="6" selection-start-column="2" selection-end-line="6" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue/recuperation_mdp.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="9" column="16" lean-forward="false" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="16" />
           <folding />
         </state>
       </provider>
