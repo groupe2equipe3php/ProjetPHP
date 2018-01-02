@@ -18,7 +18,7 @@ if (is_null($email)) {
     die();
 }
 
-if(bdd_user_verification($bdd, $email, $mdp)) {
+if(bdd_user_verification_connexion($bdd, $email, $mdp)) {
     echo 'Connecté<br/>';
     $_SESSION['pseudo'] = get_pseudo($bdd, $email);
     $_SESSION['email']  = $email;

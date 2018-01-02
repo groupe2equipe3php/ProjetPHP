@@ -2,6 +2,7 @@
 session_start();
 require_once '../modele/bdd_connexion.php';
 require_once '../modele/bdd_insertion.php';
+require_once '../modele/bdd_verification.php';
 require_once 'validation_inscription.php';
 
 $bdd = bdd_connexion();
@@ -30,18 +31,21 @@ if (is_null($nom)) {
     die();
 }
 
-if(bdd_user_insertion($bdd, $nom, $prenom, $pseudo, $email, $mdp)) {
-    echo 'Utilisateur inscrit.<br/>';
+if (bdd_user_verification_inscription($bdd, $email)) {
+    if (bdd_user_insertion($bdd, $nom, $prenom, $pseudo, $email, $mdp)) {
+        echo 'Utilisateur inscrit.<br/>';
 
-    if(valider_inscription($email)) {
-        echo 'E-mail de confirmation envoyé.<br/>';
-    }
-    else {
-        echo 'L\'e-mail de confirmation n\'a pas pu être envoyé.<br/>';
+        if (valider_inscription($email)) {
+            echo 'E-mail de confirmation envoyé.<br/>';
+        } else {
+            echo 'L\'e-mail de confirmation n\'a pas pu être envoyé.<br/>';
+        }
+    } else {
+        echo 'Erreur pendant l\'inscription. Veuillez réessayer.<br/>';
     }
 }
 else {
-    echo 'Erreur pendant l\'inscription. Veuillez réessayer.<br/>';
+    echo 'Utilisateur déjà inscrit.<br/>';
 }
 ?>
     <form action="../vue/index.php">
