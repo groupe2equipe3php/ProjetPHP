@@ -3,8 +3,10 @@ require_once '../modele/bdd_connexion.php';
 require_once '../modele/bdd_recherche.php';
 require_once '../modele/bdd_insertion.php';
 
-$email = $_GET['email'];
-$cle   = $_GET['cle'];
+$email = urldecode($_GET['email']);
+$cle   = urldecode($_GET['cle']);
+
+echo $email . '<br/>' . $cle . '<br/>';
 
 $bdd    = bdd_connexion();
 $clebdd = get_cle($bdd, $email);

@@ -12,7 +12,9 @@ function valider_inscription($email) {
 
 Pour activer votre compte, veuillez cliquer sur le lien ci-dessous.
 
-http://groupe2equipe3php.alwaysdata.net/controleur/activation_inscription.php?email='.$email.'&cle='.$cle.'
+http://groupe2equipe3php.alwaysdata.net/controleur/activation_inscription.php?email='
+        . urlencode($email)
+        . '&cle=' . urlencode($cle) .'
 
 Ceci est un mail automatique, merci de ne pas y répondre.';
 
