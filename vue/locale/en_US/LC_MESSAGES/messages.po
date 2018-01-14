@@ -1,5 +1,154 @@
-msgid "bonjour"
-msgstr "hello"
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-01-14 18:17+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
 
-msgid "s'inscrire"
-msgstr "signup"
+#: connexion.php:3
+msgid "Connexion"
+msgstr "Connection"
+
+#: connexion.php:7 inscription.php:10
+msgid "Mot de passe : "
+msgstr "Password : "
+
+#: index.php:22
+msgid "Traducteur Groupe 2 Équipe 3 IUT"
+msgstr "Translator IUT Group 2 Team 3"
+
+#: index.php:45
+msgid "Bienvenue sur le site de traduction ! Vous pouvez vous inscrire ou vous connecter."
+msgstr "Welcome to the translation website ! You can sign up or log in."
+
+#: index.php:47
+msgid "S'inscrire"
+msgstr "Sign up"
+
+#: index.php:50
+msgid "Se connecter"
+msgstr "Log in"
+
+#: index.php:53
+msgid "Mot de passe oublié"
+msgstr "Password forgotten"
+
+#: index.php:63
+msgid "Bienvenue "
+msgstr "Welcome "
+
+#: index.php:65
+msgid "Vous êtes connecté avec l'adresse "
+msgstr "You are connected as "
+
+#: index.php:69
+msgid "Se déconnecter"
+msgstr "Log out"
+
+#: index.php:77
+msgid "Voici le site web de traduction de l'équipe 3 du groupe 2 pour le projet PHP du semestre 3, IUT AMU site Aix."
+msgstr "You are on the translation website created by the the team 3 from the group 2 for the third semester PHP project, IUT AMU in Aix."
+
+#: index.php:78
+msgid "Ce groupe est composé de :"
+msgstr "We are :"
+
+#: index.php:89
+msgid "Saisir"
+msgstr "Type"
+
+#: index.php:92
+msgid "Traduire"
+msgstr "Translate"
+
+#: index.php:97
+msgid "Sélectionnez la langue du site "
+msgstr "Select language"
+
+#: index.php:100
+msgid "Français"
+msgstr "French"
+
+#: index.php:103
+msgid "Anglais"
+msgstr "English"
+
+#: index.php:105
+msgid "Changer de langue"
+msgstr "Switch"
+
+#: inscription.php:3
+msgid "Inscription"
+msgstr "Registration"
+
+#: inscription.php:6
+msgid "Nom : "
+msgstr "Last name : "
+
+#: inscription.php:7
+msgid "Prenom : "
+msgstr "First name : "
+
+#: inscription.php:8
+msgid "Pseudo : "
+msgstr "Alias : "
+
+#: recuperation_mdp.php:3
+msgid "Récupération du mot de passe"
+msgstr "Password recovery"
+
+#: recuperation_mdp.php:5
+msgid "Récupération du mot de passe."
+msgstr "Password recovery."
+
+#: recuperation_mdp.php:9
+msgid "Un code de verification vous a ete envoyé par mail : "
+msgstr "A verification code has been sent by e-mail : "
+
+#: recuperation_mdp.php:13
+msgid "Code de verification"
+msgstr "Verification code"
+
+#: recuperation_mdp.php:14 recuperation_mdp.php:25
+msgid "Valider"
+msgstr "Submit"
+
+#: recuperation_mdp.php:21
+msgid "Nouveau  mot de passe pour "
+msgstr "New password for "
+
+#: recuperation_mdp.php:23
+msgid "Nouveau mot de passe"
+msgstr "New password"
+
+#: recuperation_mdp.php:24
+msgid "Confirmation mot de passe"
+msgstr "Password confirmation"
+
+#: recuperation_mdp.php:33
+msgid "Votre adresse mail "
+msgstr "Your e-mail address "
+
+#: recuperation_mdp.php:34
+msgid "Sélectionnez la méthode :"
+msgstr "Select the method :"
+
+#: recuperation_mdp.php:37
+msgid "Recevoir un lien par mail"
+msgstr "Get a link in an e-mail"
+
+#: recuperation_mdp.php:40
+msgid "Nouveau mot de passe aléatoire"
+msgstr "New random password"
