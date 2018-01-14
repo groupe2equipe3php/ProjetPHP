@@ -1,15 +1,9 @@
 <?php
-session_start();
-
-function initialiser_gettext()
+function initialiser_gettext($lang)
 {
-    if (!isset($_SESSION['lang'])) {
-        $_SESSION['lang'] = 'fr_FR';
-    }
-
     // Initialisation de gettext
-    putenv('LANG=' . $_SESSION['lang']);
-    setlocale(LC_ALL, $_SESSION['lang']);
+    putenv('LANG=' . $lang);
+    setlocale(LC_ALL, $lang);
 
     $domain = 'messages';
     bindtextdomain($domain, 'locale');

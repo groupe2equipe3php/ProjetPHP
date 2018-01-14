@@ -3,7 +3,20 @@ session_start();
 require_once '../gettext.inc.php';
 require_once '../utils.inc.php';
 
-initialiser_gettext();
+if(! isset($_SESSION['lang'])) {
+    $_SESSION['lang'] = 'fr_FR';
+}
+
+if(isset($_POST['selection_langue'])) {
+    if($_POST['selection_langue'] == 'francais') {
+        $_SESSION['lang'] = 'fr_FR';
+    }
+    else {
+        $_SESSION['lang'] = 'en_US';
+    }
+}
+
+initialiser_gettext($_SESSION['lang']);
 // _() est un alias de gettext()
 start_page(_("Traducteur Groupe 2 Équipe 3 IUT"));
 ?>
@@ -24,15 +37,8 @@ start_page(_("Traducteur Groupe 2 Équipe 3 IUT"));
 </style>
 
 <script>
-    function lang_francais() {
-        <?php $_SESSION['lang'] = 'fr_FR'; ?>
-    }
-    function lang_anglais() {
-        <?php $_SESSION['lang'] = 'en_US'; ?>
-    }
     function recharger() {
         location.reload(true);
-        window.open('', "<?php echo $_SESSION['lang'] ?>", '');
     }
 </script>
 
@@ -98,14 +104,10 @@ else {
     <form action="index.php" method="post">
         <p><?php echo _("Sélectionnez la langue du site ") ?></p>
 
-        <input type="radio" name="selection_langue" id="selection_langue_francais"
-               onchange="lang_francais();"
-               checked="<?php if($_SESSION['lang'] == 'fr_FR') { echo 'checked'; } ?>"/>
+        <input type="radio" name="selection_langue" value="francais" id="selection_langue_francais" />
         <label for="selection_langue_francais"><?php echo _("Français") ?></label>
 
-        <input type="radio" name="selection_langue" id="selection_langue_anglais"
-               onchange="lang_anglais();"
-               checked="<?php if($_SESSION['lang'] == 'en_US') { echo 'checked'; } ?>"/>
+        <input type="radio" name="selection_langue" value="anglais" id="selection_langue_anglais" />
         <label for="selection_langue_anglais"><?php echo _("Anglais") ?></label>
 
         <input type="submit" value="<?php echo _("Recharger") ?>" onclick="recharger();"/>

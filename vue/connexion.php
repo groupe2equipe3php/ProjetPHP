@@ -1,8 +1,9 @@
 <?php
+session_start();
 require_once '../gettext.inc.php';
 require_once '../utils.inc.php';
 
-initialiser_gettext();
+initialiser_gettext($_SESSION['lang']);
 start_page(_("Connexion"));
 ?>
 

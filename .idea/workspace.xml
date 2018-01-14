@@ -1,15 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9b153b6a-8cf0-4b8d-8437-19c7d8b947a0" name="Default" comment="">
+    <list default="true" id="9b153b6a-8cf0-4b8d-8437-19c7d8b947a0" name="Default" comment="Boutons radio et javascript pour changer la langue">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/controleur/user_deconnexion.php" afterPath="$PROJECT_DIR$/controleur/user_deconnexion.php" />
       <change beforePath="$PROJECT_DIR$/gettext.inc.php" afterPath="$PROJECT_DIR$/gettext.inc.php" />
       <change beforePath="$PROJECT_DIR$/vue/connexion.php" afterPath="$PROJECT_DIR$/vue/connexion.php" />
       <change beforePath="$PROJECT_DIR$/vue/index.php" afterPath="$PROJECT_DIR$/vue/index.php" />
       <change beforePath="$PROJECT_DIR$/vue/inscription.php" afterPath="$PROJECT_DIR$/vue/inscription.php" />
-      <change beforePath="$PROJECT_DIR$/vue/locale/en_US/LC_MESSAGES/messages.mo" afterPath="$PROJECT_DIR$/vue/locale/en_US/LC_MESSAGES/messages.mo" />
-      <change beforePath="$PROJECT_DIR$/vue/locale/en_US/LC_MESSAGES/messages.po" afterPath="$PROJECT_DIR$/vue/locale/en_US/LC_MESSAGES/messages.po" />
       <change beforePath="$PROJECT_DIR$/vue/recuperation_mdp.php" afterPath="$PROJECT_DIR$/vue/recuperation_mdp.php" />
     </list>
     <option name="TRACKING_ENABLED" value="true" />
@@ -20,25 +17,45 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/vue/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="35" column="5" lean-forward="true" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
-              <folding>
-                <marker date="1515954121503" expanded="true" signature="1010:1249" ph="..." />
-                <marker date="1515954121503" expanded="true" signature="1173:1249" ph="..." />
-              </folding>
+            <state relative-caret-position="324">
+              <caret line="18" column="39" lean-forward="true" selection-start-line="18" selection-start-column="39" selection-end-line="18" selection-end-column="39" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="gettext.inc.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gettext.inc.php">
+      <file leaf-file-name="connexion.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vue/connexion.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="18">
+              <caret line="1" column="16" lean-forward="false" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="inscription.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/vue/inscription.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="20" column="2" lean-forward="true" selection-start-line="20" selection-start-column="2" selection-end-line="20" selection-end-column="2" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="recuperation_mdp.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vue/recuperation_mdp.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="5" column="35" lean-forward="false" selection-start-line="5" selection-start-column="35" selection-end-line="5" selection-end-column="35" />
+              <folding>
+                <marker date="1515956597727" expanded="true" signature="1471:1836" ph="..." />
+                <marker date="1515956597727" expanded="true" signature="1993:2002" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -70,10 +87,10 @@
         <option value="$PROJECT_DIR$/controleur/user_deconnexion.php" />
         <option value="$PROJECT_DIR$/vue/locale/en_US/LC_MESSAGES/messages.po" />
         <option value="$PROJECT_DIR$/gettext.inc.php" />
-        <option value="$PROJECT_DIR$/vue/connexion.php" />
-        <option value="$PROJECT_DIR$/vue/inscription.php" />
-        <option value="$PROJECT_DIR$/vue/recuperation_mdp.php" />
         <option value="$PROJECT_DIR$/vue/index.php" />
+        <option value="$PROJECT_DIR$/vue/recuperation_mdp.php" />
+        <option value="$PROJECT_DIR$/vue/inscription.php" />
+        <option value="$PROJECT_DIR$/vue/connexion.php" />
       </list>
     </option>
   </component>
@@ -243,14 +260,22 @@
       <option name="project" value="LOCAL" />
       <updated>1515951824826</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Boutons radio et javascript pour changer la langue">
+      <created>1515954146178</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1515954146178</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13580000" />
+    <option name="totallyTimeSpent" value="15378000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1920" height="1053" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -259,7 +284,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23541667" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21927084" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21927084" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32979852" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -303,8 +328,8 @@
         <state relative-caret-position="595">
           <caret line="35" column="2" lean-forward="false" selection-start-line="35" selection-start-column="2" selection-end-line="35" selection-end-column="2" />
           <folding>
-            <marker date="1515953871998" expanded="true" signature="1454:1819" ph="..." />
-            <marker date="1515953871998" expanded="true" signature="1976:1985" ph="..." />
+            <marker date="1515956597727" expanded="true" signature="1471:1836" ph="..." />
+            <marker date="1515956597727" expanded="true" signature="1993:2002" ph="..." />
           </folding>
         </state>
       </provider>
@@ -613,49 +638,46 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vue/connexion.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" column="22" lean-forward="false" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vue/inscription.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" column="22" lean-forward="false" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vue/recuperation_mdp.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" column="34" lean-forward="false" selection-start-line="2" selection-start-column="34" selection-end-line="2" selection-end-column="34" />
-          <folding>
-            <marker date="1515953871998" expanded="true" signature="1454:1819" ph="..." />
-            <marker date="1515953871998" expanded="true" signature="1976:1985" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/gettext.inc.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="198">
+          <caret line="11" column="2" lean-forward="true" selection-start-line="11" selection-start-column="2" selection-end-line="11" selection-end-column="2" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/vue/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="35" column="5" lean-forward="true" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
+        <state relative-caret-position="324">
+          <caret line="18" column="39" lean-forward="true" selection-start-line="18" selection-start-column="39" selection-end-line="18" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue/connexion.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="1" column="16" lean-forward="false" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue/recuperation_mdp.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" column="35" lean-forward="false" selection-start-line="5" selection-start-column="35" selection-end-line="5" selection-end-column="35" />
           <folding>
-            <marker date="1515954121503" expanded="true" signature="1010:1249" ph="..." />
-            <marker date="1515954121503" expanded="true" signature="1173:1249" ph="..." />
+            <marker date="1515956597727" expanded="true" signature="1471:1836" ph="..." />
+            <marker date="1515956597727" expanded="true" signature="1993:2002" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue/inscription.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="20" column="2" lean-forward="true" selection-start-line="20" selection-start-column="2" selection-end-line="20" selection-end-column="2" />
+          <folding />
         </state>
       </provider>
     </entry>
