@@ -22,17 +22,26 @@ start_page('Traducteur Groupe 2 Équipe 3 IUT');
 <?php
 echo 'Test de gettext /!\ (ignorer)<br/>';
 
-$language = 'en';
-putenv("LANG=$language");
-setlocale(LC_ALL, $language);
+$_SESSION['locale'] = 'en';
+putenv("LANG=" . $_SESSION['locale']);
+setlocale(LC_ALL, $_SESSION['locale']);
 
-// Set the text domain as 'messages'
 $domain = 'messages';
 bindtextdomain($domain, "/www/locale");
+bind_textdomain_codeset($domain, 'UTF-8');
 textdomain($domain);
 
-gettext("Voici une chaine a traduire");
+// _() est un alias de gettext()
+echo _("Voici une chaine a traduire") . '<br/>';
 
+// dgettext() s'utilise comme _() mais accepte une traduction d'un domaine différent
+// s'il a été configuré avec textdomain()
+// echo dgettext("messages2", "");
+
+// ngettext() permet d'afficher la phrase au singulier s'il y a 1,
+// et pluriel sinon
+echo ngettext("%d page lue", "%d pages lues", 1) . '<br/>';
+echo ngettext("%d page lue", "%d pages lues", 5) . '<br/>';
 echo '<br/>';
 
 
