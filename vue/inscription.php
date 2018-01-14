@@ -1,6 +1,8 @@
 <?php
-require_once '../utils.inc.php';
 require_once '../gettext.inc.php';
+require_once '../utils.inc.php';
+
+initialiser_gettext();
 start_page(_("Inscription"));
 ?>
 

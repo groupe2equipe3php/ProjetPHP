@@ -1,7 +1,9 @@
 <?php
 session_start();
-require_once '../utils.inc.php';
 require_once '../gettext.inc.php';
+require_once '../utils.inc.php';
+
+initialiser_gettext();
 start_page(_("Récupération du mot de passe"));
 ?>
 
@@ -40,9 +42,9 @@ else {
         <label for="methode_mail"><?php echo _("Recevoir un lien par mail") ?></label>
 
         <input type="radio" name="aleatoire" id="methode_aleatoire"/>
-        <label for="methode_aleatoire"><?php echo _("Nouveau mot de passe aléatoire") ?>"</label>
+        <label for="methode_aleatoire"><?php echo _("Nouveau mot de passe aléatoire") ?></label>
 
-        <input type="submit" value="Valider" name="recup_submit"/>
+        <input type="submit" value="<?php echo _("Valider") ?>" name="recup_submit"/>
     </form><br/>
 
 <?php

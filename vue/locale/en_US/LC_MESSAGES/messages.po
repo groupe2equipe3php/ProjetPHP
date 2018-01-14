@@ -51,7 +51,7 @@ msgstr "Welcome "
 
 #: index.php:65
 msgid "Vous êtes connecté avec l'adresse "
-msgstr "You are connected as "
+msgstr "You are connected with "
 
 #: index.php:69
 msgid "Se déconnecter"
@@ -88,6 +88,10 @@ msgstr "English"
 #: index.php:105
 msgid "Changer de langue"
 msgstr "Switch"
+
+#: index.php:109
+msgid "Recharger"
+msgstr "Reload"
 
 #: inscription.php:3
 msgid "Inscription"

@@ -1,7 +1,9 @@
 <?php
 session_start();
+require_once '../gettext.inc.php';
 require_once '../utils.inc.php';
 
+initialiser_gettext();
 // _() est un alias de gettext()
 start_page(_("Traducteur Groupe 2 Équipe 3 IUT"));
 ?>
@@ -22,16 +24,20 @@ start_page(_("Traducteur Groupe 2 Équipe 3 IUT"));
 </style>
 
 <script>
-    if (document.getElementById('selection_langue_francais').checked) {
+    function lang_francais() {
         <?php $_SESSION['lang'] = 'fr_FR'; ?>
     }
-    else if (document.getElementById('selection_langue_anglais').checked) {
+    function lang_anglais() {
         <?php $_SESSION['lang'] = 'en_US'; ?>
+    }
+    function recharger() {
+        location.reload(true);
+        window.open('', "<?php echo $_SESSION['lang'] ?>", '');
     }
 </script>
 
 <?php
-require_once '../gettext.inc.php';
+echo $_SESSION['lang'] . '<br/><br/>';
 
 // Message de bienvenue
 if(is_null($_SESSION['pseudo'])) {
@@ -92,13 +98,17 @@ else {
     <form action="index.php" method="post">
         <p><?php echo _("Sélectionnez la langue du site ") ?></p>
 
-        <input type="radio" name="selection_langue" value="selection_langue_francais"/>
-        <label for="selection_langue1"><?php echo _("Français") ?></label>
+        <input type="radio" name="selection_langue" id="selection_langue_francais"
+               onchange="lang_francais();"
+               checked="<?php if($_SESSION['lang'] == 'fr_FR') { echo 'checked'; } ?>"/>
+        <label for="selection_langue_francais"><?php echo _("Français") ?></label>
 
-        <input type="radio" name="selection_langue" value="selection_langue_anglais"/>
-        <label for="selection_langue2"><?php echo _("Anglais") ?></label>
+        <input type="radio" name="selection_langue" id="selection_langue_anglais"
+               onchange="lang_anglais();"
+               checked="<?php if($_SESSION['lang'] == 'en_US') { echo 'checked'; } ?>"/>
+        <label for="selection_langue_anglais"><?php echo _("Anglais") ?></label>
 
-        <input type="submit" value="<?php echo _("Changer de langue") ?>"/>
+        <input type="submit" value="<?php echo _("Recharger") ?>" onclick="recharger();"/>
     </form>
     </div><br/>
 
