@@ -20,6 +20,22 @@ start_page('Traducteur Groupe 2 Équipe 3 IUT');
 </style>
 
 <?php
+echo 'Test de gettext /!\ (ignorer)<br/>';
+
+$language = 'en';
+putenv("LANG=$language");
+setlocale(LC_ALL, $language);
+
+// Set the text domain as 'messages'
+$domain = 'messages';
+bindtextdomain($domain, "/www/locale");
+textdomain($domain);
+
+gettext("Voici une chaine a traduire");
+
+echo '<br/>';
+
+
 // Message de bienvenue
 if(is_null($_SESSION['pseudo'])) {
     // L'utilisateur n'est pas connecté
