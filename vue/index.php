@@ -21,10 +21,12 @@ start_page('Traducteur Groupe 2 Équipe 3 IUT');
 
 <?php
 echo 'Test de gettext /!\ (ignorer)<br/>';
+//$_SESSION['locale'] = 'fr_FR.utf8';
+$_SESSION['locale'] = 'en_US.utf8';
 
-$_SESSION['locale'] = 'en';
-putenv("LANG=" . $_SESSION['locale']);
-setlocale(LC_ALL, $_SESSION['locale']);
+$locale = $_SESSION['locale'];
+putenv("LANG=" . $locale);
+setlocale(LC_MESSAGES, $locale);
 
 $domain = 'messages';
 bindtextdomain($domain, "/www/locale");
