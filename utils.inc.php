@@ -1,7 +1,7 @@
 <?php
 function start_page($title)
 {
-    echo '<!DOCTYPE html><html lang="fr_FR.utf8"><head><meta charset="UTF-8"/><title>'
+    echo '<!DOCTYPE html><html lang="fr_FR"><head><meta charset="UTF-8"/><title>'
         . PHP_EOL . $title . '</title></head><body>' . PHP_EOL;
 };
 
