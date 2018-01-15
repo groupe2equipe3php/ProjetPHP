@@ -20,8 +20,9 @@ if (is_null($email)) {
 
 if(bdd_user_verification_connexion($bdd, $email, $mdp)) {
     echo 'Connecté<br/>';
-    $_SESSION['pseudo'] = get_pseudo($bdd, $email);
     $_SESSION['email']  = $email;
+    $_SESSION['pseudo'] = get_pseudo($bdd, $email);
+    $_SESSION['user']   = new UtilisateurStandard();
 }
 else {
     echo 'Pas connecté.<br/>';
