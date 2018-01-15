@@ -1,9 +1,5 @@
 <?php
 session_start();
 session_destroy();
-
-echo 'Vous êtes déconnecté.<br/><br/>';
+header('Location: ../vue/index.php');
 ?>
-    <form action="../vue/index.php">
-        <input type="submit" value="Accueil"/><br/>
-    </form>
