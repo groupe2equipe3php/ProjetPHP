@@ -1,10 +1,12 @@
 <?php
 session_start();
-require_once('../utils.inc.php');
+require_once '../utils.inc.php';
 require_once '../modele/bdd_connexion.php';
-$bdd = bdd_connexion();
-start_page("Recuperation de mot de passe");
+require_once '../vue/recuperation_mdp.php';
 
+start_page(_("Recuperation de mot de passe"));
+
+$bdd = bdd_connexion();
 
 if(isset($_GET['section'])) {
     $section = htmlspecialchars($_GET['section']);
@@ -39,25 +41,25 @@ if(isset($_POST['recup_submit'],$_POST['recup_mail'] )){
                     $recup_insert->execute(array($recup_mail,$recup_code));
                 }
 
-                $message = '
+                $message = _("
                  
                     Voici votre code de récuperation: '.$recup_code.' 
                     
                 
-                 ' ;
+                 ");
 
-                mail($recup_mail, "Recuperation de mot de passe  " , $message );
+                mail($recup_mail, _("Recuperation de mot de passe") , $message );
                 header("Location:http://groupe2equipe3php.alwaysdata.net/controleur/user_recuperation_mdp.php?section=code");
 
             } else {
-                $error = "Cette adresse mail n'est pas enregistée" ;
+                $error = _("Cette adresse mail n'est pas enregistée");
             }
         } else {
-            $error = "Adresse mail incorrecte" ;
+            $error = _("Adresse mail incorrecte");
         }
 
     } else {
-        $error = 'Veuillez entrez votre adresse mail' ;
+        $error = _("Veuillez entrez votre adresse mail");
     }
 }
 
@@ -73,10 +75,10 @@ if(isset($_POST['verif_submit'],$_POST['verif_code'])) {
 
             header('Location:http://groupe2equipe3php.alwaysdata.net/controleur/user_recuperation_mdp.php?section=changemdp');
         } else {
-            $error ="Code invalide" ;
+            $error = _("Code invalide");
         }
     } else {
-        $error = "Veuillez entrer votre code de confirmation " ;
+        $error = _("Veuillez entrer votre code de confirmation");
     }
 }
 
@@ -98,18 +100,16 @@ if(isset($_POST['change_submit'])) {
                     $del_req->execute(array($_SESSION['recup_mail']));
                     header('Location:http://groupe2equipe3php.alwaysdata.net/vue/connexion.php');
                 } else {
-                    $error = "Vos mots de passe ne correspondent pas";
+                    $error = _("Vos mots de passe ne correspondent pas");
                 }
 
             } else {
-                $error = "Veuillez remplir tous les champs " ;
+                $error = _("Veuillez remplir tous les champs");
             }
         } else {
-            $error = "Veuillez valider votre mail grace au code de verification qui vous a été envoyé par mail" ;
+            $error = _("Veuillez valider votre mail grace au code de verification qui vous a été envoyé par mail");
         }
     } else {
-        $error = "Veuillez remplir tous les champs " ;
+        $error = _("Veuillez remplir tous les champs");
     }
 }
-
-require_once ('../vue/recuperation_mdp.php');

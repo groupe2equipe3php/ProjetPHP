@@ -5,7 +5,7 @@ function get_pseudo(PDO $bdd, $email) {
         $request->execute(array('email' => $email));
 
         if($request->rowCount() == 0) {
-            echo 'Cet utilisateur n\'est pas enregistré.<br/>';
+            echo _("Cet utilisateur n'est pas enregistré.") . '<br/>';
         }
         else {
             $data = $request->fetch();
@@ -24,7 +24,7 @@ function get_cle(PDO $bdd, $email) {
         $request->execute(array('email' => $email));
 
         if($request->rowCount() == 0) {
-            echo 'Cet utilisateur n\'est pas enregistré.<br/>';
+            echo _("Cet utilisateur n'est pas enregistré.") . '<br/>';
         }
         else {
             $data = $request->fetch();
@@ -43,7 +43,7 @@ function get_actif(PDO $bdd, $email) {
         $request->execute(array('email' => $email));
 
         if($request->rowCount() == 0) {
-            echo 'Cet utilisateur n\'est pas enregistré.<br/>';
+            echo _("Cet utilisateur n'est pas enregistré.") . '<br/>';
         }
         else {
             $data = $request->fetch();
@@ -62,7 +62,7 @@ function get_type(PDO $bdd, $email) {
         $request->execute(array('email' => $email));
 
         if($request->rowCount() == 0) {
-            echo 'Cet utilisateur n\'est pas enregistré.<br/>';
+            echo _("Cet utilisateur n'est pas enregistré.") . '<br/>';
         }
         else {
             $data = $request->fetch();

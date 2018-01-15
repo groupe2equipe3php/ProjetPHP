@@ -13,25 +13,23 @@ $bdd = bdd_connexion();
 
 $email  = $_POST['email'];
 $mdp    = $_POST['mdp'];
-//echo 'Identifiants récupérés.<br/>';
+echo _("Identifiants récupérés.") . '<br/>';
 
 if (is_null($email)) {
-    echo 'L\'e-mail n\'est pas renseigné.';
+    echo _("L'e-mail n'est pas renseigné.");
     die();
 } elseif (is_null($mdp)) {
-    echo 'Le mot de passe n\'est pas renseigné.';
+    echo _("Le mot de passe n'est pas renseigné.");
     die();
 }
 
 if(bdd_user_verification_connexion($bdd, $email, $mdp)) {
-    echo 'Connecté<br/>';
+    echo _("Connecté") . '<br/>';
     $_SESSION['email']  = $email;
     $_SESSION['pseudo'] = get_pseudo($bdd, $email);
     $_SESSION['user']   = null;
 
     $type = get_type($bdd, $email);
-    echo $type . '<br/>';
-
     switch($type) {
         case 's':
             $_SESSION['user'] = serialize(new UtilisateurStandard());
@@ -47,10 +45,10 @@ if(bdd_user_verification_connexion($bdd, $email, $mdp)) {
             break;
     }
 }
-/*else {
-    //echo 'Pas connecté.<br/>';
-}*/
+else {
+    echo _("Pas connecté.") . '<br/>';
+}
 ?>
     <form action="../vue/index.php">
-        <br/><input type="submit" value="Accueil"/><br/>
+        <br/><input type="submit" value="<?php echo _("Accueil") ?>"/><br/>
     </form>

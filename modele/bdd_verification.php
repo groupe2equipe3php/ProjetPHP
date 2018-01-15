@@ -21,22 +21,22 @@ function bdd_user_verification_connexion(PDO $bdd, $email, $mdp)
         $request->execute(array('email' => $email));
 
         if($request->rowCount() == 0) {
-            echo 'Cet utilisateur n\'est pas enregistré.<br/>';
+            echo _("Cet utilisateur n'est pas enregistré.") . '<br/>';
         }
         else {
             $data = $request->fetch();
 
             if($data['actif'] == 0) {
-                echo 'Votre compte n\'a pas encore été vérifié.<br/>';
+                echo _("Votre compte n'a pas encore été vérifié.") . '<br/>';
                 return false;
             }
 
             if(password_verify($mdp, $data['mdp'])) {
-                //echo 'Utilisateur connecté.<br/>';
+                echo _("Utilisateur connecté.") . '<br/>';
                 return true;
             }
             else {
-                echo 'Le mot de passe renseigné n\'est pas le bon<br/>';
+                echo _("Le mot de passe renseigné n'est pas le bon.") . '<br/>';
                 return false;
             }
         }

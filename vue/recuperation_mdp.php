@@ -11,7 +11,7 @@ start_page(_("Récupération du mot de passe"));
 
 <?php
 if($section == 'code') {
-    echo _("Un code de verification vous a ete envoyé par mail : ") . $_SESSION['recup_mail']
+    echo _("Un code de verification vous a été envoyé par mail : ") . $_SESSION['recup_mail']
 ?>
     <br/><br/>
     <form  method="post" class="default-form" >

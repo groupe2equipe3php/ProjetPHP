@@ -45,8 +45,6 @@ start_page(_("Traducteur Groupe 2 Équipe 3 IUT"));
 </script>
 
 <?php
-echo $_SESSION['lang'] . '<br/><br/>';
-
 // Message de bienvenue
 if(is_null($_SESSION['pseudo'])) {
     // L'utilisateur n'est pas connecté
@@ -74,21 +72,22 @@ else {
             <?= $_SESSION['pseudo'] ?>
     </strong> ! <?php echo _("Vous êtes connecté avec l'adresse ") ?> <strong>
             <?= $_SESSION['email'] ?>
-    </strong>.<br/>Vous êtes un utilisateur <strong><?php
+    </strong>.<br/>
+        <?php echo _("Vous êtes un utilisateur ") ?><strong><?php
         if(unserialize($_SESSION['user']) instanceof UtilisateurStandard) {
-            echo 'standard';
+            echo _("standard");
         }
         elseif(unserialize($_SESSION['user']) instanceof UtilisateurPremium) {
-            echo 'premium';
+            echo _("premium");
         }
         elseif(unserialize($_SESSION['user']) instanceof UtilisateurTraducteur) {
-            echo 'traducteur';
+            echo _("traducteur");
         }
         elseif(unserialize($_SESSION['user']) instanceof UtilisateurAdministrateur) {
-            echo 'administrateur';
+            echo _("administrateur");
         }
         else {
-            echo 'erreur';
+            echo _("erreur");
         }
     ?></strong>.</p>
 
@@ -112,9 +111,9 @@ else {
     </div><br/>
 
     <div class="bloc">
-    <p>Pour rechercher une traduction :</p>
+    <p><?php echo _("Pour rechercher une traduction :") ?></p>
     <form action="traduction.php" method="post">
-        <input type="submit" value="Je veux traduire !"/>
+        <input type="submit" value="<?php echo _("Je veux traduire !") ?>"/>
     </form>
     </div><br/>
 

@@ -13,17 +13,17 @@ $clebdd = get_cle($bdd, $email);
 $actif  = get_actif($bdd, $email);
 
 if($actif == '1') {
-    echo 'Votre compte est déjà actif !<br/>';
+    echo _("Votre compte est déjà actif !") . '<br/>';
 }
 else {
     if($cle == $clebdd) {
         bdd_set_actif($bdd, $email);
     }
     else {
-        echo 'Une erreur est survenue, votre compte n\'a pas été activé.<br/>';
+        echo _("Une erreur est survenue, votre compte n'a pas été activé.") . '<br/>';
     }
 }
 ?>
     <form action="../vue/index.php">
-        <br/><input type="submit" name="index" value="Accueil"/>
+        <br/><input type="submit" name="index" value="<?php echo _("Accueil") ?>"/>
     </form>
