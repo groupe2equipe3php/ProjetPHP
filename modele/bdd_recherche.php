@@ -58,7 +58,7 @@ function get_actif(PDO $bdd, $email) {
 
 function get_type(PDO $bdd, $email) {
     try {
-        $request = $bdd->prepare('SELECT type FROM user WHERE email = :email');
+        $request = $bdd->prepare('SELECT type_user FROM user WHERE email = :email');
         $request->execute(array('email' => $email));
 
         if($request->rowCount() == 0) {
@@ -66,7 +66,7 @@ function get_type(PDO $bdd, $email) {
         }
         else {
             $data = $request->fetch();
-            return $data['type'];
+            return $data['type_user'];
         }
     }
     catch(PDOException $exception) {

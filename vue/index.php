@@ -1,6 +1,11 @@
 <?php
 session_start();
 require_once '../utils.inc.php';
+require_once '../controleur/Utilisateur.php';
+require_once '../controleur/UtilisateurStandard.php';
+require_once '../controleur/UtilisateurPremium.php';
+require_once '../controleur/UtilisateurTraducteur.php';
+require_once '../controleur/UtilisateurAdministrateur.php';
 
 start_page('Traducteur Groupe 2 Équipe 3 IUT');
 ?>
@@ -47,20 +52,24 @@ else {
             <?= $_SESSION['pseudo'] ?>
     </strong> ! Vous êtes connecté avec l'adresse <strong>
             <?= $_SESSION['email'] ?>
-    </strong>. Vous êtes un utilisateur <?php
-        if($_SESSION['user'] instanceof UtilisateurStandard) {
-            echo 'standard.';
+    </strong>. Vous êtes un utilisateur <strong><?php
+        if(unserialize($_SESSION['user']) instanceof UtilisateurStandard) {
+            echo 'standard';
         }
         elseif($_SESSION['user'] instanceof UtilisateurPremium) {
-            echo 'premium.';
+            echo 'premium';
         }
         elseif($_SESSION['user'] instanceof UtilisateurTraducteur) {
-            echo 'traducteur.';
+            echo 'traducteur';
         }
         elseif($_SESSION['user'] instanceof UtilisateurAdministrateur) {
-            echo 'administrateur.';
+            echo 'administrateur';
         }
-    ?></p>
+        else {
+            echo 'erreur';
+        }
+        unserialize($_SESSION['user'])->getPseudo();
+    ?></strong>.</p>
 
     <form action="../controleur/user_deconnexion.php" method="post">
         <input type="submit" name="user_deconnexion" value="Se déconnecter"/>

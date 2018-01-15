@@ -9,5 +9,9 @@ class UtilisateurStandard extends Utilisateur
     {
         parent::__construct();
     }
+
+    public function getPseudo() {
+        return $this->pseudo;
+    }
 }
 ?>

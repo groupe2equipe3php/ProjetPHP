@@ -3,6 +3,11 @@ session_start();
 require_once '../modele/bdd_connexion.php';
 require_once '../modele/bdd_verification.php';
 require_once '../modele/bdd_recherche.php';
+require_once 'Utilisateur.php';
+require_once 'UtilisateurStandard.php';
+require_once 'UtilisateurPremium.php';
+require_once 'UtilisateurTraducteur.php';
+require_once 'UtilisateurAdministrateur.php';
 
 $bdd = bdd_connexion();
 
@@ -22,11 +27,14 @@ if(bdd_user_verification_connexion($bdd, $email, $mdp)) {
     echo 'Connecté<br/>';
     $_SESSION['email']  = $email;
     $_SESSION['pseudo'] = get_pseudo($bdd, $email);
+    $_SESSION['user']   = null;
 
     $type = get_type($bdd, $email);
+    echo $type . '<br/>';
+
     switch($type) {
         case 's':
-            $_SESSION['user'] = new UtilisateurStandard();
+            $_SESSION['user'] = serialize(new UtilisateurStandard());
             break;
         case 'p':
             $_SESSION['user'] = new UtilisateurPremium();
@@ -37,8 +45,6 @@ if(bdd_user_verification_connexion($bdd, $email, $mdp)) {
         case 'a':
             $_SESSION['user'] = new UtilisateurAdministrateur();
             break;
-        default:
-            $_SESSION['user'] = null;
     }
 }
 else {
