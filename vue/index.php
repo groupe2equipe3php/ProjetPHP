@@ -16,10 +16,7 @@ start_page('Traducteur Groupe 2 Équipe 3 IUT');
         font-size:0.9em;
         border-radius:2em;
 
-        padding-top:0.5em;
-        padding-left:2em;
-        padding-right:2em;
-        padding-bottom:0.5em;
+        padding: 0.5em 2em;
         margin-right:60%;
     }
 </style>

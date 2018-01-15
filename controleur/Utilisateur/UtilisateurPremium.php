@@ -20,4 +20,3 @@ class UtilisateurPremium extends Utilisateur
         return parent::getPseudo();
     }
 }
-?>

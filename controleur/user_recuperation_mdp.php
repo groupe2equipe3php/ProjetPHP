@@ -113,4 +113,3 @@ if(isset($_POST['change_submit'])) {
 }
 
 require_once ('../vue/recuperation_mdp.php');
-?>

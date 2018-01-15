@@ -46,4 +46,3 @@ function bdd_set_actif(PDO $bdd, $email) {
     }
     return true;
 }
-?>

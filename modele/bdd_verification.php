@@ -46,4 +46,3 @@ function bdd_user_verification_connexion(PDO $bdd, $email, $mdp)
     }
     return false;
 }
-?>

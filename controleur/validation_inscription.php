@@ -23,4 +23,3 @@ Ceci est un mail automatique, merci de ne pas y répondre.';
     }
     return false;
 }
-?>

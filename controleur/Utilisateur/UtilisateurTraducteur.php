@@ -20,4 +20,3 @@ class UtilisateurTraducteur extends Utilisateur
         return parent::getPseudo();
     }
 }
-?>

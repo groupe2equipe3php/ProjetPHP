@@ -47,9 +47,9 @@ if(bdd_user_verification_connexion($bdd, $email, $mdp)) {
             break;
     }
 }
-else {
+/*else {
     //echo 'Pas connecté.<br/>';
-}
+}*/
 ?>
     <form action="../vue/index.php">
         <br/><input type="submit" value="Accueil"/><br/>

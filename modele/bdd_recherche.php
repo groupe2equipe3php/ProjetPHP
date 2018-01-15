@@ -74,4 +74,3 @@ function get_type(PDO $bdd, $email) {
     }
     return null;
 }
-?>
