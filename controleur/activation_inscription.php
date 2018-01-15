@@ -1,4 +1,6 @@
 <?php
+session_start();
+require_once '../gettext.inc.php';
 require_once '../modele/bdd_connexion.php';
 require_once '../modele/bdd_recherche.php';
 require_once '../modele/bdd_insertion.php';

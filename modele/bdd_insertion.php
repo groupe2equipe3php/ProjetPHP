@@ -1,4 +1,7 @@
 <?php
+session_start();
+require_once '../gettext.inc.php';
+
 function bdd_user_insertion(PDO $bdd, $nom, $prenom, $pseudo, $email, $mdp) {
     try {
         $mdp_hash = password_hash($mdp, PASSWORD_DEFAULT);
@@ -9,8 +12,6 @@ function bdd_user_insertion(PDO $bdd, $nom, $prenom, $pseudo, $email, $mdp) {
 
         $request->execute(array('nom' => $nom, 'prenom' => $prenom, 'pseudo' => $pseudo, 'email' => $email,
             'mdp' => $mdp_hash, 'type_user' => 's'));
-
-        echo _("Données ajoutées à la base de données.") . '<br/>';
     }
     catch (PDOException $exception) {
         $exception->getMessage();
@@ -23,8 +24,6 @@ function bdd_set_cle(PDO $bdd, $cle, $email) {
     try {
         $request = $bdd->prepare('UPDATE user SET cle = :cle WHERE email LIKE :email');
         $request->execute(array('cle' => $cle, 'email' => $email));
-
-        echo _("Clé ajoutée à la base de données.") . '<br/>';
     }
     catch (PDOException $exception) {
         $exception->getMessage();
@@ -38,7 +37,7 @@ function bdd_set_actif(PDO $bdd, $email) {
         $request = $bdd->prepare('UPDATE user SET actif = 1 WHERE email like :email');
         $request->execute(array('email' => $email));
 
-        echo _("Votre compte a été activé.") . '<br/>';
+        //echo _("Votre compte a été activé.") . '<br/>';
     }
     catch (PDOException $exception) {
         $exception->getMessage();

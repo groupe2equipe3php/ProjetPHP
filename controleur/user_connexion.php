@@ -1,5 +1,6 @@
 <?php
 session_start();
+require_once '../gettext.inc.php';
 require_once '../modele/bdd_connexion.php';
 require_once '../modele/bdd_verification.php';
 require_once '../modele/bdd_recherche.php';
@@ -13,7 +14,6 @@ $bdd = bdd_connexion();
 
 $email  = $_POST['email'];
 $mdp    = $_POST['mdp'];
-echo _("Identifiants récupérés.") . '<br/>';
 
 if (is_null($email)) {
     echo _("L'e-mail n'est pas renseigné.");

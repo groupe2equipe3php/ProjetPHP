@@ -1,4 +1,7 @@
 <?php
+session_start();
+require_once '../gettext.inc.php';
+
 function get_pseudo(PDO $bdd, $email) {
     try {
         $request = $bdd->prepare('SELECT pseudo FROM user WHERE email = :email');

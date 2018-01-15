@@ -1,5 +1,7 @@
 <?php
 session_start();
+require_once '../gettext.inc.php';
+
 echo 'TODO<br/>';
 ?>
     <form action="../vue/index.php">

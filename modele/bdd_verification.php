@@ -1,4 +1,7 @@
 <?php
+session_start();
+require_once '../gettext.inc.php';
+
 function bdd_user_verification_inscription(PDO $bdd, $email) {
     try {
         $request = $bdd->prepare('SELECT * FROM user WHERE email = :email');
@@ -32,7 +35,6 @@ function bdd_user_verification_connexion(PDO $bdd, $email, $mdp)
             }
 
             if(password_verify($mdp, $data['mdp'])) {
-                echo _("Utilisateur connecté.") . '<br/>';
                 return true;
             }
             else {

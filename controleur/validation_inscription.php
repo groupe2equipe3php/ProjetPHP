@@ -1,4 +1,6 @@
 <?php
+session_start();
+require_once '../gettext.inc.php';
 require_once '../modele/bdd_connexion.php';
 
 function valider_inscription($email) {

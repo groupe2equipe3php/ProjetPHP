@@ -3,6 +3,7 @@ session_start();
 require_once '../utils.inc.php';
 require_once '../modele/bdd_connexion.php';
 require_once '../vue/recuperation_mdp.php';
+require_once '../gettext.inc.php';
 
 start_page(_("Recuperation de mot de passe"));
 

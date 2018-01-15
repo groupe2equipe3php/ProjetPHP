@@ -4,6 +4,7 @@ require_once '../modele/bdd_connexion.php';
 require_once '../modele/bdd_insertion.php';
 require_once '../modele/bdd_verification.php';
 require_once 'validation_inscription.php';
+require_once '../gettext.inc.php';
 
 $bdd = bdd_connexion();
 
@@ -12,7 +13,6 @@ $prenom = htmlspecialchars($_POST['prenom']);
 $pseudo = htmlspecialchars($_POST['pseudo']);
 $email  = htmlspecialchars($_POST['email']);
 $mdp    = htmlspecialchars($_POST['mdp']);
-echo _("Paramètres récupérés.") . '<br/>';
 
 if (is_null($nom)) {
     echo _("Le nom n'est pas renseigné.");
