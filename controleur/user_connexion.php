@@ -22,7 +22,24 @@ if(bdd_user_verification_connexion($bdd, $email, $mdp)) {
     echo 'Connecté<br/>';
     $_SESSION['email']  = $email;
     $_SESSION['pseudo'] = get_pseudo($bdd, $email);
-    $_SESSION['user']   = new UtilisateurStandard();
+
+    $type = get_type($bdd, $email);
+    switch($type) {
+        case 's':
+            $_SESSION['user'] = new UtilisateurStandard();
+            break;
+        case 'p':
+            $_SESSION['user'] = new UtilisateurPremium();
+            break;
+        case 't':
+            $_SESSION['user'] = new UtilisateurTraducteur();
+            break;
+        case 'a':
+            $_SESSION['user'] = new UtilisateurAdministrateur();
+            break;
+        default:
+            $_SESSION['user'] = null;
+    }
 }
 else {
     echo 'Pas connecté.<br/>';

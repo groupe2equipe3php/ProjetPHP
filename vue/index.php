@@ -47,7 +47,21 @@ else {
             <?= $_SESSION['pseudo'] ?>
     </strong> ! Vous êtes connecté avec l'adresse <strong>
             <?= $_SESSION['email'] ?>
-    </strong></p>
+    </strong>. Vous êtes un utilisateur <?php
+        if($_SESSION['user'] instanceof UtilisateurStandard) {
+            echo 'standard.';
+        }
+        elseif($_SESSION['user'] instanceof UtilisateurPremium) {
+            echo 'premium.';
+        }
+        elseif($_SESSION['user'] instanceof UtilisateurTraducteur) {
+            echo 'traducteur.';
+        }
+        elseif($_SESSION['user'] instanceof UtilisateurAdministrateur) {
+            echo 'administrateur.';
+        }
+    ?></p>
+
     <form action="../controleur/user_deconnexion.php" method="post">
         <input type="submit" name="user_deconnexion" value="Se déconnecter"/>
     </form>

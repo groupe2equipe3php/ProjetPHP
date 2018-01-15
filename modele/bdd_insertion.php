@@ -3,8 +3,13 @@ function bdd_user_insertion(PDO $bdd, $nom, $prenom, $pseudo, $email, $mdp) {
     try {
         $mdp_hash = password_hash($mdp, PASSWORD_DEFAULT);
 
-        $request = $bdd->prepare('INSERT INTO user (nom, prenom, pseudo, email, mdp) VALUES(:nom, :prenom, :pseudo, :email, :mdp)');
-        $request->execute(array('nom' => $nom, 'prenom' => $prenom, 'pseudo' => $pseudo, 'email' => $email, 'mdp' => $mdp_hash));
+        // Création d'un utilisateur standard
+        $request = $bdd->prepare('INSERT INTO user (nom, prenom, pseudo, email, mdp, type_user) '
+        . 'VALUES(:nom, :prenom, :pseudo, :email, :mdp, :type_user)');
+
+        $request->execute(array('nom' => $nom, 'prenom' => $prenom, 'pseudo' => $pseudo, 'email' => $email,
+            'mdp' => $mdp_hash, 'type_user' => 's'));
+
         echo 'Données ajoutées à la base de données.<br/>';
     }
     catch (PDOException $exception) {

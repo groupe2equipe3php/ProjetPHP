@@ -55,4 +55,23 @@ function get_actif(PDO $bdd, $email) {
     }
     return null;
 }
+
+function get_type(PDO $bdd, $email) {
+    try {
+        $request = $bdd->prepare('SELECT type FROM user WHERE email = :email');
+        $request->execute(array('email' => $email));
+
+        if($request->rowCount() == 0) {
+            echo 'Cet utilisateur n\'est pas enregistré.<br/>';
+        }
+        else {
+            $data = $request->fetch();
+            return $data['type'];
+        }
+    }
+    catch(PDOException $exception) {
+        $exception->getMessage();
+    }
+    return null;
+}
 ?>
