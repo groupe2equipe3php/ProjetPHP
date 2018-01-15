@@ -1,11 +1,11 @@
 <?php
 session_start();
 require_once '../utils.inc.php';
-require_once '../controleur/Utilisateur.php';
-require_once '../controleur/UtilisateurStandard.php';
-require_once '../controleur/UtilisateurPremium.php';
-require_once '../controleur/UtilisateurTraducteur.php';
-require_once '../controleur/UtilisateurAdministrateur.php';
+require_once '../controleur/Utilisateur/Utilisateur.php';
+require_once '../controleur/Utilisateur/UtilisateurStandard.php';
+require_once '../controleur/Utilisateur/UtilisateurPremium.php';
+require_once '../controleur/Utilisateur/UtilisateurTraducteur.php';
+require_once '../controleur/Utilisateur/UtilisateurAdministrateur.php';
 
 start_page('Traducteur Groupe 2 Équipe 3 IUT');
 ?>
@@ -52,23 +52,22 @@ else {
             <?= $_SESSION['pseudo'] ?>
     </strong> ! Vous êtes connecté avec l'adresse <strong>
             <?= $_SESSION['email'] ?>
-    </strong>. Vous êtes un utilisateur <strong><?php
+    </strong>.<br/>Vous êtes un utilisateur <strong><?php
         if(unserialize($_SESSION['user']) instanceof UtilisateurStandard) {
             echo 'standard';
         }
-        elseif($_SESSION['user'] instanceof UtilisateurPremium) {
+        elseif(unserialize($_SESSION['user']) instanceof UtilisateurPremium) {
             echo 'premium';
         }
-        elseif($_SESSION['user'] instanceof UtilisateurTraducteur) {
+        elseif(unserialize($_SESSION['user']) instanceof UtilisateurTraducteur) {
             echo 'traducteur';
         }
-        elseif($_SESSION['user'] instanceof UtilisateurAdministrateur) {
+        elseif(unserialize($_SESSION['user']) instanceof UtilisateurAdministrateur) {
             echo 'administrateur';
         }
         else {
             echo 'erreur';
         }
-        unserialize($_SESSION['user'])->getPseudo();
     ?></strong>.</p>
 
     <form action="../controleur/user_deconnexion.php" method="post">
@@ -91,14 +90,14 @@ else {
     </div><br/>
 
     <div class="bloc">
-    <form action="../controleur/traduction.php" method="post">
-        <label name="recherche_traduction">Saisir
-            <textarea name="recherche_traduction"></textarea>
-        </label>
-        <input type="submit" value="Traduire"/><br/><br/>
+    <p>Pour rechercher une traduction :</p>
+    <form action="traduction.php" method="post">
+        <input type="submit" value="Je veux traduire !"/>
     </form>
+    </div><br/>
 
     <!-- Sélection de la langue de saisie -->
+    <div class="bloc">
     <label for="selection_langue">Sélectionnez la langue du site</label>
     <select name="selection_langue" id="selection_langue">
         <?php
@@ -112,7 +111,7 @@ else {
             }
         ?>
     </select>
-    </div><br/>
+    </div>
 
 <?php
 end_page();

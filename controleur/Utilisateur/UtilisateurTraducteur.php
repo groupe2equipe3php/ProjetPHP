@@ -9,5 +9,15 @@ class UtilisateurTraducteur extends Utilisateur
     {
         parent::__construct();
     }
+
+    public function getEmail()
+    {
+        return parent::getEmail();
+    }
+
+    public function getPseudo()
+    {
+        return parent::getPseudo();
+    }
 }
 ?>

@@ -32,7 +32,7 @@ function bdd_user_verification_connexion(PDO $bdd, $email, $mdp)
             }
 
             if(password_verify($mdp, $data['mdp'])) {
-                echo 'Utilisateur connecté.<br/>';
+                //echo 'Utilisateur connecté.<br/>';
                 return true;
             }
             else {

@@ -1,12 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="df8976d7-e84a-401c-b492-02b397824a3a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controleur/UtilisateurStandard.php" afterPath="$PROJECT_DIR$/controleur/UtilisateurStandard.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controleur/user_connexion.php" afterPath="$PROJECT_DIR$/controleur/user_connexion.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modele/bdd_recherche.php" afterPath="$PROJECT_DIR$/modele/bdd_recherche.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vue/index.php" afterPath="$PROJECT_DIR$/vue/index.php" />
+    <list default="true" id="9b153b6a-8cf0-4b8d-8437-19c7d8b947a0" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/vue/locale/fr_FR/LC_MESSAGES/messages.mo" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/vue/locale/fr_FR/LC_MESSAGES/messages.po" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/vue/traduction.php" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/controleur/Utilisateur.php" afterPath="$PROJECT_DIR$/controleur/Utilisateur/Utilisateur.php" />
+      <change beforePath="$PROJECT_DIR$/controleur/UtilisateurAdministrateur.php" afterPath="$PROJECT_DIR$/controleur/Utilisateur/UtilisateurAdministrateur.php" />
+      <change beforePath="$PROJECT_DIR$/controleur/UtilisateurPremium.php" afterPath="$PROJECT_DIR$/controleur/Utilisateur/UtilisateurPremium.php" />
+      <change beforePath="$PROJECT_DIR$/controleur/UtilisateurStandard.php" afterPath="$PROJECT_DIR$/controleur/Utilisateur/UtilisateurStandard.php" />
+      <change beforePath="$PROJECT_DIR$/controleur/UtilisateurTraducteur.php" afterPath="$PROJECT_DIR$/controleur/Utilisateur/UtilisateurTraducteur.php" />
+      <change beforePath="$PROJECT_DIR$/controleur/traduction.php" afterPath="$PROJECT_DIR$/controleur/user_traduction.php" />
+      <change beforePath="$PROJECT_DIR$/controleur/user_connexion.php" afterPath="$PROJECT_DIR$/controleur/user_connexion.php" />
+      <change beforePath="$PROJECT_DIR$/modele/bdd_connexion.php" afterPath="$PROJECT_DIR$/modele/bdd_connexion.php" />
+      <change beforePath="$PROJECT_DIR$/modele/bdd_verification.php" afterPath="$PROJECT_DIR$/modele/bdd_verification.php" />
+      <change beforePath="$PROJECT_DIR$/vue/index.php" afterPath="$PROJECT_DIR$/vue/index.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -15,53 +24,14 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
+    <leaf>
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/vue/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="558">
-              <caret line="70" column="38" lean-forward="false" selection-start-line="70" selection-start-column="38" selection-end-line="70" selection-end-column="38" />
+            <state relative-caret-position="1746">
+              <caret line="97" column="0" lean-forward="true" selection-start-line="97" selection-start-column="0" selection-end-line="97" selection-end-column="0" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="user_connexion.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/controleur/user_connexion.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="648">
-              <caret line="48" column="1" lean-forward="true" selection-start-line="48" selection-start-column="1" selection-end-line="48" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="bdd_verification.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/modele/bdd_verification.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="733">
-              <caret line="48" column="2" lean-forward="true" selection-start-line="48" selection-start-column="2" selection-end-line="48" selection-end-column="2" />
-              <folding>
-                <marker date="1516021512740" expanded="true" signature="113:152" ph="SELECT * FRO... user" />
-                <marker date="1516021512740" expanded="true" signature="501:556" ph="SELECT email... user" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="bdd_recherche.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/modele/bdd_recherche.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="733">
-              <caret line="76" column="2" lean-forward="true" selection-start-line="76" selection-start-column="2" selection-end-line="76" selection-end-column="2" />
-              <folding>
-                <marker date="1516025689484" expanded="true" signature="90:134" ph="SELECT pseud... user" />
-                <marker date="1516025689484" expanded="true" signature="590:631" ph="SELECT cle F... user" />
-                <marker date="1516025689484" expanded="true" signature="1086:1129" ph="SELECT actif... user" />
-                <marker date="1516025689484" expanded="true" signature="1585:1632" ph="SELECT type_... user" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -77,38 +47,33 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="traduction" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/controleur/user_validation_inscription.php" />
-        <option value="$PROJECT_DIR$/controleur/user_activation_inscription.php" />
-        <option value="$PROJECT_DIR$/controleur/recuperation_mdp_aleatoire.php" />
-        <option value="$PROJECT_DIR$/vue/vue_recuperation_mdp_mail.php" />
-        <option value="$PROJECT_DIR$/controleur/recuperation_mdp_mail.php" />
+        <option value="$PROJECT_DIR$/messages.po" />
+        <option value="$PROJECT_DIR$/locale/en/LC_MESSAGES/messages.po" />
+        <option value="$PROJECT_DIR$/locale/fr/LC_MESSAGES/messages.po" />
+        <option value="$PROJECT_DIR$/vue/locale/fr_FR/LC_MESSAGES/messages.po" />
+        <option value="$PROJECT_DIR$/vue/gettext.inc.php" />
+        <option value="$PROJECT_DIR$/controleur/user_deconnexion.php" />
+        <option value="$PROJECT_DIR$/vue/locale/en_US/LC_MESSAGES/messages.po" />
+        <option value="$PROJECT_DIR$/gettext.inc.php" />
+        <option value="$PROJECT_DIR$/vue/recuperation_mdp.php" />
         <option value="$PROJECT_DIR$/vue/inscription.php" />
         <option value="$PROJECT_DIR$/vue/connexion.php" />
-        <option value="$PROJECT_DIR$/controleur/validation_inscription.php" />
-        <option value="$PROJECT_DIR$/controleur/activation_inscription.php" />
-        <option value="$PROJECT_DIR$/modele/bdd_verification.php" />
-        <option value="$PROJECT_DIR$/controleur/user_inscription.php" />
-        <option value="$PROJECT_DIR$/controleur/user_recuperation_mdp.php" />
-        <option value="$PROJECT_DIR$/vue/recuperation_mdp.php" />
-        <option value="&lt;c3f993bb-196d-48a1-b382-397fb9914233&gt;/controleur/user_inscription.php" />
-        <option value="&lt;c3f993bb-196d-48a1-b382-397fb9914233&gt;/vue/recuperation_mdp.php" />
-        <option value="&lt;c3f993bb-196d-48a1-b382-397fb9914233&gt;/controleur/user_recuperation_mdp.php" />
-        <option value="&lt;c3f993bb-196d-48a1-b382-397fb9914233&gt;/vue/traduction.php" />
-        <option value="$PROJECT_DIR$/controleur/Utilisateur.php" />
-        <option value="$PROJECT_DIR$/controleur/UtilisateurPremium.php" />
-        <option value="$PROJECT_DIR$/controleur/UtilisateurTraducteur.php" />
-        <option value="$PROJECT_DIR$/UtilisateurAdministrateur.php" />
-        <option value="$PROJECT_DIR$/modele/bdd_insertion.php" />
-        <option value="$PROJECT_DIR$/modele/bdd_recherche.php" />
-        <option value="$PROJECT_DIR$/controleur/UtilisateurStandard.php" />
+        <option value="$PROJECT_DIR$/controleur/Utilisateur/Utilisateur.php" />
+        <option value="$PROJECT_DIR$/controleur/Utilisateur/UtilisateurStandard.php" />
+        <option value="$PROJECT_DIR$/controleur/Utilisateur/UtilisateurAdministrateur.php" />
+        <option value="$PROJECT_DIR$/controleur/Utilisateur/UtilisateurPremium.php" />
+        <option value="$PROJECT_DIR$/controleur/Utilisateur/UtilisateurTraducteur.php" />
+        <option value="$PROJECT_DIR$/modele/bdd_connexion.php" />
         <option value="$PROJECT_DIR$/controleur/user_connexion.php" />
+        <option value="$PROJECT_DIR$/modele/bdd_verification.php" />
+        <option value="$PROJECT_DIR$/vue/traduction.php" />
         <option value="$PROJECT_DIR$/vue/index.php" />
       </list>
     </option>
@@ -123,11 +88,11 @@
     <servers />
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds">
-    <option name="x" value="-1" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="960" />
     <option name="y" value="27" />
-    <option name="width" value="1682" />
-    <option name="height" value="1024" />
+    <option name="width" value="960" />
+    <option name="height" value="1053" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -147,62 +112,59 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ProjetPHP" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ProjetPHP" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ProjetPHP" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ProjetPHP" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="vue" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ProjetPHP" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ProjetPHP" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="modele" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ProjetPHP" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ProjetPHP" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controleur" />
-              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
-            </PATH_ELEMENT>
-          </PATH>
+          <expand>
+            <path>
+              <item name="ProjetPHP" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ProjetPHP" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="ProjetPHP" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ProjetPHP" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="controleur" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="ProjetPHP" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ProjetPHP" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="controleur" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Utilisateur" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="ProjetPHP" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ProjetPHP" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="modele" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="ProjetPHP" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ProjetPHP" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="vue" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="ProjetPHP" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ProjetPHP" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="vue" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="locale" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="ProjetPHP" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ProjetPHP" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="vue" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="locale" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="fr_FR" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="ProjetPHP" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ProjetPHP" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="vue" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="locale" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="fr_FR" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="LC_MESSAGES" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+          </expand>
+          <select />
         </subPane>
       </pane>
     </panes>
@@ -214,11 +176,18 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
-    <property name="Git.Branch.Popup.ShowAllRemotes" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/vue" />
+      <recent name="$PROJECT_DIR$/locale/fr/LC_MESSAGES" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/controleur" />
+      <recent name="$PROJECT_DIR$/controleur/Utilisateur" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/locale/fr_FR.utf8/LC_MESSAGES" />
+      <recent name="$PROJECT_DIR$/locale/en_US.utf8/LC_MESSAGES" />
+      <recent name="$PROJECT_DIR$/locale/fr/LC_MESSAGES" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -233,75 +202,6 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
-    <configuration default="true" type="CodeceptionConfigurationType" factoryName="Codeception">
-      <PhpTestRunnerSettings />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavaScriptTestRunnerJest" factoryName="Jest">
-      <node-interpreter value="project" />
-      <working-dir value="" />
-      <envs />
-      <scope-kind value="ALL" />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavaScriptTestRunnerProtractor" factoryName="Protractor">
-      <config-file value="" />
-      <node-interpreter value="project" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
-      <method />
-    </configuration>
-    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="project" working-dir="">
-      <method />
-    </configuration>
-    <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
-      <TestRunner />
-      <method />
-    </configuration>
-    <configuration default="true" type="PhpBehatConfigurationType" factoryName="Behat">
-      <BehatRunner />
-      <method />
-    </configuration>
-    <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
-      <method />
-    </configuration>
-    <configuration default="true" type="PhpSpecConfigurationType" factoryName="PHPSpec">
-      <PhpTestRunnerSettings />
-      <method />
-    </configuration>
-    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
-      <node-interpreter>project</node-interpreter>
-      <node-options />
-      <gulpfile />
-      <tasks />
-      <arguments />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
-      <command value="run" />
-      <scripts />
-      <node-interpreter value="project" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="mocha-javascript-test-runner" factoryName="Mocha">
-      <node-interpreter>project</node-interpreter>
-      <node-options />
-      <working-directory />
-      <pass-parent-env>true</pass-parent-env>
-      <envs />
-      <ui />
-      <extra-mocha-options />
-      <test-kind>DIRECTORY</test-kind>
-      <test-directory />
-      <recursive>false</recursive>
-      <method />
-    </configuration>
-  </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
   </component>
@@ -309,217 +209,131 @@
     <configuration />
   </component>
   <component name="TaskManager">
-    <task active="true" id="Default" summary="Default task">
-      <changelist id="df8976d7-e84a-401c-b492-02b397824a3a" name="Default" comment="" />
-      <created>1514205321022</created>
-      <option name="number" value="Default" />
-      <option name="presentableId" value="Default" />
-      <updated>1514205321022</updated>
-      <workItem from="1514205322145" duration="187000" />
-      <workItem from="1514549372963" duration="5810000" />
-      <workItem from="1514834003995" duration="3416000" />
-      <workItem from="1514894912080" duration="1686000" />
-      <workItem from="1515090060915" duration="54000" />
-      <workItem from="1515490780453" duration="5252000" />
-    </task>
-    <task id="LOCAL-00001" summary="Style de vue/index.php et merge sur master">
-      <created>1514205410770</created>
+    <task id="LOCAL-00001" summary="Début d'utilisation de gettext()">
+      <created>1515942082768</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1514205410770</updated>
+      <updated>1515942082768</updated>
     </task>
-    <task id="LOCAL-00002" summary="Vérification de l'inscription terminée">
-      <created>1514563582830</created>
+    <task id="LOCAL-00002" summary="messages.mo et messages.po dans locale/en/LC_MESSAGES">
+      <created>1515942305016</created>
       <option name="number" value="00002" />
       <option name="presentableId" value="LOCAL-00002" />
       <option name="project" value="LOCAL" />
-      <updated>1514563582830</updated>
+      <updated>1515942305016</updated>
     </task>
-    <task id="LOCAL-00003" summary="Vérification de l'inscription terminée">
-      <created>1514563595715</created>
+    <task id="LOCAL-00003" summary="Ajout des fonctions de traduction et fichiers de traduction vers le français">
+      <created>1515943935368</created>
       <option name="number" value="00003" />
       <option name="presentableId" value="LOCAL-00003" />
       <option name="project" value="LOCAL" />
-      <updated>1514563595715</updated>
+      <updated>1515943935368</updated>
     </task>
-    <task id="LOCAL-00004" summary="Commencement de la récupération du mot de passe">
-      <created>1514836194334</created>
+    <task id="LOCAL-00004" summary="Charset correct">
+      <created>1515944290762</created>
       <option name="number" value="00004" />
       <option name="presentableId" value="LOCAL-00004" />
       <option name="project" value="LOCAL" />
-      <updated>1514836194344</updated>
+      <updated>1515944290762</updated>
     </task>
-    <task id="LOCAL-00005" summary="Page de sélection">
-      <created>1514837735597</created>
+    <task id="LOCAL-00005" summary="Renommage">
+      <created>1515944932118</created>
       <option name="number" value="00005" />
       <option name="presentableId" value="LOCAL-00005" />
       <option name="project" value="LOCAL" />
-      <updated>1514837735597</updated>
+      <updated>1515944932118</updated>
     </task>
-    <task id="LOCAL-00006" summary="Page de sélection">
-      <created>1514838140810</created>
+    <task id="LOCAL-00006" summary="gettext() ok">
+      <created>1515947143117</created>
       <option name="number" value="00006" />
       <option name="presentableId" value="LOCAL-00006" />
       <option name="project" value="LOCAL" />
-      <updated>1514838140810</updated>
+      <updated>1515947143117</updated>
     </task>
-    <task id="LOCAL-00007" summary="Ajout de urlencode() et urldecode()">
-      <created>1514896235115</created>
+    <task id="LOCAL-00007" summary="Boutons radio et javascript pour changer la langue">
+      <created>1515951824826</created>
       <option name="number" value="00007" />
       <option name="presentableId" value="LOCAL-00007" />
       <option name="project" value="LOCAL" />
-      <updated>1514896235115</updated>
+      <updated>1515951824826</updated>
     </task>
-    <task id="LOCAL-00008" summary="Création des types d'utilisateur">
-      <created>1516023963387</created>
+    <task id="LOCAL-00008" summary="Boutons radio et javascript pour changer la langue">
+      <created>1515954146178</created>
       <option name="number" value="00008" />
       <option name="presentableId" value="LOCAL-00008" />
       <option name="project" value="LOCAL" />
-      <updated>1516023963387</updated>
+      <updated>1515954146178</updated>
     </task>
-    <task id="LOCAL-00009" summary="Gestion des utilisateurs à l'inscription et la connexion">
-      <created>1516024870522</created>
+    <task id="LOCAL-00009" summary="Suppression du javascript, sélection langue ok">
+      <created>1515956702889</created>
       <option name="number" value="00009" />
       <option name="presentableId" value="LOCAL-00009" />
       <option name="project" value="LOCAL" />
-      <updated>1516024870522</updated>
+      <updated>1515956702889</updated>
+    </task>
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9b153b6a-8cf0-4b8d-8437-19c7d8b947a0" name="Default" comment="" />
+      <created>1516039754367</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1516039754367</updated>
+      <workItem from="1516039760310" duration="1439000" />
     </task>
     <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19985000" />
+    <option name="totallyTimeSpent" value="16846000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="27" width="1682" height="1024" extended-state="6" />
-    <editor active="true" />
+    <frame x="0" y="27" width="1920" height="1053" extended-state="6" />
     <layout>
-      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26964286" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19880952" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32873806" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Remote Host" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23541667" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21927084" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Command Line Tools Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32963374" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32963374" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Remote Host" active="true" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22646007" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Command Line Tools Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32963374" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21513706" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32979852" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="processedProjectFiles" value="true" />
+    <option name="version" value="1" />
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Style de vue/index.php et merge sur master" />
-    <MESSAGE value="Vérification de l'inscription terminée" />
-    <MESSAGE value="Commencement de la récupération du mot de passe" />
-    <MESSAGE value="Page de sélection" />
-    <MESSAGE value="Ajout de urlencode() et urldecode()" />
-    <MESSAGE value="Création des types d'utilisateur" />
-    <MESSAGE value="Gestion des utilisateurs à l'inscription et la connexion" />
-    <option name="LAST_COMMIT_MESSAGE" value="Gestion des utilisateurs à l'inscription et la connexion" />
+    <MESSAGE value="Début d'utilisation de gettext()" />
+    <MESSAGE value="messages.mo et messages.po dans locale/en/LC_MESSAGES" />
+    <MESSAGE value="Ajout des fonctions de traduction et fichiers de traduction vers le français" />
+    <MESSAGE value="Charset correct" />
+    <MESSAGE value="Renommage" />
+    <MESSAGE value="gettext() ok" />
+    <MESSAGE value="Boutons radio et javascript pour changer la langue" />
+    <MESSAGE value="Suppression du javascript, sélection langue ok" />
+    <option name="LAST_COMMIT_MESSAGE" value="Suppression du javascript, sélection langue ok" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/controleur/user_inscription.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="42" lean-forward="false" selection-start-line="13" selection-start-column="42" selection-end-line="13" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controleur/user_recuperation_mdp.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1955">
-          <caret line="115" column="2" lean-forward="false" selection-start-line="115" selection-start-column="2" selection-end-line="115" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modele/bdd_verification.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="9" lean-forward="false" selection-start-line="1" selection-start-column="9" selection-end-line="1" selection-end-column="9" />
-          <folding>
-            <marker date="1516021512740" expanded="true" signature="113:152" ph="SELECT * FRO... user" />
-            <marker date="1516021512740" expanded="true" signature="501:556" ph="SELECT email... user" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vue/recuperation_mdp.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="35" column="2" lean-forward="false" selection-start-line="35" selection-start-column="2" selection-end-line="35" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controleur/user_inscription.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modele/bdd_verification.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="9" lean-forward="false" selection-start-line="1" selection-start-column="9" selection-end-line="1" selection-end-column="9" />
-          <folding>
-            <marker date="1516021512740" expanded="true" signature="113:152" ph="SELECT * FRO... user" />
-            <marker date="1516021512740" expanded="true" signature="501:556" ph="SELECT email... user" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controleur/user_inscription.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controleur/validation_inscription.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="23" column="2" lean-forward="true" selection-start-line="23" selection-start-column="2" selection-end-line="23" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vue/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -546,7 +360,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="468">
           <caret line="26" column="11" lean-forward="true" selection-start-line="26" selection-start-column="11" selection-end-line="26" selection-end-column="11" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -561,12 +374,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
           <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding>
-            <marker date="1516024812200" expanded="true" signature="234:295" ph="INSERT INTO user... " />
-            <marker date="1516024812200" expanded="true" signature="234:365" ph="INSERT INTO user... " />
-            <marker date="1516024812200" expanded="true" signature="810:860" ph="UPDATE user " />
-            <marker date="1516024812200" expanded="true" signature="1202:1251" ph="UPDATE user " />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -575,8 +383,8 @@
         <state relative-caret-position="306">
           <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
           <folding>
-            <marker date="1516021512740" expanded="true" signature="113:152" ph="SELECT * FRO... user" />
-            <marker date="1516021512740" expanded="true" signature="501:556" ph="SELECT email... user" />
+            <marker date="1516041604975" expanded="true" signature="113:152" ph="SELECT * FRO... user" />
+            <marker date="1516041604975" expanded="true" signature="501:556" ph="SELECT email... user" />
           </folding>
         </state>
       </provider>
@@ -585,7 +393,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="414">
           <caret line="23" column="2" lean-forward="false" selection-start-line="23" selection-start-column="2" selection-end-line="23" selection-end-column="2" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -601,7 +408,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="864">
           <caret line="48" column="11" lean-forward="false" selection-start-line="48" selection-start-column="11" selection-end-line="48" selection-end-column="11" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -646,7 +452,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -654,7 +459,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="414">
           <caret line="23" column="2" lean-forward="true" selection-start-line="23" selection-start-column="2" selection-end-line="23" selection-end-column="2" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -665,28 +469,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controleur/user_deconnexion.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vue/vue_recuperation_mdp_mail.php" />
     <entry file="file://$PROJECT_DIR$/controleur/recuperation_mdp_lien.php" />
-    <entry file="file://$PROJECT_DIR$/modele/bdd_connexion.php">
+    <entry file="file://$PROJECT_DIR$/modele/bdd_recherche.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="14" column="2" lean-forward="false" selection-start-line="14" selection-start-column="2" selection-end-line="14" selection-end-column="2" />
-          <folding />
+        <state relative-caret-position="0">
+          <caret line="0" column="5" lean-forward="false" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vue/recuperation_mdp.php">
+    <entry file="file://$PROJECT_DIR$/controleur/user_inscription.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="2" lean-forward="true" selection-start-line="3" selection-start-column="2" selection-end-line="3" selection-end-column="2" />
-          <folding />
+        <state relative-caret-position="221">
+          <caret line="13" column="42" lean-forward="false" selection-start-line="13" selection-start-column="42" selection-end-line="13" selection-end-column="42" />
         </state>
       </provider>
     </entry>
@@ -694,7 +489,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="541">
           <caret line="115" column="2" lean-forward="false" selection-start-line="115" selection-start-column="2" selection-end-line="115" selection-end-column="2" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -702,15 +496,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="14" column="54" lean-forward="true" selection-start-line="14" selection-start-column="54" selection-end-line="14" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controleur/activation_inscription.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="39" lean-forward="true" selection-start-line="8" selection-start-column="39" selection-end-line="8" selection-end-column="39" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -722,41 +507,136 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controleur/UtilisateurPremium.php">
+    <entry file="file://$PROJECT_DIR$/modele/bdd_insertion.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="12" column="2" lean-forward="true" selection-start-line="12" selection-start-column="2" selection-end-line="12" selection-end-column="2" />
+        <state relative-caret-position="51">
+          <caret line="3" column="58" lean-forward="true" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="58" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controleur/UtilisateurTraducteur.php">
+    <entry file="file://$PROJECT_DIR$/messages.po" />
+    <entry file="file://$PROJECT_DIR$/messages.pot" />
+    <entry file="file://$PROJECT_DIR$/locale/fr_FR.utf8/LC_MESSAGES/messages.po" />
+    <entry file="file://$PROJECT_DIR$/locale/en_US.utf8/LC_MESSAGES/messages.po" />
+    <entry file="file://$PROJECT_DIR$/vue/locale/fr_FR/LC_MESSAGES/messages.po" />
+    <entry file="file://$PROJECT_DIR$/controleur/activation_inscription.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="12" column="2" lean-forward="true" selection-start-line="12" selection-start-column="2" selection-end-line="12" selection-end-column="2" />
-          <folding />
+        <state relative-caret-position="144">
+          <caret line="8" column="39" lean-forward="true" selection-start-line="8" selection-start-column="39" selection-end-line="8" selection-end-column="39" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vue/connexion.php">
+    <entry file="file://$PROJECT_DIR$/controleur/user_deconnexion.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="11" column="2" lean-forward="false" selection-start-line="11" selection-start-column="2" selection-end-line="11" selection-end-column="2" />
-          <folding>
-            <marker date="1516023923664" expanded="true" signature="366:379" ph="..." />
-          </folding>
+        <state relative-caret-position="72">
+          <caret line="4" column="2" lean-forward="true" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="2" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/vue/locale/en_US/LC_MESSAGES/messages.po">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="20" column="17" lean-forward="true" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
+        <state relative-caret-position="558">
+          <caret line="94" column="0" lean-forward="false" selection-start-line="94" selection-start-column="0" selection-end-line="94" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils.inc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/gettext.inc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="11" column="2" lean-forward="true" selection-start-line="11" selection-start-column="2" selection-end-line="11" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue/connexion.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="1" column="16" lean-forward="false" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vue/recuperation_mdp.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" column="35" lean-forward="false" selection-start-line="5" selection-start-column="35" selection-end-line="5" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/vue/inscription.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="20" column="2" lean-forward="true" selection-start-line="20" selection-start-column="2" selection-end-line="20" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controleur/Utilisateur/Utilisateur.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="21" column="2" lean-forward="true" selection-start-line="21" selection-start-column="2" selection-end-line="21" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controleur/Utilisateur/UtilisateurAdministrateur.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="21" column="1" lean-forward="true" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controleur/Utilisateur/UtilisateurPremium.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="22" column="2" lean-forward="true" selection-start-line="22" selection-start-column="2" selection-end-line="22" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controleur/Utilisateur/UtilisateurStandard.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="22" column="2" lean-forward="true" selection-start-line="22" selection-start-column="2" selection-end-line="22" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controleur/Utilisateur/UtilisateurTraducteur.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="22" column="2" lean-forward="true" selection-start-line="22" selection-start-column="2" selection-end-line="22" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modele/bdd_connexion.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" column="10" lean-forward="false" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modele/bdd_verification.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="34" column="18" lean-forward="false" selection-start-line="34" selection-start-column="18" selection-end-line="34" selection-end-column="18" />
+          <folding>
+            <marker date="1516041604975" expanded="true" signature="113:152" ph="SELECT * FRO... user" />
+            <marker date="1516041604975" expanded="true" signature="501:556" ph="SELECT email... user" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controleur/user_connexion.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="15" column="2" lean-forward="true" selection-start-line="15" selection-start-column="2" selection-end-line="15" selection-end-column="2" />
@@ -764,87 +644,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/modele/bdd_insertion.php">
+    <entry file="file://$PROJECT_DIR$/vue/traduction.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding>
-            <marker date="1516024812200" expanded="true" signature="234:295" ph="INSERT INTO user... " />
-            <marker date="1516024812200" expanded="true" signature="234:365" ph="INSERT INTO user... " />
-            <marker date="1516024812200" expanded="true" signature="810:860" ph="UPDATE user " />
-            <marker date="1516024812200" expanded="true" signature="1202:1251" ph="UPDATE user " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controleur/user_inscription.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="733">
-          <caret line="52" column="11" lean-forward="true" selection-start-line="52" selection-start-column="11" selection-end-line="52" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controleur/Utilisateur.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="13" column="2" lean-forward="true" selection-start-line="13" selection-start-column="2" selection-end-line="13" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modele/bdd_verification.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="733">
-          <caret line="48" column="2" lean-forward="true" selection-start-line="48" selection-start-column="2" selection-end-line="48" selection-end-column="2" />
-          <folding>
-            <marker date="1516021512740" expanded="true" signature="113:152" ph="SELECT * FRO... user" />
-            <marker date="1516021512740" expanded="true" signature="501:556" ph="SELECT email... user" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modele/bdd_recherche.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="733">
-          <caret line="76" column="2" lean-forward="true" selection-start-line="76" selection-start-column="2" selection-end-line="76" selection-end-column="2" />
-          <folding>
-            <marker date="1516025689484" expanded="true" signature="90:134" ph="SELECT pseud... user" />
-            <marker date="1516025689484" expanded="true" signature="590:631" ph="SELECT cle F... user" />
-            <marker date="1516025689484" expanded="true" signature="1086:1129" ph="SELECT actif... user" />
-            <marker date="1516025689484" expanded="true" signature="1585:1632" ph="SELECT type_... user" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controleur/UtilisateurAdministrateur.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="10" column="5" lean-forward="true" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controleur/UtilisateurStandard.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="16" column="2" lean-forward="true" selection-start-line="16" selection-start-column="2" selection-end-line="16" selection-end-column="2" />
+        <state relative-caret-position="36">
+          <caret line="2" column="2" lean-forward="true" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="2" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/vue/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="558">
-          <caret line="70" column="38" lean-forward="false" selection-start-line="70" selection-start-column="38" selection-end-line="70" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controleur/user_connexion.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="648">
-          <caret line="48" column="1" lean-forward="true" selection-start-line="48" selection-start-column="1" selection-end-line="48" selection-end-column="1" />
+        <state relative-caret-position="1746">
+          <caret line="97" column="0" lean-forward="true" selection-start-line="97" selection-start-column="0" selection-end-line="97" selection-end-column="0" />
           <folding />
         </state>
       </provider>

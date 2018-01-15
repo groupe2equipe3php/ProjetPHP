@@ -1,13 +1,18 @@
 <?php
 session_start();
-class UtilisateurStandard extends Utilisateur
+abstract class Utilisateur
 {
     private $email  = '';
     private $pseudo = '';
 
     public function __construct()
     {
-        parent::__construct();
+        $this->email  = $_SESSION['email'];
+        $this->pseudo = $_SESSION['pseudo'];
+    }
+
+    public function getEmail() {
+        return $this->email;
     }
 
     public function getPseudo() {
