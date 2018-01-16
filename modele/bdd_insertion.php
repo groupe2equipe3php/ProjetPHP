@@ -20,6 +20,32 @@ function bdd_user_insertion(PDO $bdd, $nom, $prenom, $pseudo, $email, $mdp) {
     return true;
 }
 
+function bdd_set_mdp(PDO $bdd, $mdp, $email) {
+    try {
+        $mdp_hash = password_hash($mdp, PASSWORD_DEFAULT);
+
+        $request = $bdd->prepare('UPDATE user SET mdp = :mdp WHERE email LIKE :email');
+        $request->execute(array('mdp' => $mdp_hash, 'email' => $email));
+    }
+    catch (PDOException $exception) {
+        $exception->getMessage();
+        return false;
+    }
+    return true;
+}
+
+function bdd_set_pseudo(PDO $bdd, $pseudo, $email) {
+    try {
+        $request = $bdd->prepare('UPDATE user SET pseudo = :pseudo WHERE email LIKE :email');
+        $request->execute(array('pseudo' => $pseudo, 'email' => $email));
+    }
+    catch (PDOException $exception) {
+        $exception->getMessage();
+        return false;
+    }
+    return true;
+}
+
 function bdd_set_cle(PDO $bdd, $cle, $email) {
     try {
         $request = $bdd->prepare('UPDATE user SET cle = :cle WHERE email LIKE :email');

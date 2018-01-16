@@ -33,8 +33,21 @@ start_page(_("Traducteur Groupe 2 Équipe 3 IUT"));
         font-size:0.9em;
         border-radius:2em;
 
+        width: 40%;
+
+        margin-bottom: 2em;
+        padding: 0.5em 1em 1em;
+    }
+
+    .bloc_configuration {
+        font-family:"Century Gothic", Avenir, Futura, sans-serif;
+        background-color:#dfe3ee;
+        font-size:0.9em;
+        border-radius:2em;
+
+        margin-left: 80%;
         padding: 0.5em 2em;
-        margin-right:60%;
+        float: right;
     }
 </style>
 
@@ -60,7 +73,7 @@ if(is_null($_SESSION['pseudo'])) {
     <form action="recuperation_mdp.php" method="post">
         <input type="submit" name="recuperation_mdp" value="<?php echo _("Mot de passe oublié") ?>"/>
     </form>
-    </div><br/>
+    </div>
 
 <?php
 }
@@ -94,7 +107,14 @@ else {
     <form action="../controleur/user_deconnexion.php" method="post">
         <input type="submit" name="user_deconnexion" value="<?php echo _("Se déconnecter") ?>"/>
     </form>
-    </div><br/>
+    </div>
+
+    <div class="bloc_configuration">
+    <form action="changer_infos.php" method="post">
+        <p><?php echo _("Configuration du compte") ?></p>
+        <input type="submit" name="changer_infos" value="<?php echo _("Modifier les informations") ?>"/>
+    </form>
+    </div>
 
 <?php
 }
@@ -108,14 +128,14 @@ else {
         <li>Olivier Goasampis</li>
         <li>Lucas Jordan</li>
     </ul>
-    </div><br/>
+    </div>
 
     <div class="bloc">
     <p><?php echo _("Pour rechercher une traduction :") ?></p>
     <form action="traduction.php" method="post">
         <input type="submit" value="<?php echo _("Je veux traduire !") ?>"/>
     </form>
-    </div><br/>
+    </div>
 
     <!-- Sélection de la langue de saisie -->
     <div class="bloc">
@@ -126,11 +146,11 @@ else {
         <label for="selection_langue_francais"><?php echo _("Français") ?></label>
 
         <input type="radio" name="selection_langue" value="anglais" id="selection_langue_anglais" />
-        <label for="selection_langue_anglais"><?php echo _("Anglais") ?></label>
+        <label for="selection_langue_anglais"><?php echo _("Anglais") ?></label><br/><br/>
 
         <input type="submit" value="<?php echo _("Recharger") ?>" onclick="recharger();"/>
     </form>
-    </div><br/>
+    </div>
 
 <?php
 end_page();
