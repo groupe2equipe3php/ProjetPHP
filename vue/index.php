@@ -119,7 +119,7 @@ else {
     </div>
 
     <div class="bloc_configuration">
-    <form action="demandes_traduction.php" method="post">
+    <form action="afficher_demandes_traduction.php" method="post">
         <p><?php echo _("Traduction") ?></p>
         <input type="submit" name="traduire_demandes" value="<?php echo _("Traduire les demandes") ?>"/>
     </form>

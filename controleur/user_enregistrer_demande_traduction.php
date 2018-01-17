@@ -9,13 +9,13 @@ $mot    = $_SESSION['mot_a_traduire'];
 $langue = 'Français';
 
 if(bdd_demande_traduction_insertion($bdd, $_SESSION['email'], $mot, $langue)) {
-    echo _("Demande de traduction enregistrée") . '<br/>';
+    echo _("Demande de traduction enregistrée") . '<br/><br/>';
 }
 else {
     echo _("Une erreur est survenue pendant l'enregistrement de la demande. Veuillez réessayer.") . '<br/>';
 }
 ?>
 
-    <form action="index.php">
+    <form action="../vue/index.php">
         <input type="submit" value="<?php echo _("Accueil") ?>"/>
     </form>

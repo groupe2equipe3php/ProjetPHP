@@ -97,7 +97,7 @@ function get_traduction(PDO $bdd, $mot) {
     return false;
 }
 
-function afficher_traduction_requests(PDO $bdd) {
+function get_demandes_traduction(PDO $bdd) {
     try {
         $request = $bdd->prepare('SELECT * FROM demande_traduction');
         $request->execute();
@@ -107,7 +107,10 @@ function afficher_traduction_requests(PDO $bdd) {
         }
         else {
             while ($data = $request->fetch()) {
-                echo $data['email'] . "\t" . $data['mot'] . "\t" . $data['langue'] . "\t" . $data['etat'] . '<br/>';
+                echo $data['email'] . "\t\t\t"
+                    . $data['mot'] . "\t\t\t"
+                    . $data['langue'] . "\t\t\t"
+                    . $data['etat'] . '<br/><br/>';
             }
         }
     }
