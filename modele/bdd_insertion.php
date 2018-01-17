@@ -20,6 +20,20 @@ function bdd_user_insertion(PDO $bdd, $nom, $prenom, $pseudo, $email, $mdp) {
     return true;
 }
 
+function bdd_traduction_insertion(PDO $bdd, $email, $mot, $traduction) {
+    try {
+        $request = $bdd->prepare('INSERT INTO demande_traduction (email, mot, traduction) '
+        . 'VALUES(:email, :mot, :traduction)');
+
+        $request->execute(array('email' => $email, 'mot' => $mot, 'traduction' => $traduction));
+    }
+    catch (PDOException $exception) {
+        $exception->getMessage();
+        return false;
+    }
+    return true;
+}
+
 function bdd_set_mdp(PDO $bdd, $mdp, $email) {
     try {
         $mdp_hash = password_hash($mdp, PASSWORD_DEFAULT);
