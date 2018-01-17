@@ -23,6 +23,6 @@ start_page(_("Inscription"));
     <form action="index.php">
         <input type="submit" value="<?php echo _("Accueil") ?>"/>
     </form>
+
 <?php
 end_page();
-?>
