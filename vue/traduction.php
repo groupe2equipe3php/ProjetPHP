@@ -6,7 +6,7 @@ require_once '../utils.inc.php';
 initialiser_gettext($_SESSION['lang']);
 start_page(_("Inscription"));
 ?>
-    <form action="../controleur/user_traduction.php" method="post">
+    <form action="../controleur/user_recherche_traduction.php" method="post">
         <label name="selection_langue"><?php echo _("Sélectionnez la langue") ?>
             <select>
                 <option value="Français"><?php echo _("Français") ?></option>

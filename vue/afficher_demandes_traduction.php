@@ -5,18 +5,17 @@ require_once '../utils.inc.php';
 require_once '../modele/bdd_recherche.php';
 require_once '../modele/bdd_connexion.php';
 
-
 start_page(_("Demandes de traduction"));
-
-$bdd = bdd_connexion();
 initialiser_gettext($_SESSION['lang']);
 
-echo _("Voici la liste des demandes de traduction") . '<br/>';
-afficher_traduction_requests($bdd);
+$bdd = bdd_connexion();
+
+echo _("Voici la liste des demandes de traduction") . '<br/><br/>';
+get_demandes_traduction($bdd);
 ?>
     <form action="../vue/index.php">
         <input type="submit" value="<?php echo _("Accueil") ?>"/>
     </form>
+
 <?php
 end_page();
-?>

@@ -13,7 +13,7 @@ if(! $traduction) {
 
     $_SESSION['mot_a_traduire'] = $mot;
     ?>
-    <form action="user_enregistrer_demande.php" method="post">
+    <form action="user_enregistrer_demande_traduction.php" method="post">
         <!-- TODO saisir la langue du mot -->
 
         <input type="submit" value="<?php echo _("Enregistrer une demande") ?>"/>
