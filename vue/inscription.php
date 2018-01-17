@@ -7,7 +7,7 @@ initialiser_gettext($_SESSION['lang']);
 start_page(_("Inscription"));
 ?>
 
-    <form action="../controleur/user_inscription.php" method="post">
+    <form action="../controleur/inscription/user_inscription.php" method="post">
         <label name="nom"><?php echo _("Nom : ") ?><input type="text" name="nom"/></label><br/><br/>
         <label name="prenom"><?php echo _("Prenom : ") ?><input type="text" name="prenom"/></label><br/><br/>
         <label name="pseudo"><?php echo _("Pseudo : ") ?><input type="text" name="pseudo"/></label><br/><br/>

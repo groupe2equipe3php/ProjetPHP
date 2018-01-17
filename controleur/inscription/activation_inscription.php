@@ -26,6 +26,6 @@ else {
     }
 }
 ?>
-    <form action="../vue/index.php">
+    <form action="../index.php">
         <br/><input type="submit" name="index" value="<?php echo _("Accueil") ?>"/>
     </form>

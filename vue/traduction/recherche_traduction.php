@@ -6,7 +6,7 @@ require_once '../utils.inc.php';
 initialiser_gettext($_SESSION['lang']);
 start_page(_("Inscription"));
 ?>
-    <form action="../controleur/user_recherche_traduction.php" method="post">
+    <form action="../../controleur/traduction/user_recherche_traduction.php" method="post">
         <label name="selection_langue"><?php echo _("Sélectionnez la langue") ?>
             <select>
                 <option value="Français"><?php echo _("Français") ?></option>
@@ -20,7 +20,7 @@ start_page(_("Inscription"));
         <input type="submit" value="<?php echo _("Traduire") ?>"/>
     </form><br/>
 
-    <form action="index.php">
+    <form action="../../controleur/index.php">
         <input type="submit" value="<?php echo _("Accueil") ?>"/>
     </form>
 

@@ -13,7 +13,7 @@ $bdd = bdd_connexion();
 echo _("Voici la liste des demandes de traduction") . '<br/><br/>';
 get_demandes_traduction($bdd);
 ?>
-    <form action="../vue/index.php">
+    <form action="../../controleur/index.php">
         <input type="submit" value="<?php echo _("Accueil") ?>"/>
     </form>
 

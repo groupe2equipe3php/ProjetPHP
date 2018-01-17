@@ -1,0 +1,23 @@
+.bloc {
+    font-family:"Century Gothic", Avenir, Futura, sans-serif;
+    background-color:#dfe3ee;
+    font-size:0.9em;
+    border-radius:2em;
+
+    width: 40%;
+
+    margin-bottom: 2em;
+    padding: 0.5em 1em 1em;
+}
+
+.bloc_configuration {
+    font-family:"Century Gothic", Avenir, Futura, sans-serif;
+    background-color:#dfe3ee;
+    font-size:0.9em;
+    border-radius:2em;
+
+    margin-left: 80%;
+    margin-bottom: 2em;
+    padding: 0.5em 2em;
+    float: right;
+}

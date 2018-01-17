@@ -34,6 +34,6 @@ else {
     echo _("Pas connecté.") . '<br/>';
 }
 ?>
-    <form action="../vue/index.php">
+    <form action="index.php">
         <br/><input type="submit" value="<?php echo _("Accueil") ?>"/><br/>
     </form>
