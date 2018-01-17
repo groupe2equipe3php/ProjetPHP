@@ -2,7 +2,6 @@
 session_start();
 require_once '../utils.inc.php';
 require_once '../modele/bdd_connexion.php';
-require_once '../vue/recuperation_mdp.php';
 require_once '../gettext.inc.php';
 
 start_page(_("Recuperation de mot de passe"));
@@ -10,11 +9,14 @@ start_page(_("Recuperation de mot de passe"));
 $bdd = bdd_connexion();
 
 
-
 if (isset($_GET['section'])) {
     $section = htmlspecialchars($_GET['section']);
 } else {
     $section = "";
+}
+
+if (!isset($_POST['mail'])) {
+    $error = "Veuillez choisir une option";
 }
 
 if (isset($_POST['recup_submit'], $_POST['recup_mail'], $_POST['mail'])) {
@@ -121,3 +123,8 @@ if (isset($_POST['change_submit'])) {
     }
 }
 
+
+
+
+
+require_once '../vue/recuperation_mdp.php'; // laisser en bas sinon les erreurs ne sont pas gerer

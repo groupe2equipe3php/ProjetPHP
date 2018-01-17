@@ -38,10 +38,10 @@ else {
         <label name="email">E-mail : <input type="email" placeholder="<?php echo _("Votre adresse mail ") ?>" name="recup_mail"/></label><br/><br/>
         <p><?php echo _("Sélectionnez la méthode :") ?></p>
 
-        <input type="radio" name="mail" id="methode_mail"/>
+        <input type="radio" name="mail" id="methode_mail" value="meth_mail"/>
         <label for="methode_mail"><?php echo _("Recevoir un lien par mail") ?></label>
 
-        <input type="radio" name="mail" id="methode_aleatoire"/>
+        <input type="radio" name="mail" id="methode_aleatoire" value="meth_aleatoire"/>
         <label for="methode_aleatoire"><?php echo _("Nouveau mot de passe aléatoire") ?></label>
 
         <input type="submit" value="<?php echo _("Valider") ?>" name="recup_submit"/>
