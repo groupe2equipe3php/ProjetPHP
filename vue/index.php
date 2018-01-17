@@ -146,6 +146,8 @@ else {
     </form>
     </div>
 
+
+
     <!-- Sélection de la langue de saisie -->
     <div class="bloc">
     <form action="index.php" method="post">
