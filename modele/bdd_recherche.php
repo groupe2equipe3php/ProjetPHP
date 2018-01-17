@@ -94,5 +94,5 @@ function get_traduction(PDO $bdd, $mot) {
     catch(PDOException $exception) {
         $exception->getMessage();
     }
-    return null;
+    return false;
 }
