@@ -17,19 +17,19 @@ $mdp    = htmlspecialchars($_POST['mdp']);
 if (empty($nom)) {
     $err["nom"][] = "Le nom n'est pas renseigné";
 }
-elseif ($nom > 64) {
+elseif (strlen($nom)> 64) {
     $err["nom"][] = "Le nom ne doit pas dépasser 64 caractères";
 }
 if (empty($prenom)) {
     $err["prenom"][] = "Le nom n'est pas renseigné";
 }
-elseif ($prenom > 64) {
+elseif (strlen($prenom)> 64) {
     $err["prenom"][] = "Le prénom ne doit pas dépasser 64 caractères";
 }
 if (empty($pseudo)) {
     $err["pseudo"][] = "Le pseudo n'est pas renseigné";
 }
-elseif ($pseudo > 64) {
+elseif (strlen($pseudo) > 64) {
     $err["pseudo"][] = "Le pseudo ne doit pas dépasser 64 caractères";
 }
 if (empty($email)) {
@@ -41,7 +41,7 @@ elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
 if (empty($mdp)) {
     $err["mdp"][] = "Le mot de passe n'est pas renseigné";
 }
-elseif ($mdp < 8) {
+elseif (strlen($mdp) < 8) {
     $err["mdp"][] = "Le mot de passe ne doit pas être inférieur à 8 caractères";
 }
 
