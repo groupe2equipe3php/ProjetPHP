@@ -20,6 +20,20 @@ function bdd_user_insertion(PDO $bdd, $nom, $prenom, $pseudo, $email, $mdp) {
     return true;
 }
 
+function bdd_demande_traduction_insertion(PDO $bdd, $email, $mot, $langue) {
+    try {
+        $request = $bdd->prepare('INSERT INTO demande_traduction (email, mot, langue, etat) '
+            . 'VALUES(:email, :mot, :langue, :etat)');
+
+        $request->execute(array('email' => $email, 'mot' => $mot, 'langue' => $langue, 'etat' => 'En attente'));
+    }
+    catch (PDOException $exception) {
+        $exception->getMessage();
+        return false;
+    }
+    return true;
+}
+
 function bdd_traduction_insertion(PDO $bdd, $email, $mot, $traduction) {
     try {
         $request = $bdd->prepare('INSERT INTO demande_traduction (email, mot, traduction) '
