@@ -87,7 +87,7 @@ function get_traduction(PDO $bdd, $mot) {
         $request->execute(array('mot' => $mot));
 
         if($request->rowCount() == 0) {
-            echo _("Ce mot n'est pas enregistré.") . '<br/>';
+            return false;
         }
         else {
             $data = $request->fetch();
@@ -113,7 +113,7 @@ function get_demandes_traduction(PDO $bdd) {
                 echo $data['email'] . "\t" . $data['mot'] . "\t" . $data['langue'] . "\t" . $data['etat'] . "\t";
                 ?>
 
-                <form action="../vue/traduction/traduire_demandes.php" method="post">
+                <form action="/vue/traduction/traduire_demandes.php" method="post">
                     <input type="submit" name="traduire" value="<?php echo _("Traduire") ?>">
                 </form><br/>
 
