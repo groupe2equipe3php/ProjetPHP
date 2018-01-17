@@ -67,7 +67,10 @@ if (isset($_POST['recup_submit'], $_POST['recup_mail'], $_POST['mail']) && $_POS
     } else {
         $error = _("Veuillez entrez votre adresse mail");
     }
+} else{
+    $error = "Veuillez choisir une option";
 }
+
 
 if (isset($_POST['verif_submit'], $_POST['verif_code'])) {
     if (!empty($_POST['verif_code'])) {
@@ -148,25 +151,21 @@ if (isset($_POST['recup_submit'], $_POST['recup_mail'], $_POST['mail']) && $_POS
                 $mdp_alea = chaine_aleatoire(8);
 
 
-
-
-
-
-                $message = _("
+                $message = "
                  
-                    Voici votre nouveau mot de passe '$mdp_alea'
+                    ". _("Voici votre nouveau mot de passe") ." '". $mdp_alea . "'
                     
                 
-                 ");
+                 ";
 
                 mail($recup_mail, _("Mot de passe aleatoire generer"), $message);
 
-               // $mdp_alea = password_hash($mdp_alea, PASSWORD_DEFAULT);
-                $up_mdp = $bdd->prepare('UPDATE user set mdp = $mdp_alea WHERE email = ?');
-                $up_mdp->execute(array($_SESSION['$recup_mail']));
-                $up_mdp = $up_mdp->rowCount();
-                header('Location:http://groupe2equipe3php.alwaysdata.net/vue/connexion.php');
 
+                header('Location:http://groupe2equipe3php.alwaysdata.net/vue/connexion.php');
+                $mdp_alea = password_hash($mdp_alea, PASSWORD_DEFAULT);
+                $up_mdp = $bdd->prepare('UPDATE user set mdp = ? WHERE email = ?');
+                $up_mdp->execute(array($mdp_alea, $_SESSION['$recup_mail']));
+                $up_mdp = $up_mdp->rowCount();
 
             } else {
                 $error = _("Cette adresse mail n'est pas enregistée");
