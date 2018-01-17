@@ -20,20 +20,12 @@ class UtilisateurTraducteur extends UtilisateurPremium
     {
         return parent::getPseudo();
     }
-    public function traduire($text){
-        parent::traduire($text);
-    }
-    public function demanderTraduction($text){
-        parent::demanderTraduction($text);
-    }
-    public function visualiserMesDemandes(){
-        parent::visualiserMesDemandes();
-    }
+
     public function ajouterTraduction($text1,$lang1,$text2,$lang2){
 
     }
+
     public function exporterTraduction($lang){
 
     }
-
 }

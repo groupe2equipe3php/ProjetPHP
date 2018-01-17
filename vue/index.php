@@ -89,20 +89,22 @@ else {
             <?= $_SESSION['email'] ?>
     </strong>.<br/>
         <?php echo _("Vous êtes un utilisateur ") ?><strong><?php
-        if(unserialize($_SESSION['user']) instanceof UtilisateurStandard) {
-            echo _("standard");
-        }
-        elseif(unserialize($_SESSION['user']) instanceof UtilisateurPremium) {
-            echo _("premium");
-        }
-        elseif(unserialize($_SESSION['user']) instanceof UtilisateurTraducteur) {
-            echo _("traducteur");
-        }
-        elseif(unserialize($_SESSION['user']) instanceof UtilisateurAdministrateur) {
-            echo _("administrateur");
-        }
-        else {
-            echo _("erreur");
+        $type = $_SESSION['user'];
+        switch ($type) {
+            case 's':
+                echo _("standard");
+                break;
+            case 'p':
+                echo _("premium");
+                break;
+            case 't':
+                echo _("traducteur");
+                break;
+            case 'a':
+                echo _("administrateur");
+                break;
+            default:
+                echo _("erreur");
         }
     ?></strong>.</p>
 

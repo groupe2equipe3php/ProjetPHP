@@ -17,7 +17,7 @@ $mdp    = htmlspecialchars($_POST['mdp']);
 if (empty($nom)) {
     $err["nom"][] = "Le nom n'est pas renseigné";
 }
-elseif (strlen($nom)> 64) {
+elseif (strlen($nom) > 64) {
     $err["nom"][] = "Le nom ne doit pas dépasser 64 caractères";
 }
 if (empty($prenom)) {

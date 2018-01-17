@@ -20,8 +20,4 @@ class UtilisateurStandard extends Utilisateur
     {
         return parent::getPseudo();
     }
-    public function traduire($text, $lang){
-
-    }
-
 }

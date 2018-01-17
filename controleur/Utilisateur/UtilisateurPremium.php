@@ -20,14 +20,4 @@ class UtilisateurPremium extends UtilisateurStandard
     {
         return parent::getPseudo();
     }
-
-    public function traduire($text){
-    }
-    public function demanderTraduction($text, $langOrigin){
-
-    }
-    public function visualiserMesDemandes(){
-
-    }
-
 }
