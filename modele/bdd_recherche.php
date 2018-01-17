@@ -97,7 +97,7 @@ function get_traduction(PDO $bdd, $mot) {
     return false;
 }
 
-function afficher_traduction_requests(PDO $bdd) {
+function get_demandes_traduction(PDO $bdd) {
     try {
         $request = $bdd->prepare('SELECT * FROM demande_traduction');
         $request->execute();
@@ -108,7 +108,7 @@ function afficher_traduction_requests(PDO $bdd) {
         else {
             while ($data = $request->fetch()) {
                 echo $data['email'] . "\t" . $data['mot'] . "\t" . $data['langue'] . "\t" . $data['etat']; ?>
-                <form action="../controleur/traduction.php" method="post">
+                <form action="../vue/traduction.php" method="post">
                     <input type="submit" name="Traduire" value="Traduire">
                 </form><br/>
                 <?php
