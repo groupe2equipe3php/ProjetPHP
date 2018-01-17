@@ -116,3 +116,23 @@ function afficher_traduction_requests(PDO $bdd) {
     }
     return false;
 }
+function afficher_mes_requetes(PDO $bdd, $mot) {
+    try {
+
+        $request = $bdd->prepare('SELECT * FROM demande_traduction WHERE email = $_SESSION[\'email\']');
+        $request->execute(array('mot' => $mot));
+
+        if($request->rowCount() == 0) {
+            echo _("Vous n'avez fait aucunde demande de traduction.") . '<br/>';
+        }
+        else {
+            while ($data = $request->fetch()) {
+                echo $data['email'] . "\t" . $data['mot'] . "\t" . $data['langue'] . "\t" . $data['etat'] . '<br/>';
+            }
+        }
+    }
+    catch(PDOException $exception) {
+        $exception->getMessage();
+    }
+    return false;
+}
