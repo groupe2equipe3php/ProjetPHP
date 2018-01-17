@@ -1,6 +1,7 @@
 <?php
 session_start();
-class UtilisateurAdministrateur extends Utilisateur
+require_once '../gettext.inc.php';
+class UtilisateurAdministrateur extends UtilisateurTraducteur
 {
     private $email  = '';
     private $pseudo = '';
@@ -18,5 +19,8 @@ class UtilisateurAdministrateur extends Utilisateur
     public function getPseudo()
     {
         return parent::getPseudo();
+    }
+    public function rechercher($text){
+        parent::rechercher($text);
     }
 }

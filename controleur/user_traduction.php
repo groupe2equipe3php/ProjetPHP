@@ -2,12 +2,9 @@
 session_start();
 require_once '../gettext.inc.php';
 require_once '../utils.inc.php';
-require_once '../bdd_connexion.php';
+require_once  '../vue/traduction.php';
 
-$bdd = bdd_connexion();
+initialiser_gettext($_SESSION['lang']);
 
-if (is_null($bdd)) {
-    echo _("Vous n'êtes pas connecté veulliez vous connecter pour pouvoir traduire");
-}
-end_page();
-?>
+$traduction = htmlspecialchars($_POST['mot_a_traduire']);
+echo _($traduction);
