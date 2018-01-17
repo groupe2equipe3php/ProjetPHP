@@ -96,3 +96,23 @@ function get_traduction(PDO $bdd, $mot) {
     }
     return false;
 }
+
+function afficher_traduction_requests(PDO $bdd, $mot) {
+    try {
+        $request = $bdd->prepare('SELECT * FROM demande_traduction');
+        $request->execute(array('mot' => $mot));
+
+        if($request->rowCount() == 0) {
+            echo _("Ce mot n'est pas enregistré.") . '<br/>';
+        }
+        else {
+            while ($data = $request->fetch()) {
+                echo $data;
+            }
+        }
+    }
+    catch(PDOException $exception) {
+        $exception->getMessage();
+    }
+    return false;
+}
