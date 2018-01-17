@@ -124,4 +124,7 @@ if (isset($_POST['change_submit'])) {
 }
 
 
-require_once '../vue/recuperation_mdp.php';
+
+
+
+require_once '../vue/recuperation_mdp.php'; // laisser en bas sinon les erreurs ne sont pas gerer
