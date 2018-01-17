@@ -3,11 +3,8 @@ session_start();
 require_once '../gettext.inc.php';
 require_once '../utils.inc.php';
 require_once  '../vue/traduction.php';
-initialiser_gettext($SESSION['lang']);
 
-$MAT = htmlspecialchars($_POST['MAT']);
+initialiser_gettext($_SESSION['lang']);
 
-echo _($MAT);
-
-end_page();
-?>
+$traduction = htmlspecialchars($_POST['mot_a_traduire']);
+echo _($traduction);

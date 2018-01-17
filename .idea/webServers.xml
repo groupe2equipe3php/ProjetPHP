@@ -3,11 +3,11 @@
   <component name="WebServers">
     <option name="servers">
       <webServer id="c3f993bb-196d-48a1-b382-397fb9914233" name="ProjetPHP" url="http://groupe2equipe3php.alwaysdata.net">
-        <fileTransfer host="ftp-groupe2equipe3php.alwaysdata.net" port="21" rootFolder="/www/">
+        <fileTransfer host="ssh-groupe2equipe3php.alwaysdata.net" port="22" rootFolder="/home/groupe2equipe3php/www/" accessType="SFTP">
           <advancedOptions>
             <advancedOptions dataProtectionLevel="Private" />
           </advancedOptions>
-          <option name="port" value="21" />
+          <option name="port" value="22" />
         </fileTransfer>
       </webServer>
     </option>

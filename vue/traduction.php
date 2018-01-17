@@ -7,16 +7,21 @@ initialiser_gettext($_SESSION['lang']);
 start_page(_("Inscription"));
 ?>
     <form action="../controleur/user_traduction.php" method="post">
-        Sélectionnez la langue
+        <?php echo _("Sélectionnez la langue") ?>
+
         <select>
-            <option value="Français">Français</option>
-            <option value="Anglais">Anglais</option>
+            <option value="Français"><?php echo _("Français") ?></option>
+            <option value="Anglais"><?php echo _("Anglais") ?></option>
         </select>
-        <label name="MAT"><?php echo _("Mot à traduire ") ?><input type="text" name="MAT"/></label><br/><br/>
-        <input type="submit" value="Traduire"/>
+
+        <label name="MAT"><?php echo _("Mot à traduire ") ?>
+            <input type="text" name="mot_a_traduire"/></label><br/><br/>
+
+        <input type="submit" value="<?php echo _("Traduire") ?>"/>
     </form><br/>
+
     <form action="../vue/index.php">
-        <input type="submit" value="Accueil"/>
+        <input type="submit" value="<?php echo _("Accueil") ?>"/>
     </form>
 <?php
 end_page();
