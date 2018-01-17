@@ -8,7 +8,7 @@ $bdd = bdd_connexion();
 $traduction = get_traduction($bdd, $mot);
 
 if(! $traduction) {
-    header('Location: ../vue/demander_traduction.php');
+    header('Location: ../vue/demandes_traduction.php');
 }
 else {
     echo $traduction;
