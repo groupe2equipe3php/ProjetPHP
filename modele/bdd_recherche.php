@@ -107,7 +107,11 @@ function afficher_traduction_requests(PDO $bdd) {
         }
         else {
             while ($data = $request->fetch()) {
-                echo $data['email'] . "\t" . $data['mot'] . "\t" . $data['langue'] . "\t" . $data['etat'] . '<br/>';
+                echo $data['email'] . "\t" . $data['mot'] . "\t" . $data['langue'] . "\t" . $data['etat']; ?>
+                <form action="../controleur/traduction.php" method="post">
+                    <input type="submit" name="Traduire" value="Traduire">
+                </form><br/>
+                <?php
             }
         }
     }
