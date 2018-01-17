@@ -30,6 +30,7 @@ if(bdd_user_verification_connexion($bdd, $email, $mdp)) {
     $_SESSION['user']   = null;
 
     $type = get_type($bdd, $email);
+
     switch($type) {
         case 's':
             $_SESSION['user'] = serialize(new UtilisateurStandard());
