@@ -46,6 +46,7 @@ start_page(_("Traducteur Groupe 2 Équipe 3 IUT"));
         border-radius:2em;
 
         margin-left: 80%;
+        margin-bottom: 2em;
         padding: 0.5em 2em;
         float: right;
     }
@@ -77,6 +78,7 @@ if(is_null($_SESSION['pseudo'])) {
 
 <?php
 }
+
 else {
     // L'utilisateur est connecté
 ?>
@@ -113,6 +115,13 @@ else {
     <form action="changer_infos.php" method="post">
         <p><?php echo _("Configuration du compte") ?></p>
         <input type="submit" name="changer_infos" value="<?php echo _("Modifier les informations") ?>"/>
+    </form>
+    </div>
+
+    <div class="bloc_configuration">
+    <form action="valider_traduction.php" method="post">
+        <p><?php echo _("Traduction") ?></p>
+        <input type="submit" name="traduire_demandes" value="<?php echo _("Traduire les demandes") ?>"/>
     </form>
     </div>
 
