@@ -8,7 +8,7 @@ $bdd = bdd_connexion();
 $traduction = get_traduction($bdd, $mot);
 
 if(! $traduction) {
-    header('Location: ../vue/proposition_traduction.php');
+    header('Location: ../vue/traduction');
 }
 else {
     echo $traduction;
