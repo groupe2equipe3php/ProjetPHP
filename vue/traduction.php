@@ -20,7 +20,7 @@ start_page(_("Inscription"));
         <input type="submit" value="<?php echo _("Traduire") ?>"/>
     </form><br/>
 
-    <form action="../vue/index.php">
+    <form action="index.php">
         <input type="submit" value="<?php echo _("Accueil") ?>"/>
     </form>
 <?php

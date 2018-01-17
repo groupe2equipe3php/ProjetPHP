@@ -1,10 +1,15 @@
 <?php
-session_start();
-require_once '../gettext.inc.php';
-require_once '../utils.inc.php';
-require_once  '../vue/traduction.php';
+require_once '../modele/bdd_connexion.php';
+require_once '../modele/bdd_recherche.php';
 
-initialiser_gettext($_SESSION['lang']);
+$mot = $_POST['mot_a_traduire'];
+$bdd = bdd_connexion();
 
-$traduction = htmlspecialchars($_POST['mot_a_traduire']);
-echo _($traduction);
+$traduction = get_traduction($bdd, $mot);
+
+if(! $traduction) {
+    header('Location: ../vue/proposition_traduction.php');
+}
+else {
+    echo $traduction;
+}

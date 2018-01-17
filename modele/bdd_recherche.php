@@ -77,3 +77,22 @@ function get_type(PDO $bdd, $email) {
     }
     return null;
 }
+
+function get_traduction(PDO $bdd, $mot) {
+    try {
+        $request = $bdd->prepare('SELECT traduction FROM traduction WHERE mot = :mot');
+        $request->execute(array('mot' => $mot));
+
+        if($request->rowCount() == 0) {
+            echo _("Ce mot n'est pas enregistré.") . '<br/>';
+        }
+        else {
+            $data = $request->fetch();
+            return $data['traduction'];
+        }
+    }
+    catch(PDOException $exception) {
+        $exception->getMessage();
+    }
+    return false;
+}
