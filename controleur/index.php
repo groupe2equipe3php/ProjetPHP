@@ -1,15 +1,6 @@
 <?php
 session_start();
 
-require_once '../gettext.inc.php';
-require_once '../utils.inc.php';
-
-require_once '../controleur/Utilisateur/Utilisateur.php';
-require_once '../controleur/Utilisateur/UtilisateurStandard.php';
-require_once '../controleur/Utilisateur/UtilisateurPremium.php';
-require_once '../controleur/Utilisateur/UtilisateurTraducteur.php';
-require_once '../controleur/Utilisateur/UtilisateurAdministrateur.php';
-
 if(! isset($_SESSION['lang'])) {
     $_SESSION['lang'] = 'fr_FR';
 }

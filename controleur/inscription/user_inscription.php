@@ -1,9 +1,14 @@
 <?php
 session_start();
-require_once '../modele/bdd_connexion.php';
-require_once '../modele/bdd_insertion.php';
-require_once '../modele/bdd_verification.php';
+
+require_once '../../gettext.inc.php';
+
+require_once '../../modele/bdd_connexion.php';
+require_once '../../modele/bdd_insertion.php';
+require_once '../../modele/bdd_verification.php';
 require_once 'validation_inscription.php';
+
+initialiser_gettext($_SESSION['lang']);
 
 $bdd = bdd_connexion();
 $err = array();
@@ -15,77 +20,95 @@ $email  = htmlspecialchars($_POST['email']);
 $mdp    = htmlspecialchars($_POST['mdp']);
 
 if (empty($nom)) {
-    $err["nom"][] = "Le nom n'est pas renseigné";
+    $err["nom"][] = _("Le nom n'est pas renseigné.");
 }
 elseif (strlen($nom) > 64) {
-    $err["nom"][] = "Le nom ne doit pas dépasser 64 caractères";
+    $err["nom"][] = _("Le nom ne doit pas dépasser 64 caractères.");
 }
 if (empty($prenom)) {
-    $err["prenom"][] = "Le nom n'est pas renseigné";
+    $err["prenom"][] = _("Le nom n'est pas renseigné");
 }
-elseif (strlen($prenom)> 64) {
-    $err["prenom"][] = "Le prénom ne doit pas dépasser 64 caractères";
+elseif (strlen($prenom) > 64) {
+    $err["prenom"][] = _("Le prénom ne doit pas dépasser 64 caractères");
 }
 if (empty($pseudo)) {
-    $err["pseudo"][] = "Le pseudo n'est pas renseigné";
+    $err["pseudo"][] = _("Le pseudo n'est pas renseigné");
 }
 elseif (strlen($pseudo) > 64) {
-    $err["pseudo"][] = "Le pseudo ne doit pas dépasser 64 caractères";
+    $err["pseudo"][] = _("Le pseudo ne doit pas dépasser 64 caractères");
 }
 if (empty($email)) {
-    $err["email"][] = "L'email n'est pas renseigné";
+    $err["email"][] = _("L'email n'est pas renseigné");
 }
 elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-    $err["email"][] = "L'email n'est pas au bon format";
+    $err["email"][] = _("L'email n'est pas au bon format");
 }
 if (empty($mdp)) {
-    $err["mdp"][] = "Le mot de passe n'est pas renseigné";
+    $err["mdp"][] = _("Le mot de passe n'est pas renseigné");
 }
 elseif (strlen($mdp) < 8) {
-    $err["mdp"][] = "Le mot de passe ne doit pas être inférieur à 8 caractères";
+    $err["mdp"][] = _("Le mot de passe ne doit pas être inférieur à 8 caractères");
 }
 
 if (count($err) == 0) {
-    echo 'Paramètres récupérés.<br/>';
     if (bdd_user_verification_inscription($bdd, $email)) {
         if (bdd_user_insertion($bdd, $nom, $prenom, $pseudo, $email, $mdp)) {
-            echo 'Utilisateur inscrit.<br/>';
+            echo _("Utilisateur inscrit.") . '<br/>';
 
             if (valider_inscription($email)) {
-                echo 'E-mail de confirmation envoyé.<br/>';
+                echo _("E-mail de confirmation envoyé.") . '<br/>';
             } else {
-                echo 'L\'e-mail de confirmation n\'a pas pu être envoyé.<br/>';
+                echo _("L'e-mail de confirmation n'a pas pu être envoyé.") . '<br/>';
             }
         } else {
-            echo 'Erreur pendant l\'inscription. Veuillez réessayer.<br/>';
+            echo _("Erreur pendant l'inscription. Veuillez réessayer.") . '<br/>';
         }
     }
     else {
-        echo 'Utilisateur déjà inscrit.<br/>';
+        echo _("Utilisateur déjà inscrit.") . '<br/>';
     }
+    ?>
+
+    <form action="../../vue/index_non_connecte.php"><br/>
+        <input type="submit" value="<?php _("Accueil") ?>"/>
+    </form>
+
+    <?php
     die();
 }
 
 if (count($err) > 0) {
-    echo "Veuillez respecter les consignes ci-dessous SVP";
-    echo "<ul>";
+    echo _("Veuillez respecter les consignes ci-dessous SVP");
+
+    echo '<ul>';
     foreach ($err as $champEnErreur => $erreursDuChamp) {
         foreach ($erreursDuChamp as $erreur) {
-            echo "<li>".$erreur."</li>";
+            echo '<li>' . $erreur . '</li>';
         }
     }
-    echo "</ul>";
+    echo '</ul>';
 }
-
 ?>
-    <form action="user_inscription.php" method="post">
-        <label name="nom">Nom : <input type="text" name="nom" value="<?php echo htmlEntities($nom);?>"/></label><br/><br/>
-        <label name="prenom">Prenom : <input type="text" name="prenom" value="<?php echo htmlEntities($prenom);?>"/></label><br/><br/>
-        <label name="pseudo">Pseudo : <input type="text" name="pseudo" value="<?php echo htmlEntities($pseudo);?>"/></label><br/><br/>
-        <label name="email">E-mail : <input type="text" name="email" value="<?php echo htmlEntities($email);?>"/></label><br/><br/>
-        <label name="mdp">Mot de passe : <input type="password" name="mdp" <?php echo htmlEntities($mdp);?>/></label><br/><br/>
-        <input type="submit"/><br/>
-    </form>
-    <form action="../index.php">
-        <input type="submit" value="Accueil"/>
-    </form>
+
+<form action="user_inscription.php" method="post">
+    <label name="nom"><?php _("Nom :") ?>
+        <input type="text" name="nom" value="<?php echo htmlEntities($nom); ?>"/></label><br/><br/>
+
+    <label name="pseudo"><?php _("Pseudo :") ?>
+        <input type="text" name="pseudo" value="<?php echo htmlEntities($pseudo); ?>"/></label><br/><br/>
+
+    <label name="prenom"><?php _("Prenom :") ?>
+        <input type="text" name="prenom" value="<?php echo htmlEntities($prenom); ?>"/></label><br/><br/>
+
+    <label name="email"><?php _("E-mail :") ?>
+        <input type="text" name="email" value="<?php echo htmlEntities($email); ?>"/></label><br/><br/>
+
+    <label name="mdp"><?php _("Mot de passe :") ?>
+        <input type="password" name="mdp" <?php echo htmlEntities($mdp); ?>/></label><br/><br/>
+
+    <input type="submit" value="<?php _("Envoyer") ?>"/>
+</form>
+
+<form action="../../vue/index_non_connecte.php">
+    <input type="submit" value="<?php _("Accueil") ?>"/>
+</form>

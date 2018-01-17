@@ -4,24 +4,24 @@ session_start();
 require_once '../gettext.inc.php';
 require_once '../utils.inc.php';
 
-initialiser_gettext($_SESSION['lang']);
-
 // _() est un alias de gettext()
 start_page(_("Traducteur Groupe 2 Équipe 3 IUT"));
+
+initialiser_gettext($_SESSION['lang']);
 ?>
 
 <div class="bloc">
     <p><?php echo _("Bienvenue sur le site de traduction ! Vous pouvez vous inscrire ou vous connecter.") ?></p>
 
-    <form action="../vue/inscription.php" method="post">
-        <input type="submit" name="user_inscription" value="<?php echo _("S'inscrire") ?>"/><br/><br/>
+    <form action="inscription.php" method="post">
+        <input type="submit" name="inscription" value="<?php echo _("S'inscrire") ?>"/><br/><br/>
     </form>
 
-    <form action="../vue/connexion.php" method="post">
-        <input type="submit" name="user_connexion" value="<?php echo _("Se connecter") ?>"/><br/><br/>
+    <form action="connexion.php" method="post">
+        <input type="submit" name="connexion" value="<?php echo _("Se connecter") ?>"/><br/><br/>
     </form>
 
-    <form action="../vue/recuperation_mdp.php" method="post">
+    <form action="recuperation_mdp.php" method="post">
         <input type="submit" name="recuperation_mdp" value="<?php echo _("Mot de passe oublié") ?>"/>
     </form>
 </div>
@@ -46,9 +46,9 @@ start_page(_("Traducteur Groupe 2 Équipe 3 IUT"));
     </form>
 </div>
 
-<!-- Sélection de la langue de saisie -->
+<!-- Sélection de la langue -->
 <div class="bloc">
-    <form action="index_non_connecte.php" method="post">
+    <form action="../controleur/index.php" method="post">
         <p><?php echo _("Sélectionnez la langue du site ") ?></p>
 
         <input type="radio" name="selection_langue" value="francais" id="selection_langue_francais" />
@@ -57,6 +57,6 @@ start_page(_("Traducteur Groupe 2 Équipe 3 IUT"));
         <input type="radio" name="selection_langue" value="anglais" id="selection_langue_anglais" />
         <label for="selection_langue_anglais"><?php echo _("Anglais") ?></label><br/><br/>
 
-        <input type="submit" value="<?php echo _("Recharger") ?>" onclick="recharger();"/>
+        <input type="submit" value="<?php echo _("Recharger") ?>"/>
     </form>
 </div>

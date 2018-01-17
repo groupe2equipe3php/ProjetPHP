@@ -1,5 +1,6 @@
 <?php
 session_start();
+
 require_once '../utils.inc.php';
 require_once '../modele/bdd_connexion.php';
 require_once '../gettext.inc.php';
@@ -7,7 +8,6 @@ require_once '../gettext.inc.php';
 start_page(_("Recuperation de mot de passe"));
 
 $bdd = bdd_connexion();
-
 
 if (isset($_GET['section'])) {
     $section = htmlspecialchars($_GET['section']);
@@ -180,5 +180,4 @@ if (isset($_POST['recup_submit'], $_POST['recup_mail'], $_POST['mail']) && $_POS
     }
 }
 
-
-require_once '../vue/recuperation_mdp.php'; // laisser en bas sinon les erreurs ne sont pas gerer
+require_once '../vue/recuperation_mdp.php'; // laisser en bas sinon les erreurs ne sont pas gerées

@@ -1,6 +1,9 @@
 <?php
 session_start();
-require_once '../gettext.inc.php';
+
+require_once '/home/groupe2equipe3php/www/gettext.inc.php';
+
+initialiser_gettext($_SESSION['lang']);
 
 function bdd_user_verification_inscription(PDO $bdd, $email) {
     try {

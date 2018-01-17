@@ -1,6 +1,5 @@
 <?php
 session_start();
-require_once '../gettext.inc.php';
 
 function bdd_user_insertion(PDO $bdd, $nom, $prenom, $pseudo, $email, $mdp) {
     try {
@@ -90,8 +89,6 @@ function bdd_set_actif(PDO $bdd, $email) {
     try {
         $request = $bdd->prepare('UPDATE user SET actif = 1 WHERE email like :email');
         $request->execute(array('email' => $email));
-
-        //echo _("Votre compte a été activé.") . '<br/>';
     }
     catch (PDOException $exception) {
         $exception->getMessage();

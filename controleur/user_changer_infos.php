@@ -1,5 +1,6 @@
 <?php
 session_start();
+
 require_once '../gettext.inc.php';
 require_once '../modele/bdd_connexion.php';
 require_once '../modele/bdd_insertion.php';
@@ -38,6 +39,7 @@ if($_POST['ancien_mdp'] != "" and $_POST['nouveau_mdp'] != "") {
     }
 }
 ?>
-    <form action="index.php">
-        <br/><input type="submit" name="index" value="<?php echo _("Accueil") ?>"/>
-    </form>
+
+<form action="index.php"><br/>
+    <input type="submit" name="index" value="<?php echo _("Accueil") ?>"/>
+</form>

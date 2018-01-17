@@ -1,6 +1,9 @@
 <?php
 session_start();
-require_once '../gettext.inc.php';
+
+require_once '/home/groupe2equipe3php/www/gettext.inc.php';
+
+initialiser_gettext($_SESSION['lang']);
 
 function get_pseudo(PDO $bdd, $email) {
     try {
@@ -103,16 +106,20 @@ function get_demandes_traduction(PDO $bdd) {
         $request->execute();
 
         if($request->rowCount() == 0) {
-            echo _("Ce mot n'est pas enregistré.") . '<br/>';
+            return false;
         }
         else {
             while ($data = $request->fetch()) {
-                echo $data['email'] . "\t" . $data['mot'] . "\t" . $data['langue'] . "\t" . $data['etat']; ?>
+                echo $data['email'] . "\t" . $data['mot'] . "\t" . $data['langue'] . "\t" . $data['etat'] . "\t";
+                ?>
+
                 <form action="../vue/traduction/traduire_demandes.php" method="post">
-                    <input type="submit" name="Traduire" value="Traduire">
+                    <input type="submit" name="traduire" value="<?php echo _("Traduire") ?>">
                 </form><br/>
+
                 <?php
             }
+            return true;
         }
     }
     catch(PDOException $exception) {

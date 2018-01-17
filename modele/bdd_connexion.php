@@ -1,6 +1,5 @@
 <?php
 session_start();
-require_once '../gettext.inc.php';
 
 function bdd_connexion()
 {
