@@ -97,17 +97,17 @@ function get_traduction(PDO $bdd, $mot) {
     return false;
 }
 
-function afficher_traduction_requests(PDO $bdd, $mot) {
+function afficher_traduction_requests(PDO $bdd) {
     try {
         $request = $bdd->prepare('SELECT * FROM demande_traduction');
-        $request->execute(array('mot' => $mot));
+        $request->execute();
 
         if($request->rowCount() == 0) {
             echo _("Ce mot n'est pas enregistré.") . '<br/>';
         }
         else {
             while ($data = $request->fetch()) {
-                echo $data;
+                echo $data['email'] . "\t" . $data['mot'] . "\t" . $data['langue'] . "\t" . $data['etat'] . '<br/>';
             }
         }
     }
