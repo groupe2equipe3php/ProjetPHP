@@ -21,7 +21,7 @@ class UtilisateurStandard extends Utilisateur
         return parent::getPseudo();
     }
     public function traduire($text, $lang){
-        initialiser_gettext($lang);
-        echo _($text);
+
     }
+
 }

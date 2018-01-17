@@ -18,4 +18,5 @@ abstract class Utilisateur
     public function getPseudo() {
         return $this->pseudo;
     }
+
 }
