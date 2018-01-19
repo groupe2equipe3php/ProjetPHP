@@ -109,13 +109,16 @@ function get_demandes_traduction(PDO $bdd) {
             return false;
         }
         else {
+            echo _("E-mail Mot Langue État") . '<br/><br/>';
+
             while ($data = $request->fetch()) {
-                echo $data['email'] . "\t" . $data['mot'] . "\t" . $data['langue'] . "\t" . $data['etat'] . "\t";
+                echo $data['email'] . ' ' ?><strong><?php echo $data['mot'] ?></strong><?php
+                echo ' ' . $data['langue'] . ' ' . $data['etat'];
                 ?>
 
                 <form action="/vue/traduction/traduire_demandes.php" method="post">
-                    <input type="hidden" name="mot" value="<?php $data['mot'] ?>"> <!-- Envoyer l'information -->
-                    <input type="hidden" name="langue" value="<?php $data['langue'] ?>">
+                    <input type="hidden" name="mot" value="<?php echo $data['mot'] ?>"> <!-- Envoyer l'information -->
+                    <input type="hidden" name="langue" value="<?php echo $data['langue'] ?>">
 
                     <input type="submit" name="traduire" value="<?php echo _("Traduire") ?>">
                 </form><br/>

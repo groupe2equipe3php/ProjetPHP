@@ -37,6 +37,10 @@ function bdd_traduction_insertion(PDO $bdd, $mot, $traduction) {
     try {
         $bdd->beginTransaction(); // S'il y a une erreur on ne met pas à jour la base de données
 
+        if(empty($traduction)) {
+            return false;
+        }
+
         $request = $bdd->prepare('INSERT INTO traduction (mot, traduction) '
             . 'VALUES(:mot, :traduction)');
         $request->execute(array('mot' => $mot, 'traduction' => $traduction));

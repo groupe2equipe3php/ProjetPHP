@@ -10,12 +10,12 @@ $bdd = bdd_connexion();
 $traduction = get_traduction($bdd, $mot);
 
 if(! $traduction) {
-    echo _("Ce mot n'a pas de traduction dans la base de données. Souhaitez-vous demander une traduction ?");
+    echo _("Ce mot n'a pas de traduction dans la base de données. Souhaitez-vous demander une traduction ?") . '<br/>';
 
-    $_SESSION['mot_a_traduire'] = $mot;
+    $_SESSION['mot'] = $mot;
 ?>
 
-<form action="user_enregistrer_demande_traduction.php" method="post">
+<form action="user_enregistrer_demande_traduction.php" method="post"><br/>
     <!-- TODO saisir la langue du mot -->
 
     <input type="submit" value="<?php echo _("Enregistrer une demande") ?>"/>

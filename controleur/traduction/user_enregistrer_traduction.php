@@ -11,8 +11,8 @@ initialiser_gettext($_SESSION['lang']);
 
 $bdd = bdd_connexion();
 
-$mot_a_traduire = $_SESSION['mot'];
-$traduction     = $_POST['traduction'];
+$mot        = $_SESSION['mot'];
+$traduction = $_POST['traduction'];
 
 if(bdd_traduction_insertion($bdd, $mot, $traduction)) {
     echo _("Traduction enregistrée, merci.") . '<br/>';
@@ -22,6 +22,7 @@ else {
 }
 
 ?>
-<form action="../../vue/traduction/affichage_demandes_traduction.php">
+
+<form action="../../vue/traduction/affichage_demandes_traduction.php"><br/>
     <input type="submit" value="<?php echo _("Accueil") ?>"/>
 </form>
