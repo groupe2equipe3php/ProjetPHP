@@ -14,7 +14,6 @@ initialiser_gettext($_SESSION['lang']);
 $bdd = bdd_connexion();
 
 echo _("Voici la liste des demandes de traduction") . '<br/><br/>';
-
 get_demandes_traduction($bdd);
 ?>
 

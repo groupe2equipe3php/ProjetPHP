@@ -33,15 +33,22 @@ function bdd_demande_traduction_insertion(PDO $bdd, $email, $mot, $langue) {
     return true;
 }
 
-function bdd_traduction_insertion(PDO $bdd, $email, $mot, $traduction) {
+function bdd_traduction_insertion(PDO $bdd, $mot, $traduction) {
     try {
-        $request = $bdd->prepare('INSERT INTO demande_traduction (email, mot, traduction) '
-        . 'VALUES(:email, :mot, :traduction)');
+        $bdd->beginTransaction(); // S'il y a une erreur on ne met pas à jour la base de données
 
-        $request->execute(array('email' => $email, 'mot' => $mot, 'traduction' => $traduction));
+        $request = $bdd->prepare('INSERT INTO traduction (mot, traduction) '
+            . 'VALUES(:mot, :traduction)');
+        $request->execute(array('mot' => $mot, 'traduction' => $traduction));
+
+        $request = $bdd->prepare('DELETE FROM demande_traduction WHERE mot = :mot');
+        $request->execute(array('mot' => $mot));
+
+        $bdd->commit();
     }
     catch (PDOException $exception) {
         $exception->getMessage();
+        $bdd->rollBack();
         return false;
     }
     return true;

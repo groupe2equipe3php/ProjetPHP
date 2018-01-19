@@ -114,6 +114,9 @@ function get_demandes_traduction(PDO $bdd) {
                 ?>
 
                 <form action="/vue/traduction/traduire_demandes.php" method="post">
+                    <input type="hidden" name="mot" value="<?php $data['mot'] ?>"> <!-- Envoyer l'information -->
+                    <input type="hidden" name="langue" value="<?php $data['langue'] ?>">
+
                     <input type="submit" name="traduire" value="<?php echo _("Traduire") ?>">
                 </form><br/>
 
