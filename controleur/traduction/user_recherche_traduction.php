@@ -10,7 +10,7 @@ $bdd = bdd_connexion();
 $traduction = get_traduction($bdd, $mot);
 
 if(! $traduction) {
-    echo _("Ce mot n'a pas de traduction dans la base de données. Souhaitez-vous demander une traduction ?") . '<br/>';
+    echo _("Ce mot n'a pas de traduction dans la base de données. Souhaitez-vous demander une traduction ?");
 
     $_SESSION['mot'] = $mot;
 ?>
@@ -28,6 +28,6 @@ else {
 }
 ?>
 
-<form action="../index.php">
+<form action="../index.php"><br/>
     <input type="submit" value="<?php echo _("Accueil") ?>"/>
 </form>

@@ -47,12 +47,18 @@ initialiser_gettext($_SESSION['lang']);
     </form>
 </div>
 
+<?php
+if($_SESSION['user'] == 't' or $_SESSION['user'] == 'a') {
+?>
 <div class="bloc_configuration">
     <form action="traduction/affichage_demandes_traduction.php" method="post">
         <p><?php echo _("Traduction") ?></p>
         <input type="submit" name="traduire_demandes" value="<?php echo _("Traduire les demandes") ?>"/>
     </form>
 </div>
+<?php
+}
+?>
 
 <div class="bloc">
     <p> <?php echo _("Voici le site web de traduction de l'équipe 3 du groupe 2 pour le projet PHP du semestre 3, IUT AMU site Aix.") ?></p>
