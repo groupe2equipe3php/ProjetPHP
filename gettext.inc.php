@@ -16,7 +16,7 @@ function initialiser_gettext($lang)
     setlocale(LC_ALL, $lang);
 
     $domain = 'messages';
-    bindtextdomain($domain, 'locale');
+    bindtextdomain($domain, '../locale');
     textdomain($domain);
 }
 ?>

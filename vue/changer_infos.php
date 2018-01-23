@@ -21,5 +21,5 @@ initialiser_gettext($_SESSION['lang']);
     <label name="nouveau_mdp"><?php echo _("Nouveau mot de passe : ") ?>
         <input type="password" name="nouveau_mdp"/></label><br/><br/>
 
-    <input type="submit" value="<?php _("Envoyer") ?>"/>
+    <input type="submit" value="<?php echo _("Envoyer") ?>"/>
 </form>

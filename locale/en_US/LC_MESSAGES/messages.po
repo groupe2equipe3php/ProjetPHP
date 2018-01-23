@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-01-15 20:20+0100\n"
+"POT-Creation-Date: 2018-01-23 15:31+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,163 +17,294 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: connexion.php:7
+#: vue/changer_infos.php:7 vue/connexion.php:7
 msgid "Connexion"
 msgstr "Connection"
 
-#: connexion.php:12 inscription.php:15
-msgid "Mot de passe : "
-msgstr "Password : "
+#: vue/changer_infos.php:13
+msgid "Veuillez saisir les informations que vous souhaitez modifier."
+msgstr "Please enter the information you want to change."
 
-#: index.php:26
-msgid "Traducteur Groupe 2 Équipe 3 IUT"
-msgstr "Translator IUT Group 2 Team 3"
-
-#: index.php:53
-msgid "Bienvenue sur le site de traduction ! Vous pouvez vous inscrire ou vous connecter."
-msgstr "Welcome to the translation website ! You can sign up or log in."
-
-#: index.php:55
-msgid "S'inscrire"
-msgstr "Sign up"
-
-#: index.php:58
-msgid "Se connecter"
-msgstr "Log in"
-
-#: index.php:61
-msgid "Mot de passe oublié"
-msgstr "Password forgotten"
-
-#: index.php:71
-msgid "Bienvenue "
-msgstr "Welcome "
-
-#: index.php:73
-msgid "Vous êtes connecté avec l'adresse "
-msgstr "You are connected with "
-
-#: index.php:76
-msgid "Vous êtes un utilisateur "
-msgstr "You are a user "
-
-#: index.php:78
-msgid "standard"
-msgstr "standard"
-
-#: index.php:81
-msgid "premium"
-msgstr "premium"
-
-#: index.php:84
-msgid "traducteur"
-msgstr "translator"
-
-#: index.php:87
-msgid "administrateur"
-msgstr "administrator"
-
-#: index.php:90
-msgid "erreur"
-msgstr "error"
-
-#: index.php:95
-msgid "Se déconnecter"
-msgstr "Log out"
-
-#: index.php:103
-msgid "Voici le site web de traduction de l'équipe 3 du groupe 2 pour le projet PHP du semestre 3, IUT AMU site Aix."
-msgstr "You are on the translation website created by the the team 3 from the group 2 for the third semester PHP project, IUT AMU in Aix."
-
-#: index.php:104
-msgid "Ce groupe est composé de :"
-msgstr "We are :"
-
-#: index.php:114
-msgid "Pour rechercher une traduction :"
-msgstr "To find a translation :"
-
-#: index.php:116
-msgid "Je veux traduire !"
-msgstr "I want to translate !"
-
-#: index.php:123
-msgid "Sélectionnez la langue du site "
-msgstr "Select language"
-
-#: index.php:126
-msgid "Français"
-msgstr "French"
-
-#: index.php:129
-msgid "Anglais"
-msgstr "English"
-
-#: index.php:131
-msgid "Recharger"
-msgstr "Reload"
-
-#: inscription.php:7
-msgid "Inscription"
-msgstr "Registration"
-
-#: inscription.php:11
-msgid "Nom : "
-msgstr "Last name : "
-
-#: inscription.php:12
-msgid "Prenom : "
-msgstr "First name : "
-
-#: inscription.php:13
+#: vue/changer_infos.php:15 vue/inscription.php:14
 msgid "Pseudo : "
 msgstr "Alias : "
 
-#: recuperation_mdp.php:7
+#: vue/changer_infos.php:18
+msgid "Ancien mot de passe : "
+msgstr "Old password : "
+
+#: vue/changer_infos.php:21
+msgid "Nouveau mot de passe : "
+msgstr "New password : "
+
+#: vue/changer_infos.php:24
+msgid "Envoyer"
+msgstr "Submit"
+
+#: vue/connexion.php:16 vue/inscription.php:16
+msgid "Mot de passe : "
+msgstr "Password : "
+
+#: vue/connexion.php:19 vue/recuperation_mdp.php:22 vue/recuperation_mdp.php:34
+#: vue/recuperation_mdp.php:54
+msgid "Valider"
+msgstr "Send"
+
+#: vue/index_connecte.php:8 vue/index_non_connecte.php:8
+msgid "Traducteur Groupe 2 Équipe 3 IUT"
+msgstr "Translator Group 2 Team 3 IUT"
+
+#: vue/index_connecte.php:14
+msgid "Bienvenue"
+msgstr "Welcome"
+
+#: vue/index_connecte.php:15
+msgid "Vous êtes connecté avec l'adresse"
+msgstr "You are connected with the e-mail address"
+
+#: vue/index_connecte.php:16
+msgid "Vous êtes un utilisateur "
+msgstr "You are a user "
+
+#: vue/index_connecte.php:21
+msgid "standard"
+msgstr "standard"
+
+#: vue/index_connecte.php:24
+msgid "premium"
+msgstr "premium"
+
+#: vue/index_connecte.php:27
+msgid "traducteur"
+msgstr "translator"
+
+#: vue/index_connecte.php:30
+msgid "administrateur"
+msgstr "administrator"
+
+#: vue/index_connecte.php:33
+msgid "erreur"
+msgstr "error"
+
+#: vue/index_connecte.php:39
+msgid "Se déconnecter"
+msgstr "Log out"
+
+#: vue/index_connecte.php:45
+msgid "Configuration du compte"
+msgstr "Account configuration"
+
+#: vue/index_connecte.php:46
+msgid "Modifier les informations"
+msgstr "Change account information"
+
+#: vue/index_connecte.php:56
+msgid "Traduction"
+msgstr "Translation"
+
+#: vue/index_connecte.php:57
+msgid "Traduire les demandes"
+msgstr "Translate requests"
+
+#: vue/index_connecte.php:66 vue/index_non_connecte.php:30
+msgid "Voici le site web de traduction de l'équipe 3 du groupe 2 pour le projet PHP du semestre 3, IUT AMU site Aix."
+msgstr "You are on the translation website created by the team 3 from group 2 for the third semester PHP project, IUT AMU."
+
+#: vue/index_connecte.php:67 vue/index_non_connecte.php:31
+msgid "Ce groupe est composé de :"
+msgstr "We are :"
+
+#: vue/index_connecte.php:77 vue/index_non_connecte.php:42
+msgid "Pour rechercher une traduction :"
+msgstr "To look for a translation :"
+
+#: vue/index_connecte.php:80 vue/index_non_connecte.php:45
+msgid "Je veux traduire !"
+msgstr "I want to translate !"
+
+#: vue/index_connecte.php:87 vue/index_non_connecte.php:52
+msgid "Sélectionnez la langue du site "
+msgstr "Select language "
+
+#: vue/index_connecte.php:90 vue/index_non_connecte.php:55
+msgid "Français"
+msgstr "French"
+
+#: vue/index_connecte.php:93 vue/index_non_connecte.php:58
+msgid "Anglais"
+msgstr "English"
+
+#: vue/index_connecte.php:95 vue/index_non_connecte.php:60
+msgid "Recharger"
+msgstr "Reload"
+
+#: vue/index_non_connecte.php:14
+msgid "Bienvenue sur le site de traduction ! Vous pouvez vous inscrire ou vous connecter."
+msgstr "Welcome on the translation website ! You can sign in or log in."
+
+#: vue/index_non_connecte.php:17
+msgid "S'inscrire"
+msgstr "Sign in"
+
+#: vue/index_non_connecte.php:21
+msgid "Se connecter"
+msgstr "Log in"
+
+#: vue/index_non_connecte.php:25
+msgid "Mot de passe oublié"
+msgstr "Password forgotten"
+
+#: vue/inscription.php:7
+msgid "Inscription"
+msgstr "Inscription"
+
+#: vue/inscription.php:12
+msgid "Nom : "
+msgstr "Last name : "
+
+#: vue/inscription.php:13
+msgid "Prenom : "
+msgstr "First name : "
+
+#: vue/recuperation_mdp.php:7
 msgid "Récupération du mot de passe"
-msgstr "Password recovery"
+msgstr "Password recover"
 
-#: recuperation_mdp.php:10
+#: vue/recuperation_mdp.php:12
 msgid "Récupération du mot de passe."
-msgstr "Password recovery."
+msgstr "Password recover."
 
-#: recuperation_mdp.php:14
-#, fuzzy
+#: vue/recuperation_mdp.php:16
 msgid "Un code de verification vous a été envoyé par mail : "
-msgstr "A verification code has been sent by e-mail : "
+msgstr "A verification code has been sent to you via e-mail : "
 
-#: recuperation_mdp.php:18
+#: vue/recuperation_mdp.php:21
 msgid "Code de verification"
 msgstr "Verification code"
 
-#: recuperation_mdp.php:19 recuperation_mdp.php:30 recuperation_mdp.php:47
-msgid "Valider"
-msgstr "Submit"
-
-#: recuperation_mdp.php:26
+#: vue/recuperation_mdp.php:28
 msgid "Nouveau  mot de passe pour "
 msgstr "New password for "
 
-#: recuperation_mdp.php:28
+#: vue/recuperation_mdp.php:32
 msgid "Nouveau mot de passe"
 msgstr "New password"
 
-#: recuperation_mdp.php:29
+#: vue/recuperation_mdp.php:33
 msgid "Confirmation mot de passe"
 msgstr "Password confirmation"
 
-#: recuperation_mdp.php:38
+#: vue/recuperation_mdp.php:44
 msgid "Votre adresse mail "
-msgstr "Your e-mail address "
+msgstr "You e-mail address "
 
-#: recuperation_mdp.php:39
+#: vue/recuperation_mdp.php:46
 msgid "Sélectionnez la méthode :"
-msgstr "Select the method :"
+msgstr "Select method :"
 
-#: recuperation_mdp.php:42
+#: vue/recuperation_mdp.php:49
 msgid "Recevoir un lien par mail"
-msgstr "Get a link in an e-mail"
+msgstr "Get a link via e-mail"
 
-#: recuperation_mdp.php:45
+#: vue/recuperation_mdp.php:52
 msgid "Nouveau mot de passe aléatoire"
 msgstr "New random password"
+
+#: controleur/user_changer_infos.php:17
+msgid "Le pseudo a été modifié."
+msgstr "You alias has been updated."
+
+#: controleur/user_changer_infos.php:21
+msgid "Une erreur est survenue pendant la modification du pseudo. Veuillez réessayer plus tard."
+msgstr "An error occured during the alias update. Please try again later."
+
+#: controleur/user_changer_infos.php:31
+msgid "Le mot de passe a été modifié."
+msgstr "You password has been updated."
+
+#: controleur/user_changer_infos.php:34
+msgid "Une erreur est survenue pendant la modification du mot de passe. Veuillez réessayer plus tard."
+msgstr "An error occured during the password update. Please try again later."
+
+#: controleur/user_changer_infos.php:38 modele/bdd_verification.php:44
+msgid "Le mot de passe renseigné n'est pas le bon."
+msgstr "Wrong password given."
+
+#: controleur/user_changer_infos.php:44
+msgid "Accueil"
+msgstr "Home"
+
+#: controleur/user_connexion.php:18
+msgid "L'e-mail n'est pas renseigné."
+msgstr "E-mail is not given."
+
+#: controleur/user_connexion.php:21
+msgid "Le mot de passe n'est pas renseigné."
+msgstr "Password is not given."
+
+#: controleur/user_recuperation_mdp.php:8
+#: controleur/user_recuperation_mdp.php:56
+msgid "Recuperation de mot de passe"
+msgstr "Password recover"
+
+#: controleur/user_recuperation_mdp.php:60
+#: controleur/user_recuperation_mdp.php:171
+msgid "Cette adresse mail n'est pas enregistée"
+msgstr "This e-mail address is not registered"
+
+#: controleur/user_recuperation_mdp.php:64
+#: controleur/user_recuperation_mdp.php:175
+msgid "Adresse mail incorrecte"
+msgstr "Wrong e-mail address"
+
+#: controleur/user_recuperation_mdp.php:68
+#: controleur/user_recuperation_mdp.php:179
+msgid "Veuillez entrez votre adresse mail"
+msgstr "Please enter your e-mail address"
+
+#: controleur/user_recuperation_mdp.php:87
+msgid "Code invalide"
+msgstr "Wrong code"
+
+#: controleur/user_recuperation_mdp.php:90
+msgid "Veuillez entrer votre code de confirmation"
+msgstr "Please enter your verification code"
+
+#: controleur/user_recuperation_mdp.php:112
+msgid "Vos mots de passe ne correspondent pas"
+msgstr "The passwords don't match"
+
+#: controleur/user_recuperation_mdp.php:116
+#: controleur/user_recuperation_mdp.php:122
+msgid "Veuillez remplir tous les champs"
+msgstr "Please fill all fields"
+
+#: controleur/user_recuperation_mdp.php:119
+msgid "Veuillez valider votre mail grace au code de verification qui vous a été envoyé par mail"
+msgstr "Please confirm your e-mail adress with the verification code that has been sent via mail"
+
+#: controleur/user_recuperation_mdp.php:156
+msgid "Voici votre nouveau mot de passe"
+msgstr "Here is your new password"
+
+#: controleur/user_recuperation_mdp.php:161
+msgid "Mot de passe aleatoire generer"
+msgstr "Random password generated"
+
+#: modele/bdd_recherche.php:14 modele/bdd_recherche.php:33
+#: modele/bdd_recherche.php:52 modele/bdd_recherche.php:71
+#: modele/bdd_verification.php:30
+msgid "Cet utilisateur n'est pas enregistré."
+msgstr "This user is not registered"
+
+#: modele/bdd_recherche.php:112
+msgid "E-mail Mot Langue État"
+msgstr "E-mail Word Language State"
+
+#: modele/bdd_recherche.php:123
+msgid "Traduire"
+msgstr "Translate"
+
+#: modele/bdd_verification.php:36
+msgid "Votre compte n'a pas encore été vérifié."
+msgstr "Your account has not been verified yet."
