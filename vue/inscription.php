@@ -16,6 +16,10 @@ initialiser_gettext($_SESSION['lang']);
     <label name="mdp"><?php echo _("Mot de passe : ") ?><input type="password" name="mdp"/></label><br/><br/>
     <input type="submit"/>
 </form>
+    <form action="../../vue/index_non_connecte.php">
+        <br/><input type="submit" value="<?php echo _("Accueil") ?>"/>
+    </form>
 
 <?php
 end_page();
+?>

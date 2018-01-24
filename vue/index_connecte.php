@@ -97,4 +97,18 @@ if($_SESSION['user'] == 't' or $_SESSION['user'] == 'a') {
 </div>
 
 <?php
+if($_SESSION['user'] == 't' or $_SESSION['user'] == 'a') {
+?>
+<div class="bloc_configuration">
+    <form action="../controleur/user_export.php" method="post">
+        <p><?php echo _("Vous pouvez exporter les traductions enregistrées dans un fichier .mo") ?></p>
+
+        <input type="submit" value="<?php echo _("Exporter") ?>"/>
+    </form>
+</div>
+<?php
+}
+?>
+
+<?php
 end_page();

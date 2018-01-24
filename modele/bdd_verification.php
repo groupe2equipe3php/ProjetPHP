@@ -27,7 +27,7 @@ function bdd_user_verification_connexion(PDO $bdd, $email, $mdp)
         $request->execute(array('email' => $email));
 
         if($request->rowCount() == 0) {
-            echo _("Cet utilisateur n'est pas enregistré.") . '<br/>';
+            echo _("Utilisateur incconu.") . '<br/>';
         }
         else {
             $data = $request->fetch();

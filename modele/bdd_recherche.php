@@ -133,3 +133,19 @@ function get_demandes_traduction(PDO $bdd) {
     }
     return false;
 }
+
+function get_traductions(PDO $bdd) {
+    try {
+        $request = $bdd->prepare('SELECT * FROM traduction');
+        $request->execute();
+
+        if($request->rowCount() == 0) {
+            return false;
+        }
+        return $request->fetchAll();
+    }
+    catch(PDOException $exception) {
+        $exception->getMessage();
+    }
+    return false;
+}
