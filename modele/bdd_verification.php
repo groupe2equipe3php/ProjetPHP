@@ -67,3 +67,19 @@ function bdd_verification_modification_traduction(PDO $bdd, $mot) {
     }
     return false;
 }
+
+function bdd_verification_modification_utilisateur(PDO $bdd, $email) {
+    try {
+        $request = $bdd->prepare('SELECT * FROM user WHERE email = :email');
+        $request->execute(array('email' => $email));
+
+        if($request->rowCount() == 0) {
+            return false;
+        }
+        return true;
+    }
+    catch (PDOException $exception) {
+        $exception->getMessage();
+    }
+    return false;
+}

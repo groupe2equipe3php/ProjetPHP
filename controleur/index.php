@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-if(! isset($_SESSION['lang'])) {
+if(is_null($_SESSION['lang'])) {
     $_SESSION['lang'] = 'fr_FR';
 }
 

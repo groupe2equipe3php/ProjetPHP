@@ -110,3 +110,15 @@ function bdd_set_actif(PDO $bdd, $email) {
     }
     return true;
 }
+
+function bdd_set_type(PDO $bdd, $email, $type) {
+    try {
+        $request = $bdd->prepare('UPDATE user SET type_user = :type WHERE email like :email');
+        $request->execute(array('type' => $type, 'email' => $email));
+    }
+    catch (PDOException $exception) {
+        $exception->getMessage();
+        return false;
+    }
+    return true;
+}

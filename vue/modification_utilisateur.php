@@ -12,15 +12,15 @@ echo _("Saisir un e-mail avec un nouveau type d'utilisateur.") . '<br/><br/>';
 
 ?>
 <form action="../controleur/user_modifier_utilisateur.php" method="post">
-    <label name="mot"><?php echo _("Mot à modifier") ?>
+    <label name="email"><?php echo _("E-mail de l'utilisateur") ?>
         <input type="text" name="mot"/></label><br/>
 
-    <label name="traduction"><?php echo _("Nouvelle traduction") ?>
+    <label name="type"><?php echo _("Nouveau type (s, p, t, a)") ?>
         <input type="text" name="traduction"/></label><br/><br/>
 
     <input type="submit" value="<?php echo _("Envoyer") ?>"/>
 </form>
 
-<form action="../../controleur/index.php">
+<form action="../controleur/index.php">
     <br/><input type="submit" value="<?php echo _("Accueil") ?>"/>
 </form>
