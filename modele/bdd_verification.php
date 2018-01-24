@@ -51,3 +51,19 @@ function bdd_user_verification_connexion(PDO $bdd, $email, $mdp)
     }
     return false;
 }
+
+function bdd_verification_modification_traduction(PDO $bdd, $mot) {
+    try {
+        $request = $bdd->prepare('SELECT * FROM traduction WHERE mot = :mot');
+        $request->execute(array('mot' => $mot));
+
+        if($request->rowCount() == 0) {
+            return false;
+        }
+        return true;
+    }
+    catch (PDOException $exception) {
+        $exception->getMessage();
+    }
+    return false;
+}

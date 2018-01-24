@@ -308,3 +308,7 @@ msgstr "Translate"
 #: modele/bdd_verification.php:36
 msgid "Votre compte n'a pas encore été vérifié."
 msgstr "Your account has not been verified yet."
+
+#: controleur/traduction/user_recherche_traduction.php:29
+msgid "Ce mot n'a pas de traduction dans la base de données."
+msgstr "This word has no traduction in the database."

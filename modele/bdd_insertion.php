@@ -41,6 +41,9 @@ function bdd_traduction_insertion(PDO $bdd, $mot, $traduction) {
             return false;
         }
 
+        $request = $bdd->prepare('DELETE FROM traduction WHERE mot = :mot');
+        $request->execute(array('mot' => $mot)); // En cas de mise à jour, on supprime les précédents
+
         $request = $bdd->prepare('INSERT INTO traduction (mot, traduction) '
             . 'VALUES(:mot, :traduction)');
         $request->execute(array('mot' => $mot, 'traduction' => $traduction));

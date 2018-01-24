@@ -48,16 +48,27 @@ initialiser_gettext($_SESSION['lang']);
 </div>
 
 <?php
-if($_SESSION['user'] == 't' or $_SESSION['user'] == 'a') {
+if($_SESSION['user'] != 's') {
 ?>
-
 <div class="bloc_configuration">
     <form action="traduction/affichage_demandes_traduction.php" method="post">
         <p><?php echo _("Traduction") ?></p>
         <input type="submit" name="traduire_demandes" value="<?php echo _("Traduire les demandes") ?>"/>
     </form>
 </div>
+<?php
+}
+?>
 
+<?php
+if($_SESSION['user'] == 't' or $_SESSION['user'] == 'a') {
+?>
+<div class="bloc_configuration">
+    <form action="traduction/modifier_traduction.php" method="post">
+        <p><?php echo _("Modifier une traduction") ?></p>
+        <input type="submit" name="modifier_traduction" value="<?php echo _("Modifier") ?>"/>
+    </form>
+</div>
 <?php
 }
 ?>
