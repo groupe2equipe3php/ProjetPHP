@@ -72,9 +72,9 @@ if (isset($_POST['recup_submit'], $_POST['recup_mail'], $_POST['mail']) && $_POS
         $error = _("Veuillez entrez votre adresse mail");
     }
 }
-//else{
-//    $error = "Veuillez choisir une option";
-//}
+else{
+    $error = "Veuillez entrez les champs";
+}
 
 
 if (isset($_POST['verif_submit'], $_POST['verif_code'])) {
