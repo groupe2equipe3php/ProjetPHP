@@ -19,9 +19,8 @@ echo _("$title") . '<br/><br/>';
 
     <input type="submit" value="<?php echo _("Connexion") ?>"/>
 </form>
-    <form action="../../vue/index_non_connecte.php">
+    <form action="../vue/index_non_connecte.php">
         <br/><input type="submit" value="<?php echo _("Accueil") ?>"/>
     </form>
 <?php
 end_page();
-?>

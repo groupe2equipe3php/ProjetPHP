@@ -41,6 +41,9 @@ function bdd_traduction_insertion(PDO $bdd, $mot, $traduction) {
             return false;
         }
 
+        $request = $bdd->prepare('DELETE FROM traduction WHERE mot = :mot');
+        $request->execute(array('mot' => $mot)); // En cas de mise à jour, on supprime les précédents
+
         $request = $bdd->prepare('INSERT INTO traduction (mot, traduction) '
             . 'VALUES(:mot, :traduction)');
         $request->execute(array('mot' => $mot, 'traduction' => $traduction));
@@ -100,6 +103,18 @@ function bdd_set_actif(PDO $bdd, $email) {
     try {
         $request = $bdd->prepare('UPDATE user SET actif = 1 WHERE email like :email');
         $request->execute(array('email' => $email));
+    }
+    catch (PDOException $exception) {
+        $exception->getMessage();
+        return false;
+    }
+    return true;
+}
+
+function bdd_set_type(PDO $bdd, $email, $type) {
+    try {
+        $request = $bdd->prepare('UPDATE user SET type_user = :type WHERE email like :email');
+        $request->execute(array('type' => $type, 'email' => $email));
     }
     catch (PDOException $exception) {
         $exception->getMessage();

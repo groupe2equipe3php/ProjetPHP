@@ -15,60 +15,65 @@ if (isset($_GET['section'])) {
     $section = "";
 }
 
-if (!isset($_POST['mail'])) {
-    $error = "Veuillez choisir une option";
-}
+//if (!isset($_POST['mail'])) {
+//    $error = "Veuillez choisir une option";
+//}
 
 if (isset($_POST['recup_submit'], $_POST['recup_mail'], $_POST['mail']) && $_POST['mail'] == "meth_mail") {
-    if (!empty($_POST['recup_mail'])) {
+    if (!empty($_POST['recup_mail']) ) {
         $recup_mail = htmlspecialchars($_POST['recup_mail']);
-        if (filter_var($recup_mail, FILTER_VALIDATE_EMAIL)) {
-            $mailexist = $bdd->prepare('SELECT id FROM user WHERE email = ?');
-            $mailexist->execute(array($recup_mail));
-            $mailexist = $mailexist->rowCount();
-            if ($mailexist == 1) {
-                $_SESSION['recup_mail'] = $recup_mail;
-                $recup_code = "";
-                for ($i = 0; $i < 8; $i++) {
-                    $recup_code .= mt_rand(0, 9);
-                }
-                //$_SESSION['recup_code'] = $recup_code;
+        if(isset($_POST['mail'])) {
+            if (filter_var($recup_mail, FILTER_VALIDATE_EMAIL)) {
+                $mailexist = $bdd->prepare('SELECT id FROM user WHERE email = ?');
+                $mailexist->execute(array($recup_mail));
+                $mailexist = $mailexist->rowCount();
+                if ($mailexist == 1) {
+                    $_SESSION['recup_mail'] = $recup_mail;
+                    $recup_code = "";
+                    for ($i = 0; $i < 8; $i++) {
+                        $recup_code .= mt_rand(0, 9);
+                    }
+                    //$_SESSION['recup_code'] = $recup_code;
 
-                $mail_recup_exist = $bdd->prepare('SELECT id FROM recuperation WHERE mail = ? ');
-                $mail_recup_exist->execute(array($recup_mail));
-                $mail_recup_exist = $mail_recup_exist->rowCount();
+                    $mail_recup_exist = $bdd->prepare('SELECT id FROM recuperation WHERE mail = ? ');
+                    $mail_recup_exist->execute(array($recup_mail));
+                    $mail_recup_exist = $mail_recup_exist->rowCount();
 
-                if ($mail_recup_exist == 1) {
-                    $recup_insert = $bdd->prepare('UPDATE recuperation SET code = ? WHERE mail= ?');
-                    $recup_insert->execute(array($recup_code, $recup_mail));
-                } else {
-                    $recup_insert = $bdd->prepare('INSERT INTO recuperation(mail,code) VALUES (?,?)');
-                    $recup_insert->execute(array($recup_mail, $recup_code));
-                }
+                    if ($mail_recup_exist == 1) {
+                        $recup_insert = $bdd->prepare('UPDATE recuperation SET code = ? WHERE mail= ?');
+                        $recup_insert->execute(array($recup_code, $recup_mail));
+                    } else {
+                        $recup_insert = $bdd->prepare('INSERT INTO recuperation(mail,code) VALUES (?,?)');
+                        $recup_insert->execute(array($recup_mail, $recup_code));
+                    }
 
-                $message = _("
-                 
-                    Voici votre code de récuperation: '$recup_code' 
+                    $message = _("
+                     
+                        Voici votre code de récuperation: '$recup_code' 
+                        
                     
-                
-                 ");
+                     ");
 
-                mail($recup_mail, _("Recuperation de mot de passe"), $message);
-                header("Location:http://groupe2equipe3php.alwaysdata.net/controleur/user_recuperation_mdp.php?section=code");
+                    mail($recup_mail, _("Recuperation de mot de passe"), $message);
+                    header("Location:http://groupe2equipe3php.alwaysdata.net/controleur/user_recuperation_mdp.php?section=code");
+
+                } else {
+                    $error = _("Cette adresse mail n'est pas enregistée");
+                }
 
             } else {
-                $error = _("Cette adresse mail n'est pas enregistée");
+                $error = _("Adresse mail incorrecte");
             }
-
-        } else {
-            $error = _("Adresse mail incorrecte");
         }
+//        if(!isset($_POST['mail'])) {
+//            $error = "Veuillez choisir une option";
 
     } else {
         $error = _("Veuillez entrez votre adresse mail");
     }
-} else{
-    $error = "Veuillez choisir une option";
+}
+else{
+    $error = "Veuillez entrez les champs";
 }
 
 
@@ -163,8 +168,8 @@ if (isset($_POST['recup_submit'], $_POST['recup_mail'], $_POST['mail']) && $_POS
 
                 header('Location:http://groupe2equipe3php.alwaysdata.net/vue/connexion.php');
                 $mdp_alea = password_hash($mdp_alea, PASSWORD_DEFAULT);
-                $up_mdp = $bdd->prepare('UPDATE user set mdp = ? WHERE email = ?');
-                $up_mdp->execute(array($mdp_alea, $_SESSION['$recup_mail']));
+                $up_mdp = $bdd->prepare('UPDATE user SET mdp = ? WHERE email = ?');
+                $up_mdp->execute(array($mdp_alea, $_SESSION['recup_mail']));
                 $up_mdp = $up_mdp->rowCount();
 
             } else {
