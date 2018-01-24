@@ -4,7 +4,7 @@ session_start();
 require_once '../../gettext.inc.php';
 require_once '../../utils.inc.php';
 
-start_page(_("Inscription"));
+start_page(_("Modification traduction"));
 
 initialiser_gettext($_SESSION['lang']);
 
