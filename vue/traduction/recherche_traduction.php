@@ -4,9 +4,22 @@ session_start();
 require_once '../../gettext.inc.php';
 require_once '../../utils.inc.php';
 
-start_page(_("Inscription"));
+start_page(_("Recherche d'une traduction"));
+$title = "Recherche d'une traduction";
 
 initialiser_gettext($_SESSION['lang']);
+
+echo _("$title") . '<br/><br/>';
+if (empty($_SESSION['user'])) {
+    echo _("Vous devez être connecté pour pouvoir demander une traduction");?>
+    <br/><br/><form action="../../vue/connexion.php">
+    <input type="submit" value="<?php echo _("Connexion") ?>"/>
+    </form><br/>
+    <form action="../../controleur/index.php">
+        <input type="submit" value="<?php echo _("Accueil") ?>"/>
+    </form><?php
+}
+else {
 ?>
 
 <form action="../../controleur/traduction/user_recherche_traduction.php" method="post">
@@ -28,4 +41,5 @@ initialiser_gettext($_SESSION['lang']);
 </form>
 
 <?php
+}
 end_page();

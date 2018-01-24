@@ -196,7 +196,7 @@ msgstr "Password confirmation"
 
 #: vue/recuperation_mdp.php:44
 msgid "Votre adresse mail "
-msgstr "You e-mail address "
+msgstr "Your e-mail address "
 
 #: vue/recuperation_mdp.php:46
 msgid "Sélectionnez la méthode :"

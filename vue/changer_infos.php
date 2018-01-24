@@ -4,10 +4,12 @@ session_start();
 require_once '../gettext.inc.php';
 require_once '../utils.inc.php';
 
-start_page(_("Connexion"));
-
+start_page(_("Changement des informations"));
+$title = "Changement des informations";
 initialiser_gettext($_SESSION['lang']);
+echo _("$title") . '<br/><br/>';
 ?>
+
 
 <form action="../controleur/user_changer_infos.php" method="post">
     <p><?php echo _("Veuillez saisir les informations que vous souhaitez modifier.") ?></p>

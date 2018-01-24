@@ -7,6 +7,9 @@ require_once '../../utils.inc.php';
 initialiser_gettext($_SESSION['lang']);
 
 start_page(_("Proposition de traduction"));
+$title = "Proposition de traduction";
+
+echo _("$title") . '<br/><br/>';
 
 $_SESSION['mot'] = $_POST['mot']; // Envoyé par le champ <input type="hidden"/> de get_demandes_traduction()
 

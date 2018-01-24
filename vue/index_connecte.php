@@ -6,8 +6,9 @@ require_once '../utils.inc.php';
 
 // _() est un alias de gettext()
 start_page(_("Traducteur Groupe 2 Équipe 3 IUT"));
-
+$title = "Traducteur Groupe 2 Équipe 3 IUT";
 initialiser_gettext($_SESSION['lang']);
+echo _("$title") . '<br/><br/>';
 ?>
 
 <div class="bloc">

@@ -91,19 +91,19 @@ if (count($err) > 0) {
 ?>
 
 <form action="user_inscription.php" method="post">
-    <label name="nom"><?php _("Nom :") ?>
+    <label name="nom"><?php echo _("Nom :") ?>
         <input type="text" name="nom" value="<?php echo htmlEntities($nom); ?>"/></label><br/><br/>
 
-    <label name="pseudo"><?php _("Pseudo :") ?>
+    <label name="pseudo"><?php echo _("Pseudo :") ?>
         <input type="text" name="pseudo" value="<?php echo htmlEntities($pseudo); ?>"/></label><br/><br/>
 
-    <label name="prenom"><?php _("Prenom :") ?>
+    <label name="prenom"><?php echo _("Prenom :") ?>
         <input type="text" name="prenom" value="<?php echo htmlEntities($prenom); ?>"/></label><br/><br/>
 
-    <label name="email"><?php _("E-mail :") ?>
+    <label name="email"><?php echo _("E-mail :") ?>
         <input type="text" name="email" value="<?php echo htmlEntities($email); ?>"/></label><br/><br/>
 
-    <label name="mdp"><?php _("Mot de passe :") ?>
+    <label name="mdp"><?php echo _("Mot de passe :") ?>
         <input type="password" name="mdp" <?php echo htmlEntities($mdp); ?>/></label><br/><br/>
 
     <input type="submit" value="<?php echo _("Valider") ?>"/>
