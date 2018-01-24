@@ -10,6 +10,9 @@ require_once '../../modele/bdd_connexion.php';
 initialiser_gettext($_SESSION['lang']);
 
 start_page(_("Demandes de traduction"));
+$title = "Demandes de traduction";
+
+echo _("$title") . '<br/><br/>';
 
 $bdd = bdd_connexion();
 

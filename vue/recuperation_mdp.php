@@ -5,11 +5,11 @@ require_once '../gettext.inc.php';
 require_once '../utils.inc.php';
 
 start_page(_("Récupération du mot de passe"));
-
+$title = "Récupération du mot de passe";
 initialiser_gettext($_SESSION['lang']);
-?>
 
-<p><?php echo _("Récupération du mot de passe.") ?></p>
+echo _("$title") . '<br/><br/>';
+?>
 
 <?php
 if($section == 'code') {
@@ -52,7 +52,10 @@ else {
     <label for="methode_aleatoire"><?php echo _("Nouveau mot de passe aléatoire") ?></label>
 
     <input type="submit" value="<?php echo _("Valider") ?>" name="recup_submit"/>
-</form><br/>
+</form>
+    <form action="../../vue/index_non_connecte.php">
+        <br/><input type="submit" value="<?php echo _("Accueil") ?>"/>
+    </form>
 
 <?php
 }
