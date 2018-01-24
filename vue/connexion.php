@@ -18,6 +18,9 @@ initialiser_gettext($_SESSION['lang']);
 
     <input type="submit" value="<?php echo _("Valider") ?>"/>
 </form>
-
+    <form action="../../vue/index_non_connecte.php">
+        <br/><input type="submit" value="<?php echo _("Accueil") ?>"/>
+    </form>
 <?php
 end_page();
+?>

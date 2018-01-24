@@ -29,7 +29,6 @@ else {
     }
 }
 ?>
-
 <form action="../index.php">
     <input type="submit" name="index" value="<?php echo _("Accueil") ?>"/>
 </form>

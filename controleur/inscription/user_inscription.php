@@ -106,9 +106,9 @@ if (count($err) > 0) {
     <label name="mdp"><?php _("Mot de passe :") ?>
         <input type="password" name="mdp" <?php echo htmlEntities($mdp); ?>/></label><br/><br/>
 
-    <input type="submit" value="<?php _("Envoyer") ?>"/>
+    <input type="submit" value="<?php echo _("Valider") ?>"/>
 </form>
 
 <form action="../../vue/index_non_connecte.php">
-    <input type="submit" value="<?php _("Accueil") ?>"/>
+    <input type="submit" value="<?php echo _("Accueil") ?>"/>
 </form>
