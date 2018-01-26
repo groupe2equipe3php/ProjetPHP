@@ -4,6 +4,9 @@ session_start();
 require_once '../gettext.inc.php';
 require_once '../utils.inc.php';
 
+require_once '../modele/bdd_connexion.php';
+require_once '../modele/bdd_recherche.php';
+
 // _() est un alias de gettext()
 start_page(_("Traducteur Groupe 2 Équipe 3 IUT"));
 $title = "Traducteur Groupe 2 Équipe 3 IUT";
@@ -16,7 +19,7 @@ echo _("$title") . '<br/><br/>';
         <?php echo _("Vous êtes connecté avec l'adresse") ?> <strong><?= $_SESSION['email'] ?></strong>.<br/>
         <?php echo _("Vous êtes un utilisateur ") ?><strong>
             <?php
-            $type = $_SESSION['user'];
+            $type = get_type(bdd_connexion(), $_SESSION['email']);
             switch ($type) {
                 case 's':
                     echo _("standard");
