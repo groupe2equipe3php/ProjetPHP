@@ -53,7 +53,7 @@ else {
 
     <input type="submit" value="<?php echo _("Valider") ?>" name="recup_submit"/>
 </form>
-    <form action="../../vue/index_non_connecte.php">
+    <form action="../controleur/index.php">
         <br/><input type="submit" value="<?php echo _("Accueil") ?>"/>
     </form>
 
@@ -69,4 +69,4 @@ else {
 ?>
 
 <?php
-end_page();?>
+end_page();

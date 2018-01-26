@@ -31,10 +31,22 @@ else {
         ++$compteur;
     }
 
-    shell_exec('msgfmt ../download/messages.po -o ../download/messages.mo');
-    shell_exec('gzip ../download/messages.mo');
 
-    header('Location: ../download/messages.mo.gz'); // Téléchargement
+    if($_POST['export'] == 'po') {
+        shell_exec('gzip ../download/messages.po');
+        header('Location: ../download/messages.po.gz'); // Téléchargement
+    }
+    elseif($_POST['export'] == 'mo') {
+        shell_exec('msgfmt ../download/messages.po -o ../download/messages.mo');
+        shell_exec('gzip ../download/messages.mo');
+        header('Location: ../download/messages.mo.gz'); // Téléchargement
+    }
+    else {
+        shell_exec('msgfmt ../download/messages.po -o ../download/messages/messages.mo');
+        shell_exec('mkdir ../download/messages/; mv ../download/messages.po ../download/messages/');
+        shell_exec('tar czf ../download/messages.tar.gz ../download/messages/');
+        header('Location: ../download/messages.tar.gz'); // Téléchargement
+    }
 }
 
 ?>

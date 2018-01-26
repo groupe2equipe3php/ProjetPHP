@@ -129,7 +129,16 @@ if($_SESSION['user'] == 't' or $_SESSION['user'] == 'a') {
 ?>
 <div class="bloc_configuration">
     <form action="../controleur/user_export.php" method="post">
-        <p><?php echo _("Vous pouvez exporter les traductions enregistrées dans un fichier .mo") ?></p>
+        <p><?php echo _("Vous pouvez exporter les traductions enregistrées") ?></p>
+
+        <label for="po"><?php echo _("Télécharger .po") ?></label>
+        <input type="radio" name="export" id="po" value="po"/>
+
+        <label for="mo"><?php echo _("Télécharger .mo") ?></label>
+        <input type="radio" name="export" id="mo" value="mo"/>
+
+        <label for="deux"><?php echo _("Télécharger les deux") ?></label>
+        <input type="radio" name="export" id="deux" value="deux"/>
 
         <input type="submit" value="<?php echo _("Exporter") ?>"/>
     </form>
