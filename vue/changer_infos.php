@@ -4,10 +4,11 @@ session_start();
 require_once '../gettext.inc.php';
 require_once '../utils.inc.php';
 
-start_page(_("Changement des informations"));
-$title = "Changement des informations";
 initialiser_gettext($_SESSION['lang']);
-echo _("$title") . '<br/><br/>';
+
+start_page(_("Changement des informations"));
+
+echo _("Changement des informations") . '<br/><br/>';
 ?>
 
 

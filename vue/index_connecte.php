@@ -148,5 +148,11 @@ if($_SESSION['user'] == 't' or $_SESSION['user'] == 'a') {
 }
 ?>
 
+<div class="bloc">
+    <form action="mentions_legales.php" method="post">
+        <input type="submit" value="<?php echo _("Mentions légales") ?>"/>
+    </form>
+</div>
+
 <?php
 end_page();

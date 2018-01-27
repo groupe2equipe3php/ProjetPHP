@@ -62,3 +62,9 @@ echo _("Traducteur Groupe 2 Équipe 3 IUT") . '<br/><br/>';
         <input type="submit" value="<?php echo _("Recharger") ?>"/>
     </form>
 </div>
+
+<div class="bloc">
+    <form action="mentions_legales.php" method="post">
+        <input type="submit" value="<?php echo _("Mentions légales") ?>"/>
+    </form>
+</div>
