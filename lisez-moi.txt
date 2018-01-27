@@ -1,0 +1,42 @@
+Groupe 2 équipe 3, projet PHP du semestre 3, IUT AMU.
+Traducteur en ligne.
+
+
+Le site est accessible avec le lien http://groupe2equipe3php.alwaysdata.net/, qui redirige vers
+http://groupe2equipe3php.alwaysdata.net/controleur/index.php.
+
+
+
+Nous avons réalisé un site Web de traduction. L'utilisateur peut rechercher un terme et sa traduction sera affichée si
+elle est connue, sinon on lui propose d'enregistrer une demande de traduction.
+Les demandes de traduction sont ensuite traitées par les utilisateurs de type traducteur ou administrateur.
+
+Le site permet de créer un compte, de se connecter et de se déconnecter. L'utilisateur a la possibilité de récupérer son
+compte s'il a oublié son mot de passe avec deux méthodes : réception d'un lien par mail ou attribution d'un mot de passe
+aléatoire.
+L'utilisateur peut également modifier son pseudo et son mot de passe après son inscription.
+
+Les utilisateurs administrateurs peuvent modifier les types d'utilisateurs des autres utilisateurs.
+
+L'interface est traduite en anglais : on peut sélectionner la langue désirée à tout moment dans le menu en haut de page.
+
+Il est également possible de télécharger les traductions enregistrées dans la base de données dans un fichier au format
+po, mo ou les deux (dans une archive). Les téléchargements sont des versions compressées des fichiers sur le serveur.
+L'utilisateur doit être traducteur ou administrateur pour utiliser cette fonctionnalité.
+
+
+Les technologies utilisées dans ce projet sont PHP, HTML, CSS et MySQL. Le site et la base de données sont hébergés sur
+alwaysdata.net.
+
+
+
+Vous pouvez accéder à :
+
+- Alwaysdata. Identifiant : groupe2equipe3php@outlook.fr, mot de passe : phpequipe3groupe2
+- PhpMyAdmin sur Alwaysdata. id : 149231, mdp : root
+- Github. id : groupe2equipe3php@outlook.fr, mdp : phpequipe3groupe2
+
+- Un compte standard sur le site. id : utilisateur.standard@gmail.com, mdp : 12345678
+- Un compte premium sur le site. id : utilisateur.premium@gmail.com, mdp : 12345678
+- Un compte traducteur sur le site. id : utilisateur.traducteur@gmail.com, mdp : 12345678
+- Un compte administrateur sur le site. id : utilisateur.administrateur@gmail.com, mdp : 12345678

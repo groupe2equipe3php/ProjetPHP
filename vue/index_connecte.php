@@ -110,7 +110,7 @@ if($_SESSION['user'] == 'a') {
     </form>
 </div>
 
-<!-- Sélection de la langue
+<!-- Sélection de la langue -->
 <div class="bloc">
     <form action="../controleur/index.php" method="post">
         <p><?php echo _("Sélectionnez la langue du site ") ?></p>
@@ -123,7 +123,7 @@ if($_SESSION['user'] == 'a') {
 
         <input type="submit" value="<?php echo _("Recharger") ?>"/>
     </form>
-</div>-->
+</div>
 
 <?php
 if($_SESSION['user'] == 't' or $_SESSION['user'] == 'a') {
