@@ -4,11 +4,12 @@ session_start();
 require_once '../gettext.inc.php';
 require_once '../utils.inc.php';
 
+initialiser_gettext($_SESSION['lang']);
+
 // _() est un alias de gettext()
 start_page(_("Traducteur Groupe 2 Équipe 3 IUT"));
-$title = "Traducteur Groupe 2 Équipe 3 IUT";
-initialiser_gettext($_SESSION['lang']);
-echo _("$title") . '<br/><br/>';
+
+echo _("Traducteur Groupe 2 Équipe 3 IUT") . '<br/><br/>';
 ?>
 
 <div class="bloc">
@@ -42,7 +43,7 @@ echo _("$title") . '<br/><br/>';
 <div class="bloc">
     <p><?php echo _("Pour rechercher une traduction :") ?></p>
 
-    <form action="../vue/traduction/recherche_traduction.php" method="post">
+    <form action="recherche_traduction.php" method="post">
         <input type="submit" value="<?php echo _("Je veux traduire !") ?>"/>
     </form>
 </div>

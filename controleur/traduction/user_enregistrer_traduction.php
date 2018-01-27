@@ -23,6 +23,6 @@ else {
 
 ?>
 
-<form action="../../vue/traduction/affichage_demandes_traduction.php"><br/>
+<form action="../../vue/affichage_demandes_traduction.php"><br/>
     <input type="submit" value="<?php echo _("Accueil") ?>"/>
 </form>

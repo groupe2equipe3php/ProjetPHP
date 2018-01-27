@@ -11,7 +11,7 @@ $traduction = get_traduction($bdd, $mot);
 
 if(! $traduction) {
     // Traduction non disponible
-    if($_SESSION['user'] != 's') {
+    if(isset($_SESSION['user']) and $_SESSION['user'] != 's') {
         // Utilisateur pas standard : peut demander une traduction
         echo _("Ce mot n'a pas de traduction dans la base de données. Souhaitez-vous demander une traduction ?");
         $_SESSION['mot'] = $mot;

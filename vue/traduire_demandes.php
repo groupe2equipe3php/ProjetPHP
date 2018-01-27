@@ -1,8 +1,8 @@
 <?php
 session_start();
 
-require_once '../../gettext.inc.php';
-require_once '../../utils.inc.php';
+require_once '../gettext.inc.php';
+require_once '../utils.inc.php';
 
 initialiser_gettext($_SESSION['lang']);
 
@@ -17,7 +17,7 @@ echo _("Traduction du mot") . ' ' ?><strong><?php echo $_SESSION['mot'] ?></stro
 echo ' écrit en ' . $_POST['langue'] . '.<br/><br/>';
 
 ?>
-<form action="../../controleur/traduction/user_enregistrer_traduction.php" method="post">
+<form action="../controleur/traduction/user_enregistrer_traduction.php" method="post">
     <label name="traduction"><?php echo _("Saisissez la traduction") ?>
         <input type="text" name="traduction"/></label>
 

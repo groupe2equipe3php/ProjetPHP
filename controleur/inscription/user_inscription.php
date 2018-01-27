@@ -70,7 +70,7 @@ if (count($err) == 0) {
     ?>
 
     <form action="../../vue/index_non_connecte.php"><br/>
-        <input type="submit" value="<?php _("Accueil") ?>"/>
+        <input type="submit" value="<?php echo _("Accueil") ?>"/>
     </form>
 
     <?php

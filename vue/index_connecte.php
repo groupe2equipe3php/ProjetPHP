@@ -7,11 +7,12 @@ require_once '../utils.inc.php';
 require_once '../modele/bdd_connexion.php';
 require_once '../modele/bdd_recherche.php';
 
+initialiser_gettext($_SESSION['lang']);
+
 // _() est un alias de gettext()
 start_page(_("Traducteur Groupe 2 Équipe 3 IUT"));
-$title = "Traducteur Groupe 2 Équipe 3 IUT";
-initialiser_gettext($_SESSION['lang']);
-echo _("$title") . '<br/><br/>';
+
+echo _("Traducteur Groupe 2 Équipe 3 IUT") . '<br/><br/>';
 ?>
 
 <div class="bloc">
@@ -55,7 +56,7 @@ echo _("$title") . '<br/><br/>';
 if($_SESSION['user'] != 's') {
 ?>
 <div class="bloc_configuration">
-    <form action="traduction/affichage_demandes_traduction.php" method="post">
+    <form action="affichage_demandes_traduction.php" method="post">
         <p><?php echo _("Traduction") ?></p>
         <input type="submit" name="traduire_demandes" value="<?php echo _("Traduire les demandes") ?>"/>
     </form>
@@ -68,7 +69,7 @@ if($_SESSION['user'] != 's') {
 if($_SESSION['user'] == 't' or $_SESSION['user'] == 'a') {
 ?>
 <div class="bloc_configuration">
-    <form action="traduction/modification_traduction.php" method="post">
+    <form action="modification_traduction.php" method="post">
         <p><?php echo _("Modifier une traduction") ?></p>
         <input type="submit" name="modifier_traduction" value="<?php echo _("Modifier") ?>"/>
     </form>
@@ -104,12 +105,12 @@ if($_SESSION['user'] == 'a') {
 <div class="bloc">
     <p><?php echo _("Pour rechercher une traduction :") ?></p>
 
-    <form action="traduction/recherche_traduction.php" method="post">
+    <form action="recherche_traduction.php" method="post">
         <input type="submit" value="<?php echo _("Je veux traduire !") ?>"/>
     </form>
 </div>
 
-<!-- Sélection de la langue -->
+<!-- Sélection de la langue
 <div class="bloc">
     <form action="../controleur/index.php" method="post">
         <p><?php echo _("Sélectionnez la langue du site ") ?></p>
@@ -122,7 +123,7 @@ if($_SESSION['user'] == 'a') {
 
         <input type="submit" value="<?php echo _("Recharger") ?>"/>
     </form>
-</div>
+</div>-->
 
 <?php
 if($_SESSION['user'] == 't' or $_SESSION['user'] == 'a') {

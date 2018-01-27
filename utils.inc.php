@@ -3,40 +3,36 @@ session_start();
 
 function start_page($title)
 {
+    echo '<!DOCTYPE html>'
+        . '<html lang="fr_FR">'
+        . '<head><meta charset="UTF-8"/>'
+        . '<link rel="stylesheet" type="text/css" href="style.css">'
+        . '<title>' . PHP_EOL . $title . '</title>'
+        . '</head><body>'
+        . '<div class="bloc"><nav><ul><a href="/controleur/index.php">Accueil</a> ';
+
     if (empty($_SESSION['user'])) {
-        echo '<!DOCTYPE html>'
-            . '<html lang="fr_FR">'
-            . '<head><meta charset="UTF-8"/>'
-            . '<link rel="stylesheet" type="text/css" href="style.css">'
-            . '<title>' . PHP_EOL . $title . '</title>'
-            . '</head><body><div class="bloc">'
-            . '<nav>
-                    <ul>
-                        <a href="/controleur/index.php">ACCUEIL</a>
-                        <a href="/vue/connexion.php">CONNEXION</a>
-                        <a href="/vue/traduction/recherche_traduction.php">TRADUIRE</a>
-                    </ul>
-               </nav></div>';
+        echo '<a href="/vue/connexion.php">' . _("Connexion") . '</a> ';
     }
     else {
-        echo '<!DOCTYPE html>'
-            . '<html lang="fr_FR">'
-            . '<head><meta charset="UTF-8"/>'
-            . '<link rel="stylesheet" type="text/css" href="style.css">'
-            . '<title>' . PHP_EOL . $title . '</title>'
-            . '</head><body><div class="bloc">'
-            . '<nav>
-                    <ul>
-                        <a href="/controleur/index.php">ACCUEIL</a>
-                        <a href="/controleur/user_deconnexion.php">DECONNEXION</a>
-                        <a href="/vue/traduction/recherche_traduction.php">TRADUIRE</a>
-                    </ul>
-               </nav></div>';
+        echo '<a href="/controleur/user_deconnexion.php">' . _("Deconnexion") . '</a> ';
     }
+
+    echo '<a href="/vue/recherche_traduction.php">' . _("Traduction") . '</a>';
+
+    // Sélection de la langue
+    echo '<form action="/controleur/index.php" method="post">';
+    echo '<p>' . _("Sélectionner la langue du site :") . '</p>';
+    echo '<input type="radio" name="selection_langue" value="francais" id="selection_langue_francais" />
+          <label for="selection_langue_francais">' . _("Français") . '</label>
+
+          <input type="radio" name="selection_langue" value="anglais" id="selection_langue_anglais" />
+          <label for="selection_langue_anglais">' . _("Anglais") . '</label><br/><br/>
+
+          <input type="submit" value="' . _("Recharger") . '"/></form></ul></nav></div>';
 };
 
 function end_page()
 {
     echo '</body></html>';
 };
-?>

@@ -1,11 +1,11 @@
 <?php
 session_start();
 
-require_once '../../gettext.inc.php';
-require_once '../../utils.inc.php';
+require_once '../gettext.inc.php';
+require_once '../utils.inc.php';
 
-require_once '../../modele/bdd_recherche.php';
-require_once '../../modele/bdd_connexion.php';
+require_once '../modele/bdd_recherche.php';
+require_once '../modele/bdd_connexion.php';
 
 initialiser_gettext($_SESSION['lang']);
 
@@ -20,7 +20,7 @@ echo _("Voici la liste des demandes de traduction") . '<br/><br/>';
 get_demandes_traduction($bdd);
 
 ?>
-<form action="../../controleur/index.php">
+<form action="../controleur/index.php">
     <input type="submit" value="<?php echo _("Accueil") ?>"/>
 </form>
 
