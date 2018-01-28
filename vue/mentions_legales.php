@@ -23,6 +23,8 @@ echo '413 avenue Gaston Berger<br/>';
 echo '04 42 93 90 00<br/><br/>';
 
 echo _("Ce site est hébergé par Alwaysdata.") . '<br/>';
-echo '<a href="https://www.alwaysdata.com/">alwaysdata.com</a>';
+echo '<a href="https://www.alwaysdata.com/">alwaysdata.com</a><br/><br/>';
+
+echo _("Le site accessible par son url dedie est exploite dans le respect de la legislation française.");
 
 end_page();

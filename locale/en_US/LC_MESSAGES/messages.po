@@ -475,3 +475,7 @@ msgstr "Log out"
 #: utils.inc.php:44
 msgid "Sélectionner la langue du site :"
 msgstr "Select the language :"
+
+#: vue/mentions_legales.php:28
+msgid "Le site accessible par son url dedie est exploite dans le respect de la legislation française."
+msgstr "The site accessible through its dedicated url is operated in compliance with French law."
