@@ -8,7 +8,7 @@ http://groupe2equipe3php.alwaysdata.net/controleur/index.php.
 
 
 Nous avons réalisé un site Web de traduction. L'utilisateur peut rechercher un terme et sa traduction sera affichée si
-elle est connue, sinon on lui propose d'enregistrer une demande de traduction.
+elle est connue, sinon on lui propose d'enregistrer une demande de traduction si son type d'utilisateur convient.
 Les demandes de traduction sont ensuite traitées par les utilisateurs de type traducteur ou administrateur.
 
 Le site permet de créer un compte, de se connecter et de se déconnecter. L'utilisateur a la possibilité de récupérer son
